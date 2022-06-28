@@ -1,0 +1,12 @@
+@import "./Mixin";
+@import "./Variables";
+.Navbar_Top {
+  min-height: 50px;
+  border-bottom: 1px solid $border;
+}
+.Navbar_Top_Right_Item {
+  @include Navbar_Top_Items(15px, 500);
+}
+.Navbar_Top_Left_ListItem {
+  @include Navbar_Top_Items(14px, 400);
+}

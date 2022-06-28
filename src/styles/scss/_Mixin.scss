@@ -1,0 +1,41 @@
+@import "./Variables";
+// Globals
+@mixin Badge($fs, $width, $height, $bgColor, $color) {
+  font-size: $fs;
+  width: $width;
+  height: $height;
+  background-color: $bgColor;
+  color: $color;
+}
+@mixin Buttons($fs, $bgColor, $color, $border, $borderRadius) {
+  background: $bgColor;
+  color: $color;
+  border: $border;
+  border-radius: $borderRadius;
+  font-size: $fs;
+}
+@mixin Scale(
+  $element,
+  $primitiveScale,
+  $scale,
+  $transitionTime,
+  $svgFonstSize
+) {
+  transform: scale($primitiveScale);
+  #{$element} {
+    font-size: $svgFonstSize;
+    transition: all $transitionTime;
+  }
+  &:hover {
+    #{$element} {
+      transform: scale($scale);
+    }
+  }
+}
+// Home Page
+// Navbar
+@mixin Navbar_Top_Items($fs, $fw) {
+  font-size: $fs;
+  font-weight: $fw;
+  cursor: pointer;
+}

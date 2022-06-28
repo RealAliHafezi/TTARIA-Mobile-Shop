@@ -1,0 +1,60 @@
+@import "./Mixin.scss";
+@import "./Variables.scss";
+.Navbar_Badge {
+  @include Badge(12px, 20px, 20px, $primary, $white);
+}
+.NavbarBase_LoginBtn {
+  @include Buttons(15px, transparent, $black, 1px solid $border, 8px);
+}
+.NavbarBase_Right_Logo {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+.NavbarBase_Right_SearchBox {
+  min-width: 450px;
+  input {
+    background-color: $darkBorder;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 14px 0;
+    transition: all 0.3s;
+    &:focus {
+      border: 1px solid $border;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+  svg {
+    font-size: 28px;
+    color: $primary;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
+.NavbarBase_Left {
+  .NavbarBase_Left_Btn {
+    cursor: pointer;
+    svg {
+      font-size: 26px;
+    }
+  }
+  .NavbarBase_LoginBtn {
+    font-size: 15px;
+    cursor: pointer;
+    svg {
+      font-size: 24px;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      svg {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@import "./Mixin";
+@import "./Variables";
+.NavbarBaseResponsive_Drawer {
+  width: 35% !important;
+}
+.NavbarBaseResponsiveDreawer_CloseBtn {
+  background-color: transparent;
+  border: none;
+  left: 10px;
+  top: 10px;
+  //   when hover and focus , element scale is 1.2
+  @include Scale(svg, 1, 1.2, 0.3s, 26px);
+}
+.NavbarBaseResponsiveDrawer_Logo {
+  max-width: 200px;
+  object-fit: contain;
+}
+.NavbarBaseResponsiveDreawer_Body {
+  overflow-x: hidden;
+
+  .NavbarBaseResponsiveDreawer_Body_List1 {
+    border: 1px solid $border;
+    border-left: none;
+    border-right: none;
+    li {
+      transition: $transition02;
+      a {
+        transition: $transition02;
+      }
+      &:hover {
+        color: $primary;
+        a {
+          transform: translateX(-3px);
+        }
+      }
+    }
+  }
+}
+.NavbarBaseResponsiveDreawer_Body_List2 {
+  .NavbarBaseResponsiveDreawer_Body_List2Item {
+    transition: $transition02;
+    &:hover {
+      color: $primary;
+    }
+    span {
+      font-size: 15px;
+    }
+    svg {
+      font-size: 22px;
+    }
+  }
+  .NavbarBaseResponsiveDreawer_Body_List2Item_List {
+    li {
+      font-size: 14px;
+      padding: 0 30px;
+      transition: $transition02;
+      &:hover {
+        color: $primary;
+        padding-right: 34px;
+      }
+    }
+  }
+  .NavbarBaseResponsiveDreawer_Body_List2_ListItem_List {
+    li {
+      padding-right: 45px;
+      font-size: 14px;
+      transition: $transition02;
+      &:hover {
+        color: $primary;
+        padding-right: 50px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .NavbarBaseResponsiveDreawer_Body {
+    &::-webkit-scrollbar {
+      background-color: $textMiniTitle;
+      width: 10px;
+      border-radius: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $primary;
+      border-radius: 2px;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .NavbarBaseResponsive_Drawer {
+    width: 50vw !important;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .NavbarBaseResponsive_Drawer {
+    width: 75vw !important;
+  }
+}

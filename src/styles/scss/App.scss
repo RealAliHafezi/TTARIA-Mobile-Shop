@@ -1,0 +1,55 @@
+// importing font shabnam
+@font-face {
+  font-family: shabnam;
+  src: url("./../../assets/font/Shabnam.woff"),
+    url("./../../assets/font/Shabnam.woff2"),
+    url("./../../assets/font/Shabnam.ttf"),
+    url("./../../assets/font/Shabnam.eot");
+}
+@font-face {
+  font-family: shabnam_bold;
+  src: url("./../../assets/font/Shabnam-Bold.woff2"),
+    url("./../../assets/font/Shabnam-Bold.woff"),
+    url("./../../assets/font/Shabnam-Bold.ttf"),
+    url("./../../assets/font/Shabnam-Bold.eot");
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: shabnam;
+}
+body {
+  direction: rtl;
+}
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+ul {
+  margin: 0 !important;
+}
+.LINK,
+a {
+  color: unset;
+  text-decoration: none;
+}
+a:visited,
+.LINK:visited {
+  color: unset;
+}
+.CURSOR {
+  cursor: pointer;
+}
+.nav-link {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+iframe {
+  display: none;
+  visibility: hidden;
+  opacity: none;
+}

@@ -1,0 +1,45 @@
+@import "./Variables";
+@import "./Mixin";
+.NavbarBaseResponsive_Bars {
+  //   when hover and focus , element scale is 1.2
+  @include Scale(svg, 1, 1.2, 0.3s, 26px);
+  &:visited,
+  &:focus,
+  &::after,
+  &::before {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+.NavbarBaseResponsive_Btn {
+  cursor: pointer;
+  svg {
+    font-size: 26px;
+  }
+}
+.NavbarBaseResponsive_SearchBox {
+  min-width: 90%;
+  input {
+    background-color: $darkBorder;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 14px 0;
+    transition: all 0.3s;
+    &:focus {
+      border: 1px solid $border;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+  svg {
+    font-size: 28px;
+    color: $primary;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}

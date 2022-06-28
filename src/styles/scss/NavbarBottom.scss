@@ -1,0 +1,44 @@
+@import "./Variables";
+.Navbar_Bottom {
+  box-shadow: 0 3px 4px -3px $halfBlack;
+}
+.Navbar_Bottom_ListItem {
+  padding: 10px 8px !important;
+  font-size: 14px;
+  font-weight: 500;
+  &:hover {
+    color: $primary;
+  }
+}
+.Navbar_Bottom_ListItems_Data {
+  top: 100%;
+  right: -13px;
+  width: 75vw;
+  height: 350px;
+  flex-wrap: wrap;
+  background-color: $white;
+  box-shadow: 0 2px 5px -2px $halfBlack;
+  transition: all 1s;
+  .Navbar_Bottom_ListItems_Data_Item {
+    font-size: 14px;
+    transition: $transition02;
+    &:hover {
+      transform: translateX(-6px);
+      color: $primary;
+    }
+    svg {
+      margin-right: 3px;
+    }
+  }
+  .Navbar_Bottom_ListItems_Data_Item_List {
+    .Navbar_Bottom_ListItems_Data_Item_ListItem {
+      font-size: 13px;
+      color: $textP;
+      transition: $transition02;
+      &:hover {
+        transform: translateX(-4px);
+        color: $primary;
+      }
+    }
+  }
+}
