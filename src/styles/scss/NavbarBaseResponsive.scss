@@ -43,3 +43,11 @@
     cursor: pointer;
   }
 }
+@media only screen and (max-width: 576px) {
+  .NavbarBaseResponsive_SearchBox {
+    min-width: 85%;
+    input {
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "./Variables";
+.Home_Intro_Nav_Banner {
+  border-radius: $border10;
+  img {
+    border-radius: $border10;
+    object-fit: cover;
+    min-height: 40px;
+  }
+}
+.Home_Intro_Main {
+  height: 60vh;
+  --bs-gutter-x: 0 !important;
+  .Home_Intro_Main_ImagesBox {
+    --bs-gutter-x: 0 !important;
+    img,
+    a {
+      border-radius: $border10;
+      cursor: default;
+    }
+    img {
+      object-fit: fill;
+    }
+  }
+}

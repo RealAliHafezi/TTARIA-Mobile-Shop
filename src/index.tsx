@@ -4,6 +4,7 @@ import App from "./App";
 // libraries
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.css";
+import "swiper/css/bundle";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";

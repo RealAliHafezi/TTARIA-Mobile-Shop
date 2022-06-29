@@ -1,0 +1,32 @@
+@import "./Variables";
+.Home_Intro_Slider_Swiper {
+  border-radius: $border10;
+
+  .Home_Intro_Slider_SwiperSlide {
+    img {
+      object-fit: fill;
+      border-radius: $border10;
+    }
+  }
+}
+.Home_Intro_Slider_Swiper_Thumbs {
+  top: 85%;
+  padding: 0 25% !important;
+
+  .Home_Intro_Slider_SwiperSlide_Thumbs {
+    opacity: 0.5;
+    button {
+      border: none;
+      border-radius: calc(2.2 * $border10);
+    }
+  }
+  .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .Home_Intro_Slider_Swiper_Thumbs {
+    visibility: hidden;
+  }
+}

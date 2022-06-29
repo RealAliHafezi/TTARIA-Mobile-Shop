@@ -7,7 +7,13 @@ import {
   AiOutlineHome,
   AiOutlinePhone,
 } from "react-icons/ai";
-import { RiShoppingBasket2Line, RiArrowDownSLine,RiArrowUpSLine } from "react-icons/ri";
+import {
+  RiShoppingBasket2Line,
+  RiArrowDownSLine,
+  RiArrowUpSLine,
+  RiArrowLeftSLine,
+  RiArrowRightSLine,
+} from "react-icons/ri";
 import { FaRegUserCircle, FaBars } from "react-icons/fa";
 import { SiAboutdotme } from "react-icons/si";
 export {
@@ -24,5 +30,7 @@ export {
   SiAboutdotme,
   AiOutlinePhone,
   RiArrowDownSLine,
-  RiArrowUpSLine
+  RiArrowUpSLine,
+  RiArrowLeftSLine,
+  RiArrowRightSLine,
 };
