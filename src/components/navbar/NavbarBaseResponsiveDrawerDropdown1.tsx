@@ -4,11 +4,11 @@ import NavbarBaseResponsiveDrawerDropdown2 from "./NavbarBaseResponsiveDrawerDro
 // icons
 import { RiArrowDownSLine, RiArrowUpSLine } from "./../../assets/icons/icons";
 // type
-import { NavbarListDataType } from "./../../Data";
+import { NavbarListDataType } from "./../../assets/Types";
 interface propsType {
   NavbarListItem: NavbarListDataType;
   NavbarListItemIndex: number;
-};
+}
 const NavbarBaseResponsiveDrawerDropdown1 = ({
   NavbarListItem,
   NavbarListItemIndex,

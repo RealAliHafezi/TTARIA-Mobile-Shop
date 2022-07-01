@@ -8,7 +8,7 @@
   }
 }
 .Home_Intro_Main {
-  height: 60vh;
+  min-height: 60vh;
   --bs-gutter-x: 0 !important;
   .Home_Intro_Main_ImagesBox {
     --bs-gutter-x: 0 !important;
@@ -20,5 +20,11 @@
     img {
       object-fit: fill;
     }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .Home_Intro_Main {
+    height: auto;
   }
 }

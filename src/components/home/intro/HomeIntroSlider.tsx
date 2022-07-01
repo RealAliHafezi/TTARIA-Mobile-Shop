@@ -39,7 +39,7 @@ const HomeIntroSlider = () => {
         lazy
         loopedSlides={HomeIntroSliderImages.length}
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+        modules={[FreeMode, Navigation, Thumbs, Autoplay, Lazy]}
         className="Home_Intro_Slider_Swiper position-relative w-100 h-100"
       >
         {HomeIntroSliderImages.map((img, index) => (

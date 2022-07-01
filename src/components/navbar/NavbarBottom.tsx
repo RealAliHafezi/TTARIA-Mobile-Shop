@@ -6,7 +6,7 @@ import "./../../styles/scss/NavbarBottom.scss";
 import { NavbarBottomWrapper } from "../../styles/js/NavbarBottom.style";
 // types
 import { NavbarListItemsData } from "../../Data";
-import { NavbarListDataType } from "./../../Data";
+import { NavbarListDataType } from "../../assets/Types";
 export type NavbarListDataShowingType = {
   show: boolean;
 };

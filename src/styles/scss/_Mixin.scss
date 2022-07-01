@@ -39,3 +39,21 @@
   font-weight: $fw;
   cursor: pointer;
 }
+// cards
+@mixin ProductCard(
+  $borderRadius,
+  $border,
+  $borderColor,
+  $bgColor,
+  $star,
+  $offerBox
+) {
+  border-radius: $borderRadius !important;
+  border: $border;
+  background-color: $bgColor;
+}
+@mixin CardHoverAnimation($transform, $visibility, $opacity) {
+  transform: $transform;
+  opacity: $opacity;
+  visibility: $visibility;
+}

@@ -1,0 +1,13 @@
+@import "./Variables";
+.Home_AmazingOffer {
+  height: 60vh;
+}
+.Home_AmazingOffer_BannerBox {
+  img {
+    max-width: 150px;
+    object-fit: contain;
+  }
+}
+.Home_AmazingOffer_Slider {
+  height: 80%;
+}

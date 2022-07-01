@@ -6,6 +6,7 @@ import {
   AiOutlineClose,
   AiOutlineHome,
   AiOutlinePhone,
+  AiFillHeart,
 } from "react-icons/ai";
 import {
   RiShoppingBasket2Line,
@@ -14,7 +15,7 @@ import {
   RiArrowLeftSLine,
   RiArrowRightSLine,
 } from "react-icons/ri";
-import { FaRegUserCircle, FaBars } from "react-icons/fa";
+import { FaRegUserCircle, FaBars, FaStar } from "react-icons/fa";
 import { SiAboutdotme } from "react-icons/si";
 export {
   GiRotaryPhone,
@@ -33,4 +34,6 @@ export {
   RiArrowUpSLine,
   RiArrowLeftSLine,
   RiArrowRightSLine,
+  FaStar,
+  AiFillHeart,
 };

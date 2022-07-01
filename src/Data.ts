@@ -1,16 +1,4 @@
-export type NavbarListItemsDataType = {
-  filter: string;
-  title: string;
-  titleEn: string;
-  item: Array<string> | null;
-  itemEn: Array<string> | null;
-};
-export type NavbarListDataType = {
-  filter: string;
-  lable: string;
-  labelEn: string;
-  data: Array<NavbarListItemsDataType> | null;
-};
+import { NavbarListDataType } from "./assets/Types";
 const NavbarListItemsData: Array<NavbarListDataType> = [
   {
     filter: "mobile",

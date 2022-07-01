@@ -1,11 +1,12 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
-import { NavbarListDataType } from "../Data";
+// import { NavbarListDataType } from "../Data";
+import { ProductsType } from "./../assets/Types";
 type stateType = {
-  products: Array<NavbarListDataType>;
-  mobiles: Array<NavbarListDataType>;
-  speakers: Array<NavbarListDataType>;
-  smartwatch: Array<NavbarListDataType>;
+  products: Array<ProductsType>;
+  mobiles: Array<ProductsType>;
+  speakers: Array<ProductsType>;
+  smartwatch: Array<ProductsType>;
   pending: boolean;
   reject: boolean;
   success: boolean;
@@ -25,7 +26,7 @@ export const getFetchingProductsFun = createAsyncThunk(
   async () => {
     const api =
       "http://localhost:3000/productsForMySecurityHasManyWordInThisAddress";
-    let response = await axios.get<Array<NavbarListDataType>>(api);
+    let response = await axios.get<Array<ProductsType>>(api);
     return response.data;
   }
 );
@@ -37,7 +38,7 @@ const ProductsSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(
       getFetchingProductsFun.fulfilled,
-      (state: stateType, action: PayloadAction<Array<NavbarListDataType>>) => {
+      (state: stateType, action: PayloadAction<Array<ProductsType>>) => {
         state.products = action.payload;
         state.success = true;
         state.reject = false;
