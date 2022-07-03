@@ -425,4 +425,14 @@ const ProductsBannersImages: Array<string> = [
   "https://static.ttaria.com/banners/2022/03/13/bfcb558317eeae5ea549946e7c88734ab2900146d1c851896392243d8345a74bMSpiker.jpg",
   "https://static.ttaria.com/banners/2022/03/13/5c2de68d4274ded6c8cbc0637fc100b31b779aea32711f71cd96a6eba583dac9MTablet.jpg",
 ];
-export { NavbarListItemsData, ProductsBannersImages };
+const ProductsBannersBetweenImages: Array<string> = [
+  "https://static.ttaria.com/banners/2022/03/13/117abe75ed52ad5559a7503e09e7af53879e613c8557223b56f2f152c24219adprinter.jpg",
+  "https://static.ttaria.com/banners/2022/03/14/82a5a68361451f729e1aa9a78857190d6eae15de3b74116fbc8f85fc96f2674afax.jpg",
+  "https://static.ttaria.com/banners/2022/03/13/ba7b1e675816526d2c204545494f3205ec6aaf3e59425559c22497471f8ac5abBISIM.jpg",
+  "https://static.ttaria.com/banners/2022/03/13/955f2daad9b0b121c546f5af960ac5cb758d98a965b4f15eee577edb97790dc4TELEPHONE.jpg",
+];
+export {
+  NavbarListItemsData,
+  ProductsBannersImages,
+  ProductsBannersBetweenImages,
+};
