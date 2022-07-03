@@ -2,17 +2,18 @@ import { Link } from "react-router-dom";
 // components
 import NavbarBaseResponsiveDrawerDropdown1 from "./NavbarBaseResponsiveDrawerDropdown1";
 // style
-import "./../../styles/scss/NavbarBaseResponsiveDrawer.scss";
+import "./../../../styles/scss/home/header/NavbarBaseResponsiveDrawer.scss";
+
 // Data
-import { NavbarListItemsData } from "../../Data";
+import { NavbarListItemsData } from "../../../Data";
 // icon && images
-import { Logo } from "../../assets/image/Images";
+import { Logo } from "../../../assets/image/Images";
 import {
   AiOutlineClose,
   AiOutlineHome,
   SiAboutdotme,
   AiOutlinePhone,
-} from "./../../assets/icons/icons";
+} from "../../../assets/icons/icons";
 const NavbarBaseResponsiveDrawer = () => {
   return (
     <>

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 // style
-import "./../../styles/scss/NavbarBase.scss";
+import "./../../../styles/scss/home/header/NavbarBase.scss";
 // images and logo
 import {
   MdOutlineSearch,
   AiOutlineHeart,
   RiShoppingBasket2Line,
   FaRegUserCircle,
-} from "./../../assets/icons/icons";
-import { Logo } from "../../assets/image/Images";
+} from "../../../assets/icons/icons";
+import { Logo } from "../../../assets/image/Images";
 const NavbarBase = () => {
   const [Search, setSearch] = useState<string>("");
   return (

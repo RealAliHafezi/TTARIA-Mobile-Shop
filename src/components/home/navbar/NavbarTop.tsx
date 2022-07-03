@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // style
-import "./../../styles/scss/NavbarTop.scss";
+import "./../../../styles/scss/home/header/NavbarTop.scss";
+
 // icons
-import { GiRotaryPhone, HiMail } from "./../../assets/icons/icons";
+import { GiRotaryPhone, HiMail } from "../../../assets/icons/icons";
 const NavbarTop = () => {
   return (
     <div className="Navbar_Top container-fluid d-none d-lg-flex justify-content-between aling-items-center px-4">

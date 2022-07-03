@@ -1,5 +1,5 @@
-@import "./Mixin.scss";
-@import "./Variables.scss";
+@import "./../../Mixin.scss";
+@import "./../../Variables";
 .Navbar_Badge {
   @include Badge(12px, 20px, 20px, $primary, $white);
 }

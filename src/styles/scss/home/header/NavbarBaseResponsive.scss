@@ -1,5 +1,5 @@
-@import "./Variables";
-@import "./Mixin";
+@import "./../../Variables";
+@import "./../../Mixin";
 .NavbarBaseResponsive_Bars {
   //   when hover and focus , element scale is 1.2
   @include Scale(svg, 1, 1.2, 0.3s, 26px);

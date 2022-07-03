@@ -1,0 +1,22 @@
+@import "./../../Variables";
+.Home_ProductsBanner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px 20px;
+  img {
+    grid-column: 1fr;
+    object-fit: contain;
+    border-radius: $border10;
+    box-shadow: 0 2px 6px -2px $halfBlack;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .Home_ProductsBanner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 650px) {
+  .Home_ProductsBanner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

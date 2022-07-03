@@ -1,9 +1,11 @@
-@import "./Variables";
-@import "./Mixin";
-.Home_Card {
-  @include ProductCard(10px, none, none, $white, block, block);
+@import "./../../Variables";
+@import "./../../Mixin";
+.Home_AmazingProducts_Card {
+  border-radius: $border10 !important;
+  border: none;
+  background-color: $white;
   // like btn
-  .Home_Card_Like_Btn {
+  .Home_AmazingProducts_Card_Like_Btn {
     width: 40px;
     height: 40px;
     left: -15px;
@@ -39,8 +41,8 @@
     }
   }
   // crad body
-  .Home_Card_Body {
-    .Home_Card_Stars {
+  .Home_AmazingProducts_Card_Body {
+    .Home_AmazingProducts_Card_Stars {
       font-size: 13px;
       left: 50%;
       top: 0;
@@ -63,12 +65,12 @@
   .card-footer {
     background-color: transparent !important;
     transition: height 0.5s;
-    .Home_Card_Footer_Price {
+    .Home_AmazingProducts_Card_Footer_Price {
       font-size: 14px;
       @include CardHoverAnimation(translateX(0), visible, 1);
       transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
     }
-    .productOff {
+    .Home_AmazingProducts_Card_productOff {
       border-radius: 6px;
       font-size: 14px;
       @include CardHoverAnimation(translateX(0), visible, 1);
@@ -86,10 +88,10 @@
     }
   }
   // when hover on box this section showing
-  .Home_Card_PriceBox_Hover {
+  .Home_AmazingProducts_Card_PriceBox_Hover {
     height: 0;
     transition: height 0.5s;
-    .Home_Card_Footer_Price {
+    .Home_AmazingProducts_Card_Footer_Price {
       font-size: 14px;
       @include CardHoverAnimation(translateX(-20px), hidden, 0);
       transition: transform 0.3s, opacity 1s;
@@ -102,7 +104,7 @@
     }
   }
   // visit button
-  .Home_Card_Footer_Btn {
+  .Home_AmazingProducts_Card_Footer_Btn {
     display: none !important;
     height: 0;
     opacity: 1;
@@ -112,14 +114,14 @@
   }
 }
 // hover
-.Home_Card {
+.Home_AmazingProducts_Card {
   &:hover {
-    .Home_Card_Like_Btn {
+    .Home_AmazingProducts_Card_Like_Btn {
       left: 5px;
       opacity: 1;
     }
-    .Home_Card_Body {
-      .Home_Card_Stars {
+    .Home_AmazingProducts_Card_Body {
+      .Home_AmazingProducts_Card_Stars {
         visibility: hidden;
         opacity: 0;
         top: -10px;
@@ -134,11 +136,11 @@
       padding: 0 !important;
       margin: 0 !important;
       height: 0 !important;
-      .productOff {
+      .Home_AmazingProducts_Card_productOff {
         @include CardHoverAnimation(translateX(20px), hidden, 0);
         transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
       }
-      .Home_Card_Footer_Price {
+      .Home_AmazingProducts_Card_Footer_Price {
         @include CardHoverAnimation(translateX(-20px), hidden, 0);
         transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
       }
@@ -147,20 +149,20 @@
       }
     }
     // when hover , this section show
-    .Home_Card_PriceBox_Hover {
+    .Home_AmazingProducts_Card_PriceBox_Hover {
       height: auto;
       margin: 5px 0 !important;
       padding: 0 5px !important;
-      .productOff {
+      .Home_AmazingProducts_Card_productOff {
         @include CardHoverAnimation(translateX(0), visible, 1);
         transition: transform 0.3s, opacity 1s;
       }
-      .Home_Card_Footer_Price {
+      .Home_AmazingProducts_Card_Footer_Price {
         @include CardHoverAnimation(translateX(0), visible, 1);
         transition: transform 0.3s, opacity 1s;
       }
     }
-    .Home_Card_Footer_Btn {
+    .Home_AmazingProducts_Card_Footer_Btn {
       display: block !important;
       height: auto !important;
     }
@@ -174,10 +176,5 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .card-img-top {
-    height: 9rem;
   }
 }

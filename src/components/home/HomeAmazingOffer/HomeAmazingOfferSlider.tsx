@@ -8,14 +8,14 @@ import { useAppSelector } from "../../../redux/hooks";
 // type
 import { ProductsType } from "../../../assets/Types";
 // components
-import Card from "../Card";
+import AmaingProductsCard from "./AmaingProductsCard";
 // icon
 import {
   RiArrowRightSLine,
   RiArrowLeftSLine,
 } from "./../../../assets/icons/icons";
 // style
-import "./../../../styles/scss/HomeAmazingSlider.scss";
+import "../../../styles/scss/home/amazingProducts/HomeAmazingSlider.scss";
 const HomeAmazingOfferSlider = () => {
   // buttons
   const NextBtn = useRef<null | any>(null);
@@ -76,7 +76,7 @@ const HomeAmazingOfferSlider = () => {
             key={productIndex}
             className="Home_AmazingOffer_Slider_SwiperSlide h-100"
           >
-            <Card product={product} />
+            <AmaingProductsCard product={product} />
           </SwiperSlide>
         ))}
       <button

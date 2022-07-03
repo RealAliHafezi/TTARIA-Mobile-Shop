@@ -2,7 +2,7 @@ import React from "react";
 // components
 import HomeAmazingOfferSlider from "../../components/home/HomeAmazingOffer/HomeAmazingOfferSlider";
 // style
-import "./../../styles/scss/HomeAmazingOffer.scss";
+import "./../../styles/scss/home/amazingProducts/HomeAmazingOffer.scss";
 const HomeAmazingOffer = () => {
   return (
     <section className="Home_AmazingOffer row g-0 d-flex align-items-center justify-content-between bg-primary w-100 rounded-1 px-4 mt-3">

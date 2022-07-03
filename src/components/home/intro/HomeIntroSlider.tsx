@@ -8,7 +8,7 @@ import "swiper/css/thumbs";
 import "swiper/css/lazy";
 import { FreeMode, Navigation, Thumbs, Autoplay, Lazy } from "swiper";
 // style
-import "./../../../styles/scss/HomeIntroSlider.scss";
+import "../../../styles/scss/home/intro/HomeIntroSlider.scss";
 // data ( images and button slider )
 import {
   HomeIntroSliderImages,

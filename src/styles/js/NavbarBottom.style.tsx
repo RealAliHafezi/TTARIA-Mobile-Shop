@@ -1,6 +1,6 @@
 import styled from "styled-components";
 // types
-import { NavbarListDataShowingType } from "../../components/navbar/NavbarBottom";
+import { NavbarListDataShowingType } from "../../components/home/navbar/NavbarBottom";
 export const NavbarBottomWrapper = styled.ul<NavbarListDataShowingType>`
   .Navbar_Bottom_ListItems_Data {
     display: flex !important;

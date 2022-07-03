@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // style && icons
-import { MdOutlineArrowBackIosNew } from "./../../assets/icons/icons";
-import "./../../styles/scss/NavbarBottom.scss";
-import { NavbarBottomWrapper } from "../../styles/js/NavbarBottom.style";
+import { MdOutlineArrowBackIosNew } from "../../../assets/icons/icons";
+import { NavbarBottomWrapper } from "../../../styles/js/NavbarBottom.style";
+import "./../../../styles/scss/home/header/NavbarBottom.scss";
+
 // types
-import { NavbarListItemsData } from "../../Data";
-import { NavbarListDataType } from "../../assets/Types";
+import { NavbarListItemsData } from "../../../Data";
+import { NavbarListDataType } from "../../../assets/Types";
 export type NavbarListDataShowingType = {
   show: boolean;
 };

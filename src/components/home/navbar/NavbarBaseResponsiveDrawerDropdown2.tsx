@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 // icons
-import { RiArrowDownSLine, RiArrowUpSLine } from "../../assets/icons/icons";
+import { RiArrowDownSLine, RiArrowUpSLine } from "../../../assets/icons/icons";
 // types
-import { NavbarListItemsDataType } from "./../../assets/Types";
+import { NavbarListItemsDataType } from "../../../assets/Types";
 interface propsType {
   NavbarListData: NavbarListItemsDataType;
   NavbarListDataIndex: number;

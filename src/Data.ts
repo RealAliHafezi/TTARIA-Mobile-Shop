@@ -415,5 +415,14 @@ const NavbarListItemsData: Array<NavbarListDataType> = [
     ],
   },
 ];
-
-export { NavbarListItemsData };
+const ProductsBannersImages: Array<string> = [
+  "https://static.ttaria.com/banners/2022/03/14/bdb1fa9de1d947d4548f46b381dc3cc0dbd5bbacf70debf2afd3026107512047MJanbi.jpg",
+  "https://static.ttaria.com/banners/2022/03/13/8e3affecfb5b37f125c6e5a21a27877313bf9a972f355122f69d8a6490bfdeb2MGhataat.jpg",
+  "https://static.ttaria.com/banners/2022/03/13/2ecd2408a0db4f27e58eea6d5278dc8cd27ab9610f85374eed32f82deebea66cMLaptop.jpg",
+  "https://static.ttaria.com/banners/2022/03/13/f766ef8fcfb250407b0080ae5d6f8c503d83f3e6f15758658787e6bed31b4cacMMobile.jpg",
+  "https://static.ttaria.com/banners/2022/03/13/a934daf812c811db935f2aa7d2c8f55da5e98c4da66cbc0e3546626bdb22e29cMPs5.jpg",
+  "https://static.ttaria.com/banners/2022/03/13/615c7354b766b9dcc7208093de701f0351fbb1d018fb9169666e24ba8c5ac272MGLaptop.jpg",
+  "https://static.ttaria.com/banners/2022/03/13/bfcb558317eeae5ea549946e7c88734ab2900146d1c851896392243d8345a74bMSpiker.jpg",
+  "https://static.ttaria.com/banners/2022/03/13/5c2de68d4274ded6c8cbc0637fc100b31b779aea32711f71cd96a6eba583dac9MTablet.jpg",
+];
+export { NavbarListItemsData, ProductsBannersImages };

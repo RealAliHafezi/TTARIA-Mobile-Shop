@@ -1,0 +1,40 @@
+@import "./../../Variables";
+#ProductsBrand {
+  border-color: $darkBorder;
+  border-radius: $border8;
+}
+.Home_ProductsBrand_Lable {
+  .Home_ProductsBrand_Lable_IconBox {
+    width: 50px;
+    height: 50px;
+    background-color: $textMiniTitle;
+    box-shadow: 0 2px 6px 1px $textMiniTitle;
+    svg {
+      font-size: 26px;
+    }
+  }
+  .Home_ProductsBrand_Lable_Title {
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .Home_ProductsBrand_Lable {
+    .Home_ProductsBrand_Lable_Title {
+      font-size: 22px;
+    }
+    .Home_ProductsBrand_Lable_IconBox {
+      width: 40px;
+      height: 40px;
+      svg {
+        font-size: 22px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 300px) {
+  .Home_ProductsBrand_Lable {
+    .Home_ProductsBrand_Lable_Title {
+      font-size: 18px !important;
+    }
+  }
+}

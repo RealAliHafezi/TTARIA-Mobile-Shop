@@ -1,0 +1,198 @@
+@import "./../../Variables";
+@import "./../../Mixin";
+.Home_BrandsCard {
+  height: 50vh !important;
+  border-radius: 0 !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-right: none !important;
+  border-left: 1px solid $border !important;
+
+  .Home_BrandsCard_Like_Btn {
+    width: 40px;
+    height: 40px;
+    left: -15px;
+    top: 5px;
+    opacity: 0;
+    z-index: 9;
+    box-shadow: 0 2px 8px -2px black;
+    transition: left 0.3s, opacity 0.3s, color 0.1s;
+    svg {
+      transform: scale(1);
+      transition: all 0.2s;
+    }
+    &:hover {
+      svg {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .card-img-top {
+    min-height: 25vh !important;
+    max-height: 25vh !important;
+    img {
+      object-fit: fill;
+      transform: scale(1);
+      transition: $transition02;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+// card body
+.Home_BrandsCard_Body {
+  .Home_BrandsCard_Stars {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    transition: all 0.4s;
+    svg {
+      font-size: 12px;
+      color: gold;
+    }
+  }
+  .card-title {
+    font-size: 15px;
+    line-height: 1.5;
+    transition: margin 0.4s, color 0.2s;
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}
+.Home_BrandsCard_Footer {
+  height: 50px;
+  background-color: transparent !important;
+  transition: height 0.5s;
+  .Home_BrandsCard_Footer_Price {
+    font-size: 14px;
+    @include CardHoverAnimation(translateX(0), visible, 1);
+    transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+  }
+  .Home_BrandsCard_Footer_productOff {
+    border-radius: 6px;
+    font-size: 14px;
+    @include CardHoverAnimation(translateX(0), visible, 1);
+    transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+  }
+  #Home_BrandsCard_Shape {
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 60%;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: $transition02;
+  }
+}
+.Home_BrandsCard_PriceBox_Hover {
+  height: 0;
+  transition: height 0.5s;
+  .Home_BrandsCard_Price {
+    font-size: 14px;
+    @include CardHoverAnimation(translateX(-20px), hidden, 0);
+    transition: transform 0.3s, opacity 1s;
+  }
+  .Home_BrandsCard_productOff {
+    border-radius: 6px;
+    font-size: 14px;
+    @include CardHoverAnimation(translateX(20px), hidden, 0);
+    transition: transform 0.3s, opacity 1s;
+  }
+}
+// visit button
+.Home_BrandsCard_Btn {
+  display: none !important;
+  height: 0 !important;
+  font-size: 16px !important;
+  opacity: 1;
+  font-size: 16px !important;
+  animation-name: Btn;
+  animation-duration: 1s;
+  transition: all 0.5s;
+}
+// hovering
+
+// hover
+.Home_BrandsCard {
+  &:hover {
+    .Home_BrandsCard_Like_Btn {
+      left: 5px;
+      opacity: 1;
+    }
+    .Home_BrandsCard_Body {
+      .Home_BrandsCard_Stars {
+        visibility: hidden;
+        opacity: 0;
+        top: -10px;
+      }
+      .card-title {
+        margin-top: 10px !important;
+      }
+    }
+    // when hover , this section hide
+    .card-footer {
+      border: none;
+      padding: 0 !important;
+      margin: 0 !important;
+      height: 0 !important;
+      .Home_BrandsCard_Footer_productOff {
+        @include CardHoverAnimation(translateX(20px), hidden, 0);
+        transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+      }
+      .Home_BrandsCard_Footer_Price {
+        @include CardHoverAnimation(translateX(-20px), hidden, 0);
+        transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+      }
+      #HomeCardFooterShape {
+        opacity: 0;
+      }
+    }
+    // when hover , this section show
+    .Home_BrandsCard_PriceBox_Hover {
+      height: auto;
+      margin: 5px 0 !important;
+      padding: 0 5px !important;
+      .Home_BrandsCard_productOff {
+        @include CardHoverAnimation(translateX(0), visible, 1);
+        transition: transform 0.3s, opacity 1s;
+      }
+      .Home_BrandsCard_Price {
+        @include CardHoverAnimation(translateX(0), visible, 1);
+        transition: transform 0.3s, opacity 1s;
+      }
+    }
+    .Home_BrandsCard_Btn {
+      display: block !important;
+      height: auto !important;
+    }
+  }
+}
+@keyframes Btn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 992px) {
+  .Home_BrandsCard_Btn {
+    font-size: 15px !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .Home_BrandsCard_Btn {
+    font-size: 14px !important;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .card-title,
+  .Home_BrandsCard_Footer_Price {
+    font-size: 12px !important;
+  }
+}

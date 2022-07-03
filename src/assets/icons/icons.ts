@@ -17,6 +17,8 @@ import {
 } from "react-icons/ri";
 import { FaRegUserCircle, FaBars, FaStar } from "react-icons/fa";
 import { SiAboutdotme } from "react-icons/si";
+import { TbDeviceMobile, TbDeviceWatch } from "react-icons/tb";
+import { BsSpeakerFill } from "react-icons/bs";
 export {
   GiRotaryPhone,
   HiMail,
@@ -36,4 +38,7 @@ export {
   RiArrowRightSLine,
   FaStar,
   AiFillHeart,
+  TbDeviceMobile,
+  TbDeviceWatch,
+  BsSpeakerFill,
 };

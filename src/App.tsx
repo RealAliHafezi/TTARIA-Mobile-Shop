@@ -5,7 +5,7 @@ import { getFetchingProductsFun } from "./redux/productsSlice";
 // style
 import "./styles/scss/App.scss";
 // components
-import Navbar from "./sections/navbar/Header";
+import Navbar from "./sections/Home/Header";
 import Home from "./pages/Home/Home";
 function App() {
   const dispatch = useAppDispatch();

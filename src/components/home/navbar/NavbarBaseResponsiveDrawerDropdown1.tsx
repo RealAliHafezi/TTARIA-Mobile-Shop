@@ -2,9 +2,9 @@ import React, { useState } from "react";
 // components
 import NavbarBaseResponsiveDrawerDropdown2 from "./NavbarBaseResponsiveDrawerDropdown2";
 // icons
-import { RiArrowDownSLine, RiArrowUpSLine } from "./../../assets/icons/icons";
+import { RiArrowDownSLine, RiArrowUpSLine } from "../../../assets/icons/icons";
 // type
-import { NavbarListDataType } from "./../../assets/Types";
+import { NavbarListDataType } from "../../../assets/Types";
 interface propsType {
   NavbarListItem: NavbarListDataType;
   NavbarListItemIndex: number;

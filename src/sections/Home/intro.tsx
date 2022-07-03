@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // components
 import HomeIntroSlider from "../../components/home/intro/HomeIntroSlider";
 // style
-import "./../../styles/scss/intro.scss";
+import "./../../styles/scss/home/intro/intro.scss";
 const Intro = () => {
   return (
     <section className="Home_Intro p-0 m-0">

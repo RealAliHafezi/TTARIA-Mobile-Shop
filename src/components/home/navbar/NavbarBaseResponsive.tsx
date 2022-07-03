@@ -2,15 +2,15 @@ import React, { useState } from "react";
 //
 import NavbarBaseResponsiveDrawer from "./NavbarBaseResponsiveDrawer";
 // image && icons
-import { Logo } from "../../assets/image/Images";
+import { Logo } from "../../../assets/image/Images";
 import {
   FaBars,
   MdOutlineSearch,
   RiShoppingBasket2Line,
   AiOutlineHeart,
-} from "./../../assets/icons/icons";
+} from "../../../assets/icons/icons";
 // style
-import "./../../styles/scss/NavbarBaseResponsive.scss";
+import "./../../../styles/scss/home/header/NavbarBaseResponsive.scss";
 const NavbarBaseResponsive = () => {
   const [Search, setSearch] = useState<string>("");
   return (
