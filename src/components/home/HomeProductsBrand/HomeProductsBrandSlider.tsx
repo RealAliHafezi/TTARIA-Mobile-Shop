@@ -31,8 +31,9 @@ const HomeProductsBrandSlider = ({ product }: PropsType) => {
       }}
       speed={600}
       slidesPerView={5}
+      spaceBetween={0}
       modules={[Lazy, Navigation, FreeMode]}
-      className="Home_ProductsBrand_Slider_Swiper position-relative w-100 h-100"
+      className="Home_ProductsBrand_Slider_Swiper position-relative overflow-hidden"
       onSwiper={(swiper) => {
         // Delay execution for the refs to be defined
         setTimeout(() => {
@@ -56,17 +57,17 @@ const HomeProductsBrandSlider = ({ product }: PropsType) => {
         600: {
           slidesPerView: 3,
         },
-        450: {
-          slidesPerView: 2,
-        },
         0: {
-          slidesPerView: 1,
+          slidesPerView: "auto",
         },
       }}
     >
       {product.length > 0 &&
         product.map((prod, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide
+            key={index}
+            className="Home_ProductsBrand_Slider_SwiperSlide"
+          >
             <Card product={prod} />
           </SwiperSlide>
         ))}

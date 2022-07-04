@@ -1,7 +1,7 @@
 @import "./../../Variables";
 @import "./../../Mixin";
 .Home_BrandsCard {
-  height: 50vh !important;
+  height: 60vh !important;
   border-radius: 0 !important;
   border-top: none !important;
   border-bottom: none !important;
@@ -28,8 +28,8 @@
     }
   }
   .card-img-top {
-    min-height: 25vh !important;
-    max-height: 25vh !important;
+    min-height: 30vh !important;
+    max-height: 30vh !important;
     img {
       object-fit: fill;
       transform: scale(1);

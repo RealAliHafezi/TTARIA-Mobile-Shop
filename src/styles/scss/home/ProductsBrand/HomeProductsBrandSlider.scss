@@ -9,7 +9,6 @@
     border: none;
     box-shadow: 0 2px 6px -1px $primary;
     z-index: 9;
-
     svg {
       transform: scale(1);
       transition: all 0.3s;
@@ -23,5 +22,40 @@
   .swiper-button-disabled {
     opacity: 0.2;
     cursor: default !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .Home_ProductsBrand_Slider_Swiper {
+    .Home_ProductsBrand_Slider_SwiperSlide {
+      width: 45% !important;
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .Home_ProductsBrand_Slider_Swiper {
+    .Home_ProductsBrand_Slider_SwiperSlide {
+      width: 50% !important;
+    }
+  }
+}
+@media only screen and (max-width: 430px) {
+  .Home_ProductsBrand_Slider_Swiper {
+    .Home_ProductsBrand_Slider_SwiperSlide {
+      width: 75% !important;
+    }
+  }
+}
+@media only screen and (max-width: 350px) {
+  .Home_ProductsBrand_Slider_Swiper {
+    .Home_ProductsBrand_Slider_SwiperSlide {
+      width: 90% !important;
+    }
+  }
+}
+@media only screen and (max-width: 300px) {
+  .Home_ProductsBrand_Slider_Swiper {
+    .Home_ProductsBrand_Slider_SwiperSlide {
+      width: 100% !important;
+    }
   }
 }
