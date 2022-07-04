@@ -41,3 +41,11 @@ export type NavbarListDataType = {
   labelEn: string;
   data: Array<NavbarListItemsDataType> | null;
 };
+// home last readable
+export interface HomeLastReadableType {
+  img: string;
+  caption: string;
+  writerName: string;
+  date: string;
+  link: string;
+}

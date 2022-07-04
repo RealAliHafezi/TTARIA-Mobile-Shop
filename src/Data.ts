@@ -1,4 +1,5 @@
 import { NavbarListDataType } from "./assets/Types";
+import { HomeLastReadableType } from "./assets/Types";
 const NavbarListItemsData: Array<NavbarListDataType> = [
   {
     filter: "mobile",
@@ -431,8 +432,39 @@ const ProductsBannersBetweenImages: Array<string> = [
   "https://static.ttaria.com/banners/2022/03/13/ba7b1e675816526d2c204545494f3205ec6aaf3e59425559c22497471f8ac5abBISIM.jpg",
   "https://static.ttaria.com/banners/2022/03/13/955f2daad9b0b121c546f5af960ac5cb758d98a965b4f15eee577edb97790dc4TELEPHONE.jpg",
 ];
+const HomeLastReadableData: Array<HomeLastReadableType> = [
+  {
+    img: "https://static.ttaria.com/blogs/cover/2022/06/05/09830798065c3ef4bbe5b0fa6fa399cb.jpg",
+    caption: "بهترین گوشی هوآوی",
+    writerName: "یوسف هنرمند",
+    date: "یکشنبه،15 خرداد 1401",
+    link: "./",
+  },
+  {
+    img: "https://static.ttaria.com/blogs/cover/2022/06/06/1a063013676854008f1de3ab63df4679.jpg",
+    caption: "جدیدترین گوشی هوآوی",
+    writerName: "یوسف هنرمند",
+    date: "دوشنبه،9 خرداد 1401",
+    link: "./",
+  },
+  {
+    img: "https://static.ttaria.com/blogs/cover/2022/05/29/eb042ee3923c0a241c0619fa2eb1a692.jpg",
+    caption: "مقایسه آیفون 11 با 12",
+    writerName: "یوسف هنرمند",
+    date: "یکشنبه، 08 خرداد 1401",
+    link: "./",
+  },
+  {
+    img: "https://static.ttaria.com/blogs/cover/2022/05/28/76b075d12602e3b7c1a65bc6cadb4f62.jpg",
+    caption: "بهترین گوشی تا 15 میلیون تومان",
+    writerName: "یوسف هنرمند",
+    date: "شنبه،07 خرداد 1401",
+    link: "./",
+  },
+];
 export {
   NavbarListItemsData,
   ProductsBannersImages,
   ProductsBannersBetweenImages,
+  HomeLastReadableData,
 };

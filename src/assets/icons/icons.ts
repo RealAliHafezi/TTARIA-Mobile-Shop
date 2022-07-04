@@ -1,6 +1,10 @@
 import { GiRotaryPhone } from "react-icons/gi";
 import { HiMail } from "react-icons/hi";
-import { MdOutlineSearch, MdOutlineArrowBackIosNew } from "react-icons/md";
+import {
+  MdOutlineSearch,
+  MdOutlineArrowBackIosNew,
+  MdOutlineWatchLater,
+} from "react-icons/md";
 import {
   AiOutlineHeart,
   AiOutlineClose,
@@ -14,8 +18,9 @@ import {
   RiArrowUpSLine,
   RiArrowLeftSLine,
   RiArrowRightSLine,
+  RiBookMarkFill,
 } from "react-icons/ri";
-import { FaRegUserCircle, FaBars, FaStar } from "react-icons/fa";
+import { FaRegUserCircle, FaBars, FaStar, FaUserCircle } from "react-icons/fa";
 import { SiAboutdotme } from "react-icons/si";
 import { TbDeviceMobile, TbDeviceWatch } from "react-icons/tb";
 import { BsSpeakerFill } from "react-icons/bs";
@@ -41,4 +46,7 @@ export {
   TbDeviceMobile,
   TbDeviceWatch,
   BsSpeakerFill,
+  RiBookMarkFill,
+  FaUserCircle,
+  MdOutlineWatchLater,
 };

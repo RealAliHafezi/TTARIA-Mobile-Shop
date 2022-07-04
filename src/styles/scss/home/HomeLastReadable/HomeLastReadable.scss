@@ -1,0 +1,63 @@
+@import "./../../Variables";
+
+.Home_LastReadable_Lable {
+  .Home_LastReadable_Lable_IconBox {
+    width: 50px;
+    height: 50px;
+    background-color: $textMiniTitle;
+    box-shadow: 0 2px 6px 1px $textMiniTitle;
+    svg {
+      font-size: 26px;
+    }
+  }
+  .Home_LastReadable_Lable_Title {
+    font-size: 26px;
+  }
+}
+.Home_LastReadable_Card {
+  .card {
+    border: none !important;
+  }
+  .Home_LastReadable_Card_ImgBox {
+    border-radius: $border10;
+    img {
+      object-fit: contain;
+      border-radius: $border10;
+      transform: scale(1);
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .card-body {
+    .card-title {
+      font-size: 18px;
+    }
+  }
+}
+.Home_LastReadable_Card_WriterBox {
+  .Home_LastReadable_Card_WriterIcon {
+    width: 30px;
+    height: 30px;
+    svg {
+      width: 100%;
+      height: 100%;
+      color: $textP;
+    }
+  }
+  .Home_LastReadable_Card_Writer {
+    font-size: 14px;
+  }
+}
+.Home_LastReadable_Card_DateBox {
+  .Home_LastReadable_Card_DateIcon {
+    svg {
+      font-size: 11px;
+      color: $textP;
+    }
+  }
+  .Home_LastReadable_Card_Date {
+    font-size: 12px;
+  }
+}

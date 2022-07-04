@@ -1,3 +1,4 @@
+@import "./Variables";
 // importing font shabnam
 @font-face {
   font-family: shabnam;
@@ -41,12 +42,7 @@ a:visited,
 .LINK:visited {
   color: unset;
 }
-.CURSOR {
-  cursor: pointer !important;
-}
-.CDEFAULT {
-  cursor: default !important;
-}
+
 .nav-link {
   margin: 0 !important;
   padding: 0 !important;
@@ -55,4 +51,19 @@ iframe {
   display: none;
   visibility: hidden;
   opacity: none;
+}
+
+// my classes
+.CURSOR {
+  cursor: pointer !important;
+}
+.CDEFAULT {
+  cursor: default !important;
+}
+.txtHoverPrimary {
+  color: $black !important;
+  transition: $transition02;
+  &:hover {
+    color: $primary !important;
+  }
 }

@@ -13,6 +13,7 @@ import HomeAmazingOffer from "../../sections/Home/HomeAmazingOffer";
 import ProductsBanner from "../../sections/Home/ProductsBanner";
 import ProductsBrand from "../../sections/Home/ProductsBrand";
 import ProductsBetweenBanners from "../../sections/Home/ProductsBetweenBanners";
+import HomeLastReadable from "../../sections/Home/HomeLastReadable";
 
 const Home = () => {
   window.document.title =
@@ -29,6 +30,7 @@ const Home = () => {
       <ProductsBetweenBanners numOne={0} numTwo={2} />
       <ProductsBrand brand="Watch" icon={<TbDeviceWatch />} />
       <ProductsBetweenBanners numOne={2} numTwo={4} />
+      <HomeLastReadable />
     </article>
   );
 };
