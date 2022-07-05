@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // icon
 import { FaStar, AiFillHeart } from "../../../assets/icons/icons";
 // style
-import "./../../../styles/scss/home/amazingProducts/HomeCard.scss";
+import "./../../../styles/scss/home/amazingProducts/HomeAmazingOfferCard.scss";
 // type
 import { ProductsType } from "../../../assets/Types";
 interface PropsType {
@@ -72,7 +72,7 @@ const AmaingProductsCard = ({ product }: PropsType) => {
           className="position-absolute bg-primary"
         ></span>
       </div>
-      <button className="Home_AmazingProducts_Card_Footer_Btn d-block btn btn-primary w-100 m-0 mb-2">
+      <button className="Home_AmazingProducts_Card_Footer_Btn d-block btn btn-primary w-100 p-1 m-0 mb-2">
         دیدن جزئیات و خرید
       </button>
     </div>

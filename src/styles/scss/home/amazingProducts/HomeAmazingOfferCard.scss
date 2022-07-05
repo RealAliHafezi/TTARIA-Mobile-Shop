@@ -96,7 +96,7 @@
       @include CardHoverAnimation(translateX(-20px), hidden, 0);
       transition: transform 0.3s, opacity 1s;
     }
-    .productOff {
+    .Home_AmazingProducts_Card_productOff {
       border-radius: 6px;
       font-size: 14px;
       @include CardHoverAnimation(translateX(20px), hidden, 0);
@@ -108,6 +108,7 @@
     display: none !important;
     height: 0;
     opacity: 1;
+    font-size: 16px !important;
     animation-name: Btn;
     animation-duration: 1s;
     transition: all 0.5s;
@@ -176,5 +177,25 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 992px) {
+  .Home_AmazingProducts_Card {
+    .Home_AmazingProducts_Card_Footer_Btn {
+      font-size: 15px !important;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .Home_AmazingProducts_Card {
+    .Home_AmazingProducts_Card_Footer_Btn {
+      font-size: 14px !important;
+    }
+  }
+}
+@media only screen and (max-width: 300px) {
+  .card-title,
+  .Home_AmazingProducts_Card_Footer_Price {
+    font-size: 12px !important;
   }
 }

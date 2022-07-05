@@ -15,7 +15,7 @@ import {
   RiArrowLeftSLine,
 } from "./../../../assets/icons/icons";
 // style
-import "../../../styles/scss/home/amazingProducts/HomeAmazingSlider.scss";
+import "../../../styles/scss/home/amazingProducts/HomeAmazingOfferSlider.scss";
 const HomeAmazingOfferSlider = () => {
   // buttons
   const NextBtn = useRef<null | any>(null);
@@ -62,11 +62,8 @@ const HomeAmazingOfferSlider = () => {
         768: {
           slidesPerView: 3,
         },
-        500: {
-          slidesPerView: 2,
-        },
         0: {
-          slidesPerView: 1,
+          slidesPerView: "auto",
         },
       }}
     >
