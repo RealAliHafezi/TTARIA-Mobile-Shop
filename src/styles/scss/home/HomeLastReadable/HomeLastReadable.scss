@@ -20,6 +20,7 @@
   }
   .Home_LastReadable_Card_ImgBox {
     border-radius: $border10;
+    box-shadow: 0 1px 5px 0px $halfBlack;
     img {
       object-fit: contain;
       border-radius: $border10;

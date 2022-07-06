@@ -16,6 +16,7 @@
   .Home_Intro_Slider_SwiperSlide_Thumbs {
     opacity: 0.5;
     button {
+      min-width: 200px;
       border: none;
       border-radius: calc(2.2 * $border10);
     }

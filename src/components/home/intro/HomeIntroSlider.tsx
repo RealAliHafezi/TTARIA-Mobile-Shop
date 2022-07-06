@@ -56,12 +56,12 @@ const HomeIntroSlider = () => {
         speed={800}
         autoplay={{ delay: 3500 }}
         pagination={{ clickable: true }}
-        slideToClickedSlide={true}
-        centeredSlides={true}
-        loop={true}
+        slideToClickedSlide
+        centeredSlides
+        loop
         slidesPerView="auto"
-        freeMode={true}
-        watchSlidesProgress={true}
+        freeMode
+        watchSlidesProgress
         modules={[FreeMode, Navigation, Thumbs, Autoplay]}
         className="Home_Intro_Slider_Swiper_Thumbs position-absolute w-100"
       >
@@ -70,7 +70,7 @@ const HomeIntroSlider = () => {
             key={index}
             className="Home_Intro_Slider_SwiperSlide_Thumbs w-auto"
           >
-            <button className="bg-primary text-light d-block px-4 py-2 mx-2">
+            <button className="bg-primary text-light d-block py-2 mx-2">
               {btn.lable}
             </button>
           </SwiperSlide>
