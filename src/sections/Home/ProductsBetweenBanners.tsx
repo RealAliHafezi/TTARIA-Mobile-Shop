@@ -13,7 +13,7 @@ const ProductsBetweenBanners = ({ numOne, numTwo }: PropsType) => {
   return (
     <section className="ProductsBetweenBanners d-grid mt-3">
       {ProductsBannersBetweenImages.slice(numOne, numTwo).map((img, index) => (
-        <img src={img} key={index} className="w-100 h-100" />
+        <img src={img} key={index} className="w-100 mb-2 mb-md-0" />
       ))}
     </section>
   );

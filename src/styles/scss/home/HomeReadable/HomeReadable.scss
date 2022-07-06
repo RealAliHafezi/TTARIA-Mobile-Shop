@@ -1,0 +1,42 @@
+@import "./../../Variables";
+.Home_Readable {
+  border-color: $border !important;
+  border-radius: $border8;
+  .Home_Readable_lorem {
+    line-height: 1.7;
+    font-size: 16px;
+  }
+}
+.Home_Readable_PictureOneBox,
+.Home_Readable_PictureTwoBox {
+  img {
+    object-fit: contain;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .Home_Readable_PictureOneBox,
+  .Home_Readable_PictureTwoBox {
+    img {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .Home_Readable {
+    .Home_Readable_lorem {
+      font-size: 14px;
+    }
+    h2 {
+      font-size: 22px !important;
+    }
+    h3 {
+      font-size: 18px !important;
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+  .Home_Readable {
+    text-align: center;
+  }
+}

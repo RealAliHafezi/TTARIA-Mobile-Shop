@@ -49,3 +49,10 @@ export interface HomeLastReadableType {
   date: string;
   link: string;
 }
+// home readable
+export interface HomeRedableType {
+  pictureOne: string;
+  title: string;
+  titleBlue: string;
+  pictureTwo: string;
+}

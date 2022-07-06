@@ -1,5 +1,8 @@
-import { NavbarListDataType } from "./assets/Types";
-import { HomeLastReadableType } from "./assets/Types";
+import {
+  NavbarListDataType,
+  HomeLastReadableType,
+  HomeRedableType,
+} from "./assets/Types";
 const NavbarListItemsData: Array<NavbarListDataType> = [
   {
     filter: "mobile",
@@ -462,9 +465,82 @@ const HomeLastReadableData: Array<HomeLastReadableType> = [
     link: "./",
   },
 ];
+const HomeRedableData: Array<HomeRedableType> = [
+  {
+    title: "خرید گوشی",
+    titleBlue: "",
+    pictureOne:
+      "https://static.ttaria.com/editor/2022/02/27/1645963963-9924%D8%AE%D8%B1%DB%8C%D8%AF-%DA%AF%D9%88%D8%B4%DB%8C.jpg",
+    pictureTwo:
+      "https://static.ttaria.com/editor/2022/02/27/1645963981-4884%D8%AE%D8%B1%DB%8C%D8%AF-%DA%AF%D9%88%D8%B4%DB%8C-%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%DA%AF.jpg",
+  },
+  {
+    titleBlue: "خرید گوشی سامسونگ",
+    title: "",
+    pictureOne: "",
+    pictureTwo:
+      "https://static.ttaria.com/editor/2022/02/27/1645963990-2492%D8%AE%D8%B1%DB%8C%D8%AF-%DA%AF%D9%88%D8%B4%DB%8C-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C.jpg",
+  },
+  {
+    titleBlue: "خرید گوشی شیائومی",
+    title: "",
+    pictureOne: "",
+    pictureTwo:
+      "https://static.ttaria.com/editor/2022/02/27/1645963998-2737%D8%AE%D8%B1%DB%8C%D8%AF-%DA%AF%D9%88%D8%B4%DB%8C-%D8%A7%D9%BE%D9%84.jpg",
+  },
+  {
+    titleBlue: "خرید گوشی اپل",
+    title: "",
+    pictureOne: "",
+    pictureTwo:
+      "https://static.ttaria.com/editor/2022/02/27/1645964025-4821%D8%AE%D8%B1%DB%8C%D8%AF-%DA%AF%D9%88%D8%B4%DB%8C-%D9%87%D9%88%D8%A7%D9%88%DB%8C.jpg",
+  },
+  {
+    titleBlue: "خرید گوشی هوآوی",
+    title: "",
+    pictureOne: "",
+    pictureTwo:
+      "https://static.ttaria.com/editor/2022/02/27/1645964039-2635%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8-%D8%A8%D9%87%D8%AA%D8%B1%DB%8C%D9%86-%DA%AF%D9%88%D8%B4%DB%8C.jpg",
+  },
+  {
+    title: "انتخاب بهترین گوشی",
+    titleBlue: "",
+    pictureOne: "",
+    pictureTwo:
+      "https://static.ttaria.com/editor/2022/02/27/1645964049-7553IOS-%DB%8C%D8%A7-%D8%A7%D9%86%D8%AF%D8%B1%D9%88%DB%8C%D8%AF%D8%9F.jpg",
+  },
+  {
+    title: "IOS یا Android ؟",
+    titleBlue: "",
+    pictureOne: "",
+    pictureTwo:
+      "https://static.ttaria.com/editor/2022/02/27/1645964059-3042%D9%86%D9%85%D8%A7%DB%8C%D8%B4%DA%AF%D8%B1-%D8%A7%D9%85%D9%88%D9%84%D8%AF-%DB%8C%D8%A7-LCD.jpg",
+  },
+  {
+    title: "نمایشگر AMOLED یا LCD ?",
+    titleBlue: "",
+    pictureOne: "",
+    pictureTwo:
+      "https://static.ttaria.com/editor/2022/02/27/1645964070-5288%D8%AE%D8%B1%DB%8C%D8%AF-%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA%DB%8C-%DA%AF%D9%88%D8%B4%DB%8C.jpg",
+  },
+  {
+    title: "خرید اینترنتی بهترین گوشی های موبایل",
+    titleBlue: "",
+    pictureOne: "",
+    pictureTwo:
+      "https://static.ttaria.com/editor/2022/02/27/1645964080-9117%D9%81%D8%B1%D9%88%D8%B4%DA%AF%D8%A7%D9%87-%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84%D8%8C-%D9%84%D9%BE-%D8%AA%D8%A7%D9%BE.jpg",
+  },
+  {
+    title: "فروشگاه موبایل، لپ تاپ و لوازم جانبی آریا",
+    titleBlue: "",
+    pictureOne: "",
+    pictureTwo: "",
+  },
+];
 export {
   NavbarListItemsData,
   ProductsBannersImages,
   ProductsBannersBetweenImages,
   HomeLastReadableData,
+  HomeRedableData,
 };

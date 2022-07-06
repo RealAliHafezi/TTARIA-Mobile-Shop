@@ -18,7 +18,10 @@ const HomeLastReadable = () => {
       </div>
       <div className="Home_LastReadable_Card row">
         {HomeLastReadableData.map((readable, index) => (
-          <div className="col-12 col-sm-6 col-md-3 mb-2 mb-md-0 gx-3" key={index}>
+          <div
+            className="col-12 col-sm-6 col-md-3 mb-4 mb-sm-2 mb-md-0 gx-3"
+            key={index}
+          >
             <div className="card">
               <div className="Home_LastReadable_Card_ImgBox overflow-hidden position-relative w-100">
                 <img
@@ -27,7 +30,7 @@ const HomeLastReadable = () => {
                   alt="Banner"
                 />
               </div>
-              <div className="card-body text-center">
+              <div className="card-body pb-0 pb-md-3 text-center">
                 <h5 className="card-title txtHoverPrimary CURSOR">
                   {readable.caption}
                 </h5>
