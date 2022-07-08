@@ -1,0 +1,46 @@
+@import "./../Variables";
+#Footer {
+  border-color: $border;
+}
+.Footer_BackToUp {
+  border: 1px solid $border !important;
+  border-radius: $border8 !important;
+  background-color: transparent;
+}
+.Footer_Services {
+  .Footer_Service_Logo {
+    img {
+      object-fit: contain;
+    }
+  }
+  .Footer_Service_Lable span {
+    font-size: 11px;
+    color: $textP;
+    font-weight: 500px;
+  }
+}
+.Footer_Links {
+  .Footer_Links_Address {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  ul {
+    color: $littleBlack;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .Footer_Links_Logo {
+    img {
+      object-fit: contain;
+    }
+    h6 {
+      color: $textP;
+      font-size: 15px !important;
+    }
+  }
+}
+.Footer_Copy {
+  p {
+    font-size: 11px;
+  }
+}

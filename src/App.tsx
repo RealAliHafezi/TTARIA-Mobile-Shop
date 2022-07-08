@@ -7,6 +7,7 @@ import "./styles/scss/App.scss";
 // components
 import Navbar from "./sections/Home/Header";
 import Home from "./pages/Home/Home";
+import Footer from "./sections/Footer/Footer";
 function App() {
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+        <Footer />
       </div>
     </>
   );

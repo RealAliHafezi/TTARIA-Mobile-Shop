@@ -2,6 +2,7 @@ import {
   NavbarListDataType,
   HomeLastReadableType,
   HomeRedableType,
+  FooterTypes,
 } from "./assets/Types";
 const NavbarListItemsData: Array<NavbarListDataType> = [
   {
@@ -537,10 +538,113 @@ const HomeRedableData: Array<HomeRedableType> = [
     pictureTwo: "",
   },
 ];
+const FooterData: FooterTypes = {
+  services: [
+    {
+      title: "ارسال سریع به سراسر کشور",
+      caption: "تحویل سریع تمامی مرسولات به سراسر کشور",
+      logo: "https://ttaria.com/images/icons/delivery.png",
+    },
+    {
+      title: "7 روز ضمانت بازگشت",
+      caption: "در صورت نارضایتی به هر دلیلی می توانید محصول را بازگردانید",
+      logo: "https://ttaria.com/images/icons/refund.png",
+    },
+    {
+      title: "پشتیبانی 24 ساعته",
+      caption: "در صورت وجود هرگونه سوال یا ابهامی، با ما در تماس باشید",
+      logo: "https://ttaria.com/images/icons/support.png",
+    },
+    {
+      title: "ضمانت اصل بودن کالا",
+      caption: "محصولات مدنظر خود را با خیال آسوده از اصل بودن آن خریداری کنید",
+      logo: "https://ttaria.com/images/icons/guarantee.png",
+    },
+  ],
+  links: [
+    [
+      {
+        link: "/",
+        text: "پشتیبانی واتساپ",
+      },
+      {
+        link: "/",
+        text: "تماس با ما",
+      },
+      {
+        link: "/",
+        text: "درباره ما",
+      },
+      {
+        link: "/",
+        text: "روند ارسال سفارشات",
+      },
+      {
+        link: "/",
+        text: "رویه عودت سازی سفارش",
+      },
+      {
+        link: "/",
+        text: "قوانین و مقررات",
+      },
+      {
+        link: "/",
+        text: "تجربه خرید از آریا",
+      },
+      {
+        link: "/",
+        text: "مقالات",
+      },
+      {
+        link: "/",
+        text: "گوشی استوک",
+      },
+      {
+        link: "/",
+        text: "تماس با ما",
+      },
+    ],
+    [
+      {
+        link: "/",
+        text: "قیمت گوشی",
+      },
+      {
+        link: "/",
+        text: "قیمت لپ تاپ",
+      },
+      {
+        link: "/",
+        text: "قیمت قطعات کامپیوتر",
+      },
+      {
+        link: "/",
+        text: "گوشی آیفون",
+      },
+      {
+        link: "/",
+        text: "گوشی سامسونگ",
+      },
+      {
+        link: "/",
+        text: "گوشی شیائومی",
+      },
+      {
+        link: "/",
+        text: "گوشی هوآوی",
+      },
+      {
+        link: "/",
+        text: "گوشی نوکیا",
+      },
+    ],
+  ],
+};
 export {
   NavbarListItemsData,
   ProductsBannersImages,
   ProductsBannersBetweenImages,
   HomeLastReadableData,
   HomeRedableData,
+  FooterData,
 };

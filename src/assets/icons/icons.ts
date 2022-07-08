@@ -20,7 +20,14 @@ import {
   RiArrowRightSLine,
   RiBookMarkFill,
 } from "react-icons/ri";
-import { FaRegUserCircle, FaBars, FaStar, FaUserCircle } from "react-icons/fa";
+import {
+  FaRegUserCircle,
+  FaBars,
+  FaStar,
+  FaUserCircle,
+  FaTelegramPlane,
+  FaInstagram,
+} from "react-icons/fa";
 import { SiAboutdotme } from "react-icons/si";
 import { TbDeviceMobile, TbDeviceWatch } from "react-icons/tb";
 import { BsSpeakerFill } from "react-icons/bs";
@@ -49,4 +56,6 @@ export {
   RiBookMarkFill,
   FaUserCircle,
   MdOutlineWatchLater,
+  FaTelegramPlane,
+  FaInstagram,
 };

@@ -56,3 +56,17 @@ export interface HomeRedableType {
   titleBlue: string;
   pictureTwo: string;
 }
+// footer
+interface FooterServicesType {
+  title: string;
+  caption: string;
+  logo: string;
+}
+interface FooterLinksType {
+  text: string;
+  link: string;
+}
+export interface FooterTypes {
+  services: Array<FooterServicesType>;
+  links: Array<Array<FooterLinksType>>;
+}
