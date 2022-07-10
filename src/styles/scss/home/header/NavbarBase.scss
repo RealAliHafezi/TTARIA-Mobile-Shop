@@ -1,6 +1,10 @@
 @import "./../../Mixin.scss";
 @import "./../../Variables";
 .Navbar_Base {
+  background-color: $white;
+}
+.NavbarBase_Left,
+.NavbarBase_Right {
   z-index: 99;
 }
 .Navbar_Badge {

@@ -8,6 +8,7 @@ export const HeaderWrapper = styled.div<HeaderScrollOptionType>`
 `;
 // navbar bottom
 export const NavbarBottomWrapper = styled.ul<NavbarBottomProps>`
+  transform: translateY(${(props) => (props.Hide ? "0" : "-40px")});
   .Navbar_Bottom_ListItems_Data {
     display: flex !important;
     opacity: ${(props: NavbarBottomProps) => (props.show ? "1" : "0")};

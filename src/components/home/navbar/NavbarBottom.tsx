@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // style && icons
 import { MdOutlineArrowBackIosNew } from "../../../assets/icons/icons";
@@ -9,8 +9,10 @@ import { NavbarListItemsData } from "../../../Data";
 import { NavbarListDataType } from "../../../assets/Types";
 export type NavbarBottomProps = {
   show: boolean;
+  Hide: boolean;
 };
 const NavbarBottom = () => {
+  const [HideWhenScroll, setHideWhenScroll] = useState<boolean>(true);
   const [openNavbarListItem, setOpenNavbarListItems] = useState<boolean>(false);
   // active item , datas is here
   const [ActiveItemData, setActiveItemData] = useState<
@@ -18,6 +20,7 @@ const NavbarBottom = () => {
   >([]);
   const NavbarListDataShowing: NavbarBottomProps = {
     show: openNavbarListItem,
+    Hide: HideWhenScroll,
   };
   //
   const handleHoverOnNavbarListItems = (item: string) => {
@@ -28,9 +31,25 @@ const NavbarBottom = () => {
       NavbarListItemsData.filter((item2) => item2.labelEn === item)
     );
   };
+  // when scroll Bottom , navbarBottom Hide & when scroll top , navbarBottom Show
+  useEffect(() => {
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 75) {
+        var scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+          setHideWhenScroll(false);
+        } else if (scrollTop <= lastScrollTop) {
+          setHideWhenScroll(true);
+        }
+        lastScrollTop = scrollTop;
+      }
+    });
+  }, []);
   return (
     <NavbarBottomWrapper
-      className="Navbar_Bottom container-fluid d-none d-lg-flex align-items-center"
+      className="Navbar_Bottom position-absolute container-fluid d-none d-lg-flex align-items-center"
       {...NavbarListDataShowing}
     >
       <ul className="Navbar_Bottom_List d-flex justify-content-start position-relative">

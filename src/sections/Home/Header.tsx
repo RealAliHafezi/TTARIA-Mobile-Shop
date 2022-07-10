@@ -6,7 +6,6 @@ import { HeaderWrapper } from "../../styles/js/Header.style";
 import NavbarBase from "../../components/home/navbar/NavbarBase";
 import NavbarTop from "../../components/home/navbar/NavbarTop";
 import NavbarBaseResponsive from "../../components/home/navbar/NavbarBaseResponsive";
-import NavbarBottom from "../../components/home/navbar/NavbarBottom";
 // type
 import { HeaderScrollOptionType } from "../../assets/Types";
 
@@ -25,18 +24,17 @@ const Navbar = () => {
         setHideNavbarTop(true);
       }
     });
-  }, [window.scrollY]);
+  }, []);
   return (
     <>
       <HeaderWrapper
         {...HeaderProps}
-        className="navbar navbar-expand-lg d-block position-sticky h-auto py-0"
+        className="navbar navbar-expand-lg d-block position-sticky h-auto py-0 mb-5"
         id="Header"
       >
         <NavbarTop />
         <NavbarBase />
         <NavbarBaseResponsive />
-        <NavbarBottom />
       </HeaderWrapper>
     </>
   );

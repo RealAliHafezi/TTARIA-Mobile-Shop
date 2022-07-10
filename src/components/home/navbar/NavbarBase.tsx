@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 // style
 import "./../../../styles/scss/home/header/NavbarBase.scss";
+// components
+import NavbarBottom from "../../../components/home/navbar/NavbarBottom";
 // images and logo
 import {
   MdOutlineSearch,
@@ -12,7 +14,7 @@ import { Logo } from "../../../assets/image/Images";
 const NavbarBase = () => {
   const [Search, setSearch] = useState<string>("");
   return (
-    <div className="Navbar_Base position-relative d-none d-lg-flex aling-items-center justify-content-between px-3">
+    <div className="Navbar_Base position-relative d-none d-lg-flex align-items-center justify-content-between px-3 py-2">
       <div className="NavbarBase_Right d-flex align-items-center">
         <div className="NavbarBase_Right_Logo ms-5">
           <img src={Logo} alt="Logo" className="w-100 h1-00" />
@@ -48,6 +50,7 @@ const NavbarBase = () => {
           <span>ثبت نام یا ورود</span>
         </div>
       </div>
+      <NavbarBottom />
     </div>
   );
 };
