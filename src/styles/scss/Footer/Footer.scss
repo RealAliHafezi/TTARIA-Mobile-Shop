@@ -6,6 +6,10 @@
   border: 1px solid $border !important;
   border-radius: $border8 !important;
   background-color: transparent;
+  &:focus,
+  &:visited {
+    outline: none !important;
+  }
 }
 .Footer_Services {
   .Footer_Service_Logo {
