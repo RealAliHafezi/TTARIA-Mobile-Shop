@@ -12,7 +12,7 @@ import { Logo } from "../../../assets/image/Images";
 const NavbarBase = () => {
   const [Search, setSearch] = useState<string>("");
   return (
-    <div className="container-fluid d-none d-lg-flex aling-items-center justify-content-between">
+    <div className="Navbar_Base position-relative d-none d-lg-flex aling-items-center justify-content-between px-3">
       <div className="NavbarBase_Right d-flex align-items-center">
         <div className="NavbarBase_Right_Logo ms-5">
           <img src={Logo} alt="Logo" className="w-100 h1-00" />

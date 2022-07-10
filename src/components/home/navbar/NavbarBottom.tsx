@@ -2,23 +2,21 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // style && icons
 import { MdOutlineArrowBackIosNew } from "../../../assets/icons/icons";
-import { NavbarBottomWrapper } from "../../../styles/js/NavbarBottom.style";
+import { NavbarBottomWrapper } from "../../../styles/js/Header.style";
 import "./../../../styles/scss/home/header/NavbarBottom.scss";
-
-// types
+// types & Data
 import { NavbarListItemsData } from "../../../Data";
 import { NavbarListDataType } from "../../../assets/Types";
-export type NavbarListDataShowingType = {
+export type NavbarBottomProps = {
   show: boolean;
 };
-
 const NavbarBottom = () => {
   const [openNavbarListItem, setOpenNavbarListItems] = useState<boolean>(false);
   // active item , datas is here
   const [ActiveItemData, setActiveItemData] = useState<
     Array<NavbarListDataType>
   >([]);
-  const NavbarListDataShowing: NavbarListDataShowingType = {
+  const NavbarListDataShowing: NavbarBottomProps = {
     show: openNavbarListItem,
   };
   //

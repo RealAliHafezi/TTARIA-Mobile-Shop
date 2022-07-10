@@ -1,5 +1,8 @@
 @import "./../../Mixin.scss";
 @import "./../../Variables";
+.Navbar_Base {
+  z-index: 99;
+}
 .Navbar_Badge {
   @include Badge(12px, 20px, 20px, $primary, $white);
 }

@@ -41,6 +41,9 @@ export type NavbarListDataType = {
   labelEn: string;
   data: Array<NavbarListItemsDataType> | null;
 };
+export interface HeaderScrollOptionType {
+  Hide: boolean;
+}
 // home last readable
 export interface HomeLastReadableType {
   img: string;

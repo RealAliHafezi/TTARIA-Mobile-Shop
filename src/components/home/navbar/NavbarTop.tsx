@@ -1,13 +1,11 @@
-import React from "react";
 import { Link } from "react-router-dom";
 // style
 import "./../../../styles/scss/home/header/NavbarTop.scss";
-
 // icons
 import { GiRotaryPhone, HiMail } from "../../../assets/icons/icons";
 const NavbarTop = () => {
   return (
-    <div className="Navbar_Top container-fluid d-none d-lg-flex justify-content-between aling-items-center px-4">
+    <nav className="Navbar_Top container-fluid d-none d-lg-flex justify-content-between align-items-center px-4 m-0">
       <div className="d-flex align-items-center">
         <div className="d-flex align-items-center">
           <GiRotaryPhone />
@@ -35,7 +33,7 @@ const NavbarTop = () => {
           </Link>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 
