@@ -8,6 +8,7 @@ import "./styles/scss/App.scss";
 import Navbar from "./sections/Home/Header";
 import Home from "./pages/Home/Home";
 import Footer from "./sections/Footer/Footer";
+import Products from "./pages/Products/Products";
 function App() {
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
         </Routes>
         <Footer />
       </div>
