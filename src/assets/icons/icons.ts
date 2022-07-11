@@ -1,5 +1,5 @@
 import { GiRotaryPhone } from "react-icons/gi";
-import { HiMail } from "react-icons/hi";
+import { HiMail, HiFilter } from "react-icons/hi";
 import {
   MdOutlineSearch,
   MdOutlineArrowBackIosNew,
@@ -58,4 +58,5 @@ export {
   MdOutlineWatchLater,
   FaTelegramPlane,
   FaInstagram,
+  HiFilter,
 };

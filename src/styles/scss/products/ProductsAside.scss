@@ -1,0 +1,50 @@
+@import "./../Variables";
+.Products_Aside_Box{
+  top: 150px;
+}
+.products_FilterOptionBox {
+  border-color: $border !important;
+  border-radius: $border8;
+  .products_FilterOptionBox_title {
+    color: $littleBlack;
+    font-size: 16px;
+  }
+  hr {
+    color: $textP;
+  }
+  .form-check {
+    label {
+      font-size: 14px;
+    }
+    input.form-check-input {
+      transform: rotate(180deg);
+      width: 1.75rem;
+      box-shadow: none !important;
+      &:checked {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+      &:focus {
+        color: unset !important;
+      }
+    }
+  }
+}
+.Products_FilterBtnBox {
+  border-radius: $border8;
+  button {
+    border-radius: $border8;
+    box-shadow: 0 1px 3px 0 $primary;
+    svg {
+      font-size: 22px;
+    }
+    &:active {
+      background-color: $primary !important;
+    }
+  }
+}
+.products_Filter_Instagram {
+  img {
+    border-radius: $border8;
+  }
+}
