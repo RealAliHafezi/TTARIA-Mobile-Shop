@@ -1,5 +1,8 @@
 @import "./../../Variables";
 @import "./../../Mixin";
+.Navbar_NavbarBase_Responsive {
+  box-shadow: 0 3px 4px -3px $halfBlack;
+}
 .NavbarBaseResponsive_Bars {
   //   when hover and focus , element scale is 1.2
   @include Scale(svg, 1, 1.2, 0.3s, 26px);
@@ -48,6 +51,11 @@
     min-width: 85%;
     input {
       padding: 10px;
+    }
+  }
+  .NavbarBaseResponsive_Btn {
+    svg {
+      font-size: 18px;
     }
   }
 }

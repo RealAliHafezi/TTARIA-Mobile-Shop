@@ -5,6 +5,9 @@ import { NavbarBottomProps } from "../../components/home/navbar/NavbarBottom";
 //
 export const HeaderWrapper = styled.div<HeaderScrollOptionType>`
   top: ${(props) => (props.Hide ? "0" : "-50px")};
+  @media only screen and (max-width: 992px) {
+    top: 0 !important;
+  }
 `;
 // navbar bottom
 export const NavbarBottomWrapper = styled.ul<NavbarBottomProps>`

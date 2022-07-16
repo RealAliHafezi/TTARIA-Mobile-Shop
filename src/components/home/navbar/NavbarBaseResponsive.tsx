@@ -14,7 +14,7 @@ import "./../../../styles/scss/home/header/NavbarBaseResponsive.scss";
 const NavbarBaseResponsive = () => {
   const [Search, setSearch] = useState<string>("");
   return (
-    <div className="container-fluid d-flex d-lg-none flex-column">
+    <div className="Navbar_NavbarBase_Responsive container-fluid d-flex d-lg-none flex-column py-2">
       <div className="w-100 d-flex align-items-center justify-content-between mb-3">
         <button
           className="NavbarBaseResponsive_Bars navbar-toggler d-block"
@@ -28,7 +28,7 @@ const NavbarBaseResponsive = () => {
         <div className="NavbarBase_Right_Logo">
           <img src={Logo} alt="Logo" className="w-100 h-100" />
         </div>
-        <div className="NavbarBaseResponsive_Btn position-relative">
+        <div className="NavbarBaseResponsive_Btn position-relative me-3">
           <RiShoppingBasket2Line />
           <span className="Navbar_Badge d-flex align-items-center justify-content-center position-absolute top-0 start-100 translate-middle rounded-circle">
             1
@@ -48,7 +48,7 @@ const NavbarBaseResponsive = () => {
           />
           <MdOutlineSearch className="position-absolute" />
         </div>
-        <div className="NavbarBaseResponsive_Btn position-relative d-block">
+        <div className="NavbarBaseResponsive_Btn position-relative d-block me-1">
           <AiOutlineHeart />
           <span className="Navbar_Badge d-flex align-items-center justify-content-center position-absolute top-0 start-100 translate-middle rounded-circle">
             1
