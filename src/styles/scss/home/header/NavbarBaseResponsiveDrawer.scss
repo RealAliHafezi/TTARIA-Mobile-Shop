@@ -92,6 +92,11 @@
 }
 @media only screen and (max-width: 450px) {
   .NavbarBaseResponsive_Drawer {
-    width: 75vw !important;
+    width: 85vw !important;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .NavbarBaseResponsive_Drawer {
+    width: 100vw !important;
   }
 }

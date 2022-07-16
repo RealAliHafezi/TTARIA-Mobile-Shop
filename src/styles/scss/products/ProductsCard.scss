@@ -3,23 +3,27 @@
 @import "./../Mixin";
 .Products_Card {
   height: 70vh !important;
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 1px;
-    background-color: $border;
+  &:not(:nth-child(4n)) {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background-color: $border;
+    }
   }
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 1px;
-    width: 100%;
-    background-color: $border;
+  &:not(:nth-child(-n + 4)) {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $border;
+    }
   }
   .card-img-top {
     height: 35vh !important;
@@ -94,6 +98,86 @@
     .Home_BrandsCard_Btn {
       display: block !important;
       height: auto !important;
+    }
+  }
+}
+
+// responsive
+@media only screen and(max-width : 992px) {
+  .Products_Card {
+    &:not(:nth-child(3n)) {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background-color: $border;
+      }
+    }
+    &:not(:nth-child(-n + 3)) {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 1px;
+        width: 100%;
+        background-color: $border;
+      }
+    }
+  }
+}
+@media only screen and(max-width : 768px) {
+  .Products_Card {
+    &:not(:nth-child(2n)) {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background-color: $border;
+      }
+    }
+    &:not(:nth-child(-n + 2)) {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 1px;
+        width: 100%;
+        background-color: $border;
+      }
+    }
+  }
+}
+@media only screen and(max-width : 576px) {
+  .Products_Card {
+    &:not(:only-child) {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 0;
+        width: 0;
+        background-color: $border;
+      }
+    }
+    &:not(:nth-child(-n + 1)) {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 1px;
+        width: 100%;
+        background-color: $border;
+      }
     }
   }
 }

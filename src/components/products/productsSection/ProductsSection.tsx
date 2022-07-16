@@ -9,7 +9,7 @@ interface propsType {
 }
 const ProductsSection = ({ products }: propsType) => {
   return (
-    <section className="Products_Section row g-0 rounded-1 border p-0">
+    <section className="Products_Section row g-0 rounded-3 border">
       {products?.map((product, index) => (
         <ProductsCard product={product} key={index} />
       ))}
