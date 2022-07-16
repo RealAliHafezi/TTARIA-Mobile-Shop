@@ -1,27 +1,15 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-// icon
-import { AiFillHeart, FaStar } from "./../../../assets/icons/icons";
+import React from "react";
 // style
-import "./../../../styles/scss/home/ProductsBrand/HomeBrandCard.scss";
-// types
-import { ProductsType } from "../../../assets/Types";
-interface PropsType {
+import "./../../../styles/scss/products/ProductsCard.scss";
+// type
+import { ProductsType } from "./../../../assets/Types";
+interface propsType {
   product: ProductsType;
+  key: number;
 }
-
-const HomeBrandsCard = ({ product }: PropsType) => {
-  const [Like, setLike] = useState<boolean>(false);
+const ProductsCard = ({ product }: propsType) => {
   return (
-    <section className="Home_BrandsCard card position-relative w-100 py-3 px-2">
-      <span
-        onClick={() => setLike(!Like)}
-        className={`position-absolute Home_BrandsCard_Like_Btn rounded-circle d-flex align-items-center justify-content-center bg-light fs-4 CURSOR ${
-          Like ? "text-danger" : "text-black"
-        }`}
-      >
-        <AiFillHeart />
-      </span>
+    <div className="Products_Card col-12 col-sm-6 col-md-4 col-lg-3 card border-0 position-relative py-3 px-2">
       <div className="card-img-top position-relative overflow-hidden w-100">
         <img
           src={product.information.banner}
@@ -30,17 +18,8 @@ const HomeBrandsCard = ({ product }: PropsType) => {
         />
       </div>
       <div className="Home_BrandsCard_Body card-body position-relative p-0 m-0 mt-2">
-        <div className="Home_BrandsCard_Stars position-absolute">
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
-        </div>
         <h5 className="card-title text-black mt-4 CURSOR">
-          <Link to={`/`} className="LINK">
-            {product.PhoneLableFa}
-          </Link>
+          {product.PhoneLableFa}
         </h5>
       </div>
       {/* price box */}
@@ -93,12 +72,17 @@ const HomeBrandsCard = ({ product }: PropsType) => {
             ناموجود
           </span>
         )}
+
+        <span
+          id="HomeCardFooterShape"
+          className="position-absolute bg-primary"
+        ></span>
       </div>
       <button className="Home_BrandsCard_Btn btn btn-primary w-100 m-0 mb-2">
         دیدن جزئیات و خرید
       </button>
-    </section>
+    </div>
   );
 };
 
-export default HomeBrandsCard;
+export default ProductsCard;

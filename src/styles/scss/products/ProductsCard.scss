@@ -1,0 +1,99 @@
+// N : I Use HomeBrandCards.scss Styles
+@import "./../Variables";
+@import "./../Mixin";
+.Products_Card {
+  height: 70vh !important;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: $border;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    background-color: $border;
+  }
+  .card-img-top {
+    height: 35vh !important;
+    min-height: 35vh !important;
+    img {
+      object-fit: fill;
+      transform: scale(1);
+      transition: $transition02;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .Home_BrandsCard_Body {
+    .card-title {
+      &:hover {
+        color: $textRed !important;
+      }
+    }
+  }
+}
+
+// hover
+.Products_Card {
+  &:hover {
+    .Home_BrandsCard_Like_Btn {
+      left: 5px;
+      opacity: 1;
+    }
+    .Home_BrandsCard_Body {
+      .Home_BrandsCard_Stars {
+        visibility: hidden;
+        opacity: 0;
+        top: -10px;
+      }
+      .card-title {
+        margin-top: 10px !important;
+      }
+    }
+    // when hover , this section hide
+    .card-footer {
+      border: none;
+      padding: 0 !important;
+      margin: 0 !important;
+      height: 0 !important;
+      .Home_BrandsCard_Footer_productOff {
+        @include CardHoverAnimation(translateX(20px), hidden, 0);
+        transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+      }
+      .Home_BrandsCard_Footer_Price {
+        @include CardHoverAnimation(translateX(-20px), hidden, 0);
+        transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+      }
+      #Home_BrandsCard_Shape {
+        opacity: 0;
+      }
+    }
+    // when hover , this section show
+    .Home_BrandsCard_PriceBox_Hover {
+      height: auto;
+      margin: 5px 0 !important;
+      padding: 0 5px !important;
+      .Home_BrandsCard_productOff {
+        @include CardHoverAnimation(translateX(0), visible, 1);
+        transition: transform 0.3s, opacity 1s;
+      }
+      .Home_BrandsCard_Price {
+        @include CardHoverAnimation(translateX(0), visible, 1);
+        transition: transform 0.3s, opacity 1s;
+      }
+    }
+    .Home_BrandsCard_Btn {
+      display: block !important;
+      height: auto !important;
+    }
+  }
+}

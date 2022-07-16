@@ -84,7 +84,7 @@
     height: 60%;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
-    transition: $transition02;
+    transition: all 0s;
   }
 }
 .Home_BrandsCard_PriceBox_Hover {
@@ -113,7 +113,6 @@
   animation-duration: 1s;
   transition: all 0.5s;
 }
-// hovering
 
 // hover
 .Home_BrandsCard {
@@ -146,7 +145,7 @@
         @include CardHoverAnimation(translateX(-20px), hidden, 0);
         transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
       }
-      #HomeCardFooterShape {
+      #Home_BrandsCard_Shape {
         opacity: 0;
       }
     }
