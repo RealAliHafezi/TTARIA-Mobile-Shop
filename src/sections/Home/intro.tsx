@@ -10,7 +10,7 @@ const Intro = () => {
       <nav className="Home_Intro_Nav_Banner w-100 pb-3">
         <img
           className="w-100 h-100"
-          src="https://static.ttaria.com/banners/2022/06/02/aa20b3863572d5f336f0836aff717819.jpg"
+          src="https://static.ttaria.com/banners/2022/07/12/3d3166e80def941dd965cb2cc95eff04.jpg"
           alt="Banner"
         />
       </nav>

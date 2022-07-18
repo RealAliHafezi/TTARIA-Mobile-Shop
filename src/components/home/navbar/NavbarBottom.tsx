@@ -75,19 +75,26 @@ const NavbarBottom = () => {
           {ActiveItemData.length &&
             ActiveItemData[0].data?.map((dataItem, dataIndex) => (
               <>
-                <li
-                  key={dataIndex}
-                  className="Navbar_Bottom_ListItems_Data_Item fw-bold mb-2 CURSOR"
+                <Link
+                  to={`/productsCategories/${dataItem.titleEn}`}
+                  className="LINK"
+                  onClick={() => setOpenNavbarListItems(false)}
                 >
-                  {dataItem.title}
-                  <MdOutlineArrowBackIosNew />
-                </li>
+                  <li
+                    key={dataIndex}
+                    className="Navbar_Bottom_ListItems_Data_Item fw-bold mb-2 CURSOR"
+                  >
+                    {dataItem.title}
+                    <MdOutlineArrowBackIosNew />
+                  </li>
+                </Link>
                 {dataItem.item && (
                   <ul className="Navbar_Bottom_ListItems_Data_Item_List">
                     {dataItem.item.map((itemList, itemListIndex) => (
                       <li
                         key={itemListIndex}
                         className="Navbar_Bottom_ListItems_Data_Item_ListItem mb-1 fw-bold CURSOR"
+                        onClick={() => setOpenNavbarListItems(false)}
                       >
                         {itemList}
                       </li>

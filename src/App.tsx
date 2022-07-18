@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import { useAppDispatch } from "./redux/hooks";
+import { useAppDispatch, useAppSelector } from "./redux/hooks";
 import { getFetchingProductsFun } from "./redux/productsSlice";
 // style
 import "./styles/scss/App.scss";
@@ -12,6 +12,7 @@ import Products from "./pages/Products/Products";
 import ProductsCategory from "./pages/ProductsCategory/ProductsCategory";
 function App() {
   const dispatch = useAppDispatch();
+  const getProducts = useAppSelector((state) => state.Products.products);
   useEffect(() => {
     dispatch(getFetchingProductsFun());
   }, [getFetchingProductsFun]);
@@ -22,7 +23,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/:ProductsCategory" element={<ProductsCategory />} />
+          <Route
+            path="/productsCategories/:ProductsCategory"
+            element={<ProductsCategory />}
+          />
         </Routes>
         <Footer />
       </div>
