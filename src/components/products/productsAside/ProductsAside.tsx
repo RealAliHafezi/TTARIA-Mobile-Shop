@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // icon
 import { HiFilter } from "./../../../assets/icons/icons";
 // style
 import "./../../../styles/scss/products/ProductsAside.scss";
-const ProductsAside = () => {
+// type
+interface propsType {
+  handleFilter: (inventory?: boolean, discount?: boolean) => void;
+}
+const ProductsAside = ({ handleFilter }: propsType) => {
+  const [InventoryFilter, setInventoryFilter] = useState<boolean>(false);
+  const [DiscountFilter, setDiscountFilter] = useState<boolean>(false);
+
+  useEffect(() => {});
   return (
     <div className="Products_Aside_Box position-sticky">
       <div className="products_FilterOptionBox border w-auto py-3 px-2 mb-3">
@@ -16,6 +24,10 @@ const ProductsAside = () => {
             type="checkbox"
             role="switch"
             id="products_filter_check_input_off"
+            onChange={(e) => {
+              setDiscountFilter(e.target.checked);
+            }}
+            checked={DiscountFilter}
           />
           <label
             className="form-check-label fw-light"
@@ -31,6 +43,10 @@ const ProductsAside = () => {
             type="checkbox"
             role="switch"
             id="products_filter_check_input_inventory"
+            onChange={(e) => {
+              setInventoryFilter(e.target.checked);
+            }}
+            checked={InventoryFilter}
           />
           <label
             className="form-check-label fw-light"
@@ -41,7 +57,10 @@ const ProductsAside = () => {
         </div>
       </div>
       <div className="Products_FilterBtnBox border px-3 py-4 mb-3">
-        <button className="Products_FilterBtnBox_Btn border-0 bg-primary text-light w-100 py-2">
+        <button
+          className="Products_FilterBtnBox_Btn border-0 bg-primary text-light w-100 py-2"
+          onClick={() => handleFilter(InventoryFilter, DiscountFilter)}
+        >
           <HiFilter className="ms-1" />
           <span>اعمال فیلتر ها</span>
         </button>
