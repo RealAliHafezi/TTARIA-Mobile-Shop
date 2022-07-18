@@ -9,6 +9,7 @@ import Navbar from "./sections/Home/Header";
 import Home from "./pages/Home/Home";
 import Footer from "./sections/Footer/Footer";
 import Products from "./pages/Products/Products";
+import ProductsCategory from "./pages/ProductsCategory/ProductsCategory";
 function App() {
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/:ProductsCategory" element={<ProductsCategory />} />
         </Routes>
         <Footer />
       </div>
