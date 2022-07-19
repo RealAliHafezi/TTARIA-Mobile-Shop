@@ -2,6 +2,7 @@
   "productsForMySecurityHasManyWordInThisAddress": [
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "samsung",
       "brandFa": "سامسونگ",
       "PhoneLable": "Samsung Galaxy A52 4G 256GB RAM 8GB Mobile Phone",
@@ -34,6 +35,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "samsung",
       "brandFa": "سامسونگ",
       "PhoneLable": "Samsung Galaxy S21 FE 5G 256GB AND 8GB RAM Mobile Phone",
@@ -66,6 +68,8 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
+
       "brand": "samsung",
       "brandFa": "سامسونگ",
       "PhoneLable": "Samsung Galaxy A12 128GB AND 6GB RAM Mobile Phone",
@@ -97,6 +101,8 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
+
       "brand": "samsung",
       "brandFa": "سامسونگ",
       "PhoneLable": "Samsung Galaxy A03S 64GB AND 4GB RAM Mobile Phone",
@@ -129,6 +135,8 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
+
       "brand": "samsung",
       "brandFa": "سامسونگ",
       "PhoneLable": "Samsung Galaxy M32 128GB AND 4GB RAM Mobile Phone",
@@ -161,6 +169,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "samsung",
       "brandFa": "سامسونگ",
       "PhoneLable": "Samsung Galaxy A01Core 16GB AND 1GB RAM Mobile Phone",
@@ -193,6 +202,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "samsung",
       "brandFa": "سامسونگ",
       "PhoneLable": "Samsung Galaxy A72 256GB AND 8GB RAM Mobile Phone",
@@ -225,6 +235,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "samsung",
       "brandFa": "سامسونگ",
       "PhoneLable": "Samsung Galaxy S20 FE 256GB AND 8GB RAM Mobile Phone",
@@ -257,6 +268,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "apple",
       "brandFa": "اپل",
       "PhoneLable": "Apple iphone 13 Pro 128GB AND RAM 6GB Mobile Phone",
@@ -288,6 +300,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "apple",
       "brandFa": "اپل",
       "PhoneLable": "Apple iphone 13 Pro Max 256GB AND RAM 6GB Mobile Phone",
@@ -320,6 +333,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "apple",
       "brandFa": "اپل",
       "PhoneLable": "Apple iphone 12 128GB AND RAM 4GB Mobile Phone",
@@ -352,6 +366,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "apple",
       "brandFa": "اپل",
       "PhoneLable": "Apple iphone 12 Pro Max 512GB AND RAM 6GB Mobile Phone",
@@ -392,6 +407,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "apple",
       "brandFa": "اپل",
       "PhoneLable": "Apple iphone 7 128GB AND RAM 2GB Mobile Phone",
@@ -422,6 +438,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "apple",
       "brandFa": "اپل",
       "PhoneLable": "Apple iphone SE 2020 128GB AND RAM 3GB Mobile Phone",
@@ -454,6 +471,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "apple",
       "brandFa": "اپل",
       "PhoneLable": "Apple iphone 12 Pro 256GB AND RAM 6GB Mobile Phone",
@@ -485,6 +503,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "xiaomi",
       "brandFa": "شیائومی",
       "PhoneLable": "Xiaomi redmi 9T 128GB And 4GB RAM Mobile Phone",
@@ -517,6 +536,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "xiaomi",
       "brandFa": "شیائومی",
       "PhoneLable": "Xiaomi redmi 10 128GB And 4GB RAM Mobile Phone",
@@ -549,6 +569,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "xiaomi",
       "brandFa": "شیائومی",
       "PhoneLable": "Xiaomi Redmi Note 9T 128GB And 4GB RAM Mobile Phone",
@@ -581,6 +602,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "xiaomi",
       "brandFa": "شیائومی",
       "PhoneLable": "Xiaomi Redmi Note 10 Pro 128GB And 6GB RAM Mobile Phone",
@@ -613,6 +635,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "xiaomi",
       "brandFa": "شیائومی",
       "PhoneLable": "Xiaomi Redmi 9 128GB And 6GB RAM Mobile Phone",
@@ -646,6 +669,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "xiaomi",
       "brandFa": "شیائومی",
       "PhoneLable": "Xiaomi Redmi 11T 256GB And 8GB RAM AND 5G Mobile Phone",
@@ -678,6 +702,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "xiaomi",
       "brandFa": "شیائومی",
       "PhoneLable": "Xiaomi Redmi Note 9T 64GB And 4GB RAM Mobile Phone",
@@ -710,6 +735,7 @@
     },
     {
       "productName": "Mobile",
+      "productNameFa": "موبایل",
       "brand": "xiaomi",
       "brandFa": "شیائومی",
       "PhoneLable": "Xiaomi Redmi 9C 64GB And 3GB RAM Mobile Phone",
@@ -742,6 +768,7 @@
     },
     {
       "productName": "Speaker",
+      "productNameFa": "اسپیکر",
       "brand": "Kingstar",
       "brandFa": "کینگ استار",
       "PhoneLable": "Kingstar KBS335 Bluetooth Speaker",
@@ -775,6 +802,7 @@
     },
     {
       "productName": "Speaker",
+      "productNameFa": "اسپیکر",
       "brand": "TSCO",
       "brandFa": "تسکو",
       "PhoneLable": "TSCO TS 2066 Wireless Portable Speaker",
@@ -807,6 +835,7 @@
     },
     {
       "productName": "Speaker",
+      "productNameFa": "اسپیکر",
       "brand": "TSCO",
       "brandFa": "تسکو",
       "PhoneLable": "TSCO TS 1900 Speaker",
@@ -839,6 +868,7 @@
     },
     {
       "productName": "Speaker",
+      "productNameFa": "اسپیکر",
       "brand": "TSCO",
       "brandFa": "تسکو",
       "PhoneLable": "TSCO Desktop TS 2184 Bluetooth Speaker",
@@ -871,6 +901,7 @@
     },
     {
       "productName": "Speaker",
+      "productNameFa": "اسپیکر",
       "brand": "TSCO",
       "brandFa": "تسکو",
       "PhoneLable": "TSCO TS 2307 Wireless Portable Speaker",
@@ -902,6 +933,7 @@
     },
     {
       "productName": "Speaker",
+      "productNameFa": "اسپیکر",
       "product": "Speaker",
       "brand": "T&G",
       "brandFa": "تی اند جی",
@@ -934,6 +966,7 @@
     },
     {
       "productName": "Speaker",
+      "productNameFa": "اسپیکر",
       "brand": "XP Product",
       "brandFa": "ایکس پی پروداکت",
       "PhoneLable": "XP Product Desktop XP-Q08 Speaker",
@@ -965,6 +998,7 @@
     },
     {
       "productName": "Speaker",
+      "productNameFa": "اسپیکر",
       "brand": "JBL",
       "brandFa": "جی بی ال",
       "PhoneLable": "JBL Party Box 310 Bluetooth Speaker",
@@ -998,6 +1032,7 @@
     },
     {
       "productName": "Watch",
+      "productNameFa": "ساعت",
       "brand": "SmartWatch",
       "brandFa": "اسمارت واتچ",
       "PhoneLable": "SmartWatch Model Z26 Plus",
@@ -1029,6 +1064,7 @@
     },
     {
       "productName": "Watch",
+      "productNameFa": "ساعت",
       "brand": "SmartWatch",
       "brandFa": "اسمارت واتچ",
       "PhoneLable": "SmartWatch Model X22 Pro",
@@ -1060,6 +1096,7 @@
     },
     {
       "productName": "Watch",
+      "productNameFa": "ساعت",
       "brand": "SmartWatch",
       "brandFa": "اسمارت واتچ",
       "PhoneLable": "SmartWatch Series 7 Wo7max 45Mm",
