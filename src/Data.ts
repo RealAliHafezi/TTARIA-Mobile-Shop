@@ -287,7 +287,7 @@ const NavbarListItemsData: Array<NavbarListDataType> = [
       {
         filter: "smartWatch",
         title: "مچ بند و ساعت",
-        titleEn: "smart watch",
+        titleEn: "SmartWatch",
         item: null,
         itemEn: null,
       },

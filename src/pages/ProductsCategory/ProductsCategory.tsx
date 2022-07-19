@@ -9,17 +9,20 @@ import ProductsCategoryAside from "../../components/productsCategory/productsCat
 import ProductsCategorySection from "../../components/productsCategory/productsCategorySection/ProductsCategorySection";
 
 const ProductsCategory = () => {
+  // products
   let { ProductsCategory } = useParams();
   const [AllProducts, setAllProducts] = useState<null | Array<ProductsType>>(
     null
   );
   const [productsCategory, setProductsCategory] =
     useState<null | Array<ProductsType>>(null);
+  // title
+  window.document.title = `فروشگاه آریا | محصولات دسته بندی ${
+    AllProducts && AllProducts[0].brandFa
+  }`;
   //   data
   const getProducts = useAppSelector((state) => state.Products.products);
   // onClick on Filter Button in Aside Page
-  console.log(productsCategory);
-  console.log(AllProducts);
   const handleFilterProducts = (inventory?: boolean, discount?: boolean) => {
     // inventory
     inventory &&
@@ -79,11 +82,17 @@ const ProductsCategory = () => {
         <ProductsCategoryAside handleFilter={handleFilterProducts} />
       </aside>
       <article className="col-12 col-md-8 col-lg-9 position-relative px-3 py-4">
-        <h6 className="mb-3">
-          {productsCategory &&
-            `فروشگاه آریا / محصولات دسته بندی ${productsCategory[0].productName} ${productsCategory[0].brandFa}`}
-        </h6>
-        <ProductsCategorySection products={productsCategory} />
+        {productsCategory && productsCategory.length > 0 ? (
+          <>
+            <h6 className="mb-3">
+              فروشگاه آریا / محصولات دسته بندی{" "}
+              {productsCategory[0].productNameFa} {productsCategory[0].brandFa}
+            </h6>
+            <ProductsCategorySection products={productsCategory} />
+          </>
+        ) : (
+          <div>محصول مورد نظر یافت نشد</div>
+        )}
       </article>
     </main>
   );
