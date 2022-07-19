@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 // icon
-import { HiFilter } from "./../../../assets/icons/icons";
+import { HiFilter } from "../../../assets/icons/icons";
 // style
 import "./../../../styles/scss/products/ProductsAside.scss";
 // type
 interface propsType {
   handleFilter: (inventory?: boolean, discount?: boolean) => void;
 }
-const ProductsAside = ({ handleFilter }: propsType) => {
+const ProductsCategoryAside = ({ handleFilter }: propsType) => {
   const [InventoryFilter, setInventoryFilter] = useState<boolean>(false);
   const [DiscountFilter, setDiscountFilter] = useState<boolean>(false);
 
@@ -78,4 +78,4 @@ const ProductsAside = ({ handleFilter }: propsType) => {
   );
 };
 
-export default ProductsAside;
+export default ProductsCategoryAside;

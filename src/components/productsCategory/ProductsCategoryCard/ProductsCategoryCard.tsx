@@ -2,7 +2,7 @@ import React from "react";
 // style
 import "./../../../styles/scss/products/ProductsCard.scss";
 // type
-import { ProductsType } from "./../../../assets/Types";
+import { ProductsType } from "../../../assets/Types";
 interface propsType {
   product: ProductsType;
   key: number;
