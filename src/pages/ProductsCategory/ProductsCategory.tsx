@@ -7,6 +7,7 @@ import { ProductsType } from "../../assets/Types";
 // components
 import ProductsCategoryAside from "../../components/productsCategory/productsCategoryAside/ProductsCategoryAside";
 import ProductsCategorySection from "../../components/productsCategory/productsCategorySection/ProductsCategorySection";
+import ProductNotFound from "../../components/productNotFound/productNotFound";
 
 const ProductsCategory = () => {
   // products
@@ -17,9 +18,9 @@ const ProductsCategory = () => {
   const [productsCategory, setProductsCategory] =
     useState<null | Array<ProductsType>>(null);
   // title
-  window.document.title = `فروشگاه آریا | محصولات دسته بندی ${
-    AllProducts && AllProducts[0].brandFa
-  }`;
+  AllProducts && AllProducts.length > 0
+    ? (window.document.title = `فروشگاه آریا | محصولات دسته بندی ${AllProducts[0].brandFa}`)
+    : (window.document.title = "فروشگاه آریا | دسته بندی یافت نشد");
   //   data
   const getProducts = useAppSelector((state) => state.Products.products);
   // onClick on Filter Button in Aside Page
@@ -86,12 +87,13 @@ const ProductsCategory = () => {
           <>
             <h6 className="mb-3">
               فروشگاه آریا / محصولات دسته بندی{" "}
-              {productsCategory[0].productNameFa} {productsCategory[0].brandFa}
+              {productsCategory && productsCategory[0].productNameFa}{" "}
+              {productsCategory && productsCategory[0].brandFa}
             </h6>
             <ProductsCategorySection products={productsCategory} />
           </>
         ) : (
-          <div>محصول مورد نظر یافت نشد</div>
+          <ProductNotFound />
         )}
       </article>
     </main>

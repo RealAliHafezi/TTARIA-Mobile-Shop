@@ -11,7 +11,10 @@ const ProductsCategoryAside = ({ handleFilter }: propsType) => {
   const [InventoryFilter, setInventoryFilter] = useState<boolean>(false);
   const [DiscountFilter, setDiscountFilter] = useState<boolean>(false);
 
-  useEffect(() => {});
+  useEffect(() => {
+    setInventoryFilter(false);
+    setDiscountFilter(false);
+  }, [window.document.baseURI]);
   return (
     <div className="Products_Aside_Box position-sticky">
       <div className="products_FilterOptionBox border w-auto py-3 px-2 mb-3">
