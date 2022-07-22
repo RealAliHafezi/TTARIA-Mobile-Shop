@@ -54,18 +54,16 @@ const NavbarBottom = () => {
     >
       <ul className="Navbar_Bottom_List d-flex justify-content-start position-relative">
         {NavbarListItemsData.map((ListItemLable) => (
-          <Link to={`/`} className="LINK CURSOR">
-            <li
-              key={ListItemLable.labelEn}
-              className="Navbar_Bottom_ListItem"
-              onMouseOver={() =>
-                handleHoverOnNavbarListItems(ListItemLable.labelEn)
-              }
-              onMouseLeave={() => setOpenNavbarListItems(false)}
-            >
-              {ListItemLable.lable}
-            </li>
-          </Link>
+          <li
+            key={ListItemLable.labelEn}
+            className="Navbar_Bottom_ListItem CURSOR"
+            onMouseOver={() =>
+              handleHoverOnNavbarListItems(ListItemLable.labelEn)
+            }
+            onMouseLeave={() => setOpenNavbarListItems(false)}
+          >
+            {ListItemLable.lable}
+          </li>
         ))}
         <ul
           onMouseMove={() => setOpenNavbarListItems(true)}
