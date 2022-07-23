@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // icons
 import { RiArrowDownSLine, RiArrowUpSLine } from "../../../assets/icons/icons";
 // types
@@ -10,6 +11,7 @@ interface propsType {
 const NavbarBaseResponsiveDrawerDropdown2 = ({
   NavbarListData,
   NavbarListDataIndex,
+
 }: propsType) => {
   const [Arrow, setArrow] = useState<boolean>(false);
   return (
@@ -26,9 +28,19 @@ const NavbarBaseResponsiveDrawerDropdown2 = ({
           {Arrow ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
         </li>
       ) : (
-        <li key={NavbarListDataIndex} className="py-1 LINK CURSOR">
-          <span>{NavbarListData.title}</span>
-        </li>
+        <Link
+          to={`/productsCategories/${NavbarListData.titleEn}`}
+          className="LINK CURSOR"
+        >
+          <li
+            key={NavbarListDataIndex}
+            className="py-1"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <span>{NavbarListData.title}</span>
+          </li>
+        </Link>
       )}
       <ul
         className="collapse NavbarBaseResponsiveDreawer_Body_List2_ListItem_List justify-content-end flex-grow-1 p-0 m-0"
@@ -37,9 +49,20 @@ const NavbarBaseResponsiveDrawerDropdown2 = ({
         {NavbarListData.item?.map(
           (NavbarListItemDataItem, NavbarListItemDataItemIndex) => (
             <>
-              <li key={NavbarListItemDataItemIndex} className="CURSOR">
-                {NavbarListItemDataItem}
-              </li>
+              <li className="CURSOR hosein"></li>
+              <Link
+                key={NavbarListItemDataItemIndex}
+                to={`/productsCategories/${NavbarListData.titleEn}`}
+                className="LINK CURSOR"
+              >
+                <li
+                  className="py-1"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  {NavbarListItemDataItem}
+                </li>
+              </Link>
             </>
           )
         )}

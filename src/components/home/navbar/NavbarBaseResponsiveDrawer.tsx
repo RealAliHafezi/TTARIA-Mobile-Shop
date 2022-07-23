@@ -42,8 +42,14 @@ const NavbarBaseResponsiveDrawer = () => {
                 to={`/`}
                 className="nav-link LINK d-flex align-items-center"
               >
-                <AiOutlineHome className="ms-2" />
-                <span>خانه</span>
+                <div
+                  className="w-100"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <AiOutlineHome className="ms-2" />
+                  <span>خانه</span>
+                </div>
               </Link>
             </li>
             <li className="nav-item CURSOR pe-3 py-1">
@@ -51,8 +57,14 @@ const NavbarBaseResponsiveDrawer = () => {
                 to={`/`}
                 className="nav-link LINK d-flex align-items-center"
               >
-                <AiOutlinePhone className="ms-2" />
-                <span>ارتباط با ما</span>
+                <div
+                  className="w-100"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <AiOutlinePhone className="ms-2" />
+                  <span>ارتباط با ما</span>
+                </div>
               </Link>
             </li>
             <li className="nav-item CURSOR pe-3 py-1">
@@ -60,8 +72,14 @@ const NavbarBaseResponsiveDrawer = () => {
                 to={`/`}
                 className="nav-link LINK d-flex align-items-center"
               >
-                <SiAboutdotme className="ms-2" />
-                <span>درباره ما</span>
+                <div
+                  className="w-100"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <SiAboutdotme className="ms-2" />
+                  <span>درباره ما</span>
+                </div>
               </Link>
             </li>
           </ul>
