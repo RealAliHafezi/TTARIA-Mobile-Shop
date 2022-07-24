@@ -1,4 +1,4 @@
-import { GiRotaryPhone } from "react-icons/gi";
+import { GiRotaryPhone, GiSettingsKnobs } from "react-icons/gi";
 import { HiMail, HiFilter } from "react-icons/hi";
 import {
   MdOutlineSearch,
@@ -59,4 +59,5 @@ export {
   FaTelegramPlane,
   FaInstagram,
   HiFilter,
+  GiSettingsKnobs,
 };

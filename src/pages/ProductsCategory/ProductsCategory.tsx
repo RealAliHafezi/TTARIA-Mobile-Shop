@@ -2,12 +2,15 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useAppSelector } from "../../redux/hooks";
+// icons
+import { GiSettingsKnobs } from "./../../assets/icons/icons";
 // type
 import { ProductsType } from "../../assets/Types";
 // components
 import ProductsCategoryAside from "../../components/productsCategory/productsCategoryAside/ProductsCategoryAside";
 import ProductsCategorySection from "../../components/productsCategory/productsCategorySection/ProductsCategorySection";
 import ProductNotFound from "../../components/productNotFound/productNotFound";
+import ProductsCategoryAsideResponsive from "../../components/productsCategory/productsCategoryAsideResponsive/productsCategoryAsideResponsive";
 
 const ProductsCategory = () => {
   // products
@@ -17,6 +20,7 @@ const ProductsCategory = () => {
   );
   const [productsCategory, setProductsCategory] =
     useState<null | Array<ProductsType>>(null);
+  const [ResponsiveAside, setResponsiveAside] = useState<boolean>(false);
   // title
   AllProducts && AllProducts.length > 0
     ? (window.document.title = `فروشگاه آریا | محصولات دسته بندی ${AllProducts[0].brandFa}`)
@@ -82,6 +86,19 @@ const ProductsCategory = () => {
       <aside className="col-0 col-md-4 col-lg-3 d-none d-md-block position-relative px-3 py-2">
         <ProductsCategoryAside handleFilter={handleFilterProducts} />
       </aside>
+      {/* Responsive */}
+      <button
+        className="d-flex d-md-none btn btn-primary w-auto align-items-center me-3"
+        onClick={() => setResponsiveAside(true)}
+      >
+        <span className="ms-1">جستجوی پیشرفته</span>
+        <GiSettingsKnobs />
+      </button>
+      <ProductsCategoryAsideResponsive
+        filterSlide={ResponsiveAside}
+        setFilterSlide={setResponsiveAside}
+        handleFilter={handleFilterProducts}
+      />
       <article className="col-12 col-md-8 col-lg-9 position-relative px-3 py-4">
         {productsCategory && productsCategory.length > 0 ? (
           <>

@@ -1,0 +1,56 @@
+@import "./../Variables";
+.productsCategory_AsideResponsive {
+  top: 0;
+  transition: all 0.4s;
+  z-index: 999;
+
+  .productsCategory_AsideResponsive_CloseBtn {
+    left: 10px;
+    top: 10px;
+    font-size: 26px;
+    border: none;
+    background-color: transparent;
+  }
+  .productsCategory_AsideResponsive_title {
+    top: 15px;
+    right: 15px;
+    span {
+      font-size: 15px;
+    }
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}
+.productsCategory_AsideResponsive_FilterBox {
+  margin-top: 6rem;
+  border-radius: $border8;
+}
+.productsCategory_AsideResponsive_BtnBox {
+  border-radius: $border8;
+  button {
+    border-radius: $border8;
+    box-shadow: 0 1px 3px 0 $primary;
+    svg {
+      font-size: 22px;
+    }
+    &:active {
+      background-color: $primary !important;
+    }
+  }
+}
+.productsCategory_AsideResponsive_Instagram {
+  img {
+    border-radius: $border8;
+    transition: $transition02;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .productsCategory_AsideResponsive_Instagram {
+    img {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}
