@@ -72,9 +72,12 @@ const AmaingProductsCard = ({ product }: PropsType) => {
           className="position-absolute bg-primary"
         ></span>
       </div>
-      <button className="Home_AmazingProducts_Card_Footer_Btn d-block btn btn-primary w-100 p-1 m-0 mb-2">
+      <Link
+        to={`/products/${product.id}`}
+        className="Home_AmazingProducts_Card_Footer_Btn d-block btn btn-primary w-100 p-1 m-0 mb-2 LINK"
+      >
         دیدن جزئیات و خرید
-      </button>
+      </Link>
     </div>
   );
 };

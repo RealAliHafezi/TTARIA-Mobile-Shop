@@ -3,6 +3,7 @@ import React from "react";
 import "./../../../styles/scss/products/ProductsCard.scss";
 // type
 import { ProductsType } from "../../../assets/Types";
+import { Link } from "react-router-dom";
 interface propsType {
   product: ProductsType;
   key: number;
@@ -78,9 +79,9 @@ const ProductsCard = ({ product }: propsType) => {
           className="position-absolute bg-primary"
         ></span>
       </div>
-      <button className="Home_BrandsCard_Btn btn btn-primary w-100 m-0 mb-2">
+      <Link to={`/products/${product.id}`} className="Home_BrandsCard_Btn btn btn-primary w-100 m-0 mb-2 LINK">
         دیدن جزئیات و خرید
-      </button>
+      </Link>
     </div>
   );
 };

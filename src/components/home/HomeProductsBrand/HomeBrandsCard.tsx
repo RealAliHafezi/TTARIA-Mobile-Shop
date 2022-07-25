@@ -94,9 +94,12 @@ const HomeBrandsCard = ({ product }: PropsType) => {
           </span>
         )}
       </div>
-      <button className="Home_BrandsCard_Btn btn btn-primary w-100 m-0 mb-2">
+      <Link
+        to={`/products/${product.id}`}
+        className="Home_BrandsCard_Btn btn btn-primary w-100 m-0 mb-2 LINK"
+      >
         دیدن جزئیات و خرید
-      </button>
+      </Link>
     </section>
   );
 };
