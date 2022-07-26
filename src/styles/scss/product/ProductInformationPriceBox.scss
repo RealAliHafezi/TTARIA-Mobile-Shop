@@ -1,0 +1,61 @@
+@import "./../Variables";
+.Product_Information_PriceBox_ColorBox {
+  h6 {
+    font-size: 14px;
+  }
+  .Product_Information_PriceBox_Color {
+    border: 1px solid $border;
+    .Product_Information_PriceBox_ColorName {
+      font-size: 14px;
+    }
+    .Product_Information_PriceBox_Color_Color {
+      width: 25px;
+      height: 25px;
+    }
+    input {
+      box-shadow: none !important;
+      width: 0.75rem !important;
+      height: 0.75rem !important;
+      &:checked {
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+.Product_Information_PriceBox_Count {
+  h6 {
+    font-size: 14px;
+  }
+  .Product_Information_PriceBox_CountActionsBox {
+    border: 1px solid $border;
+    h6 {
+      font-size: 16px;
+    }
+    button {
+      background-color: transparent;
+      transition: $transition02;
+    }
+  }
+}
+.Product_Information_PriceBox_PriceBox {
+  .Product_Information_PriceBox_PriceBox_Offer {
+    span {
+      font-size: 13px;
+    }
+    .Product_Information_PriceBox_PriceBox_Offer_OffPrice {
+      text-decoration: line-through;
+      color: $textMiniTitle;
+    }
+  }
+  button {
+    border-radius: $border8 !important;
+    font-size: 14px;
+  }
+  .Product_Information_PriceBox_PriceBox_Instagram {
+    border-radius: $border8;
+    img {
+      border-radius: $border8;
+      object-fit: contain;
+    }
+  }
+}

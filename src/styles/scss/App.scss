@@ -42,7 +42,14 @@ a:visited,
 .LINK:visited {
   color: unset;
 }
-
+.btn {
+  box-shadow: none !important;
+  &:active,
+  &:visited,
+  &:focus {
+    box-shadow: none !important;
+  }
+}
 .nav-link {
   margin: 0 !important;
   padding: 0 !important;

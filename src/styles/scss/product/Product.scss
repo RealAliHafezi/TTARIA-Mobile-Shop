@@ -1,0 +1,8 @@
+@import "./../Variables";
+.Product {
+  margin-top: 75px;
+  .Product_Information {
+    border-color: $border !important;
+    border-radius: $border8 !important;
+  }
+}

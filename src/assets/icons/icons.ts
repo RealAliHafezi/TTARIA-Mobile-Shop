@@ -1,3 +1,4 @@
+import { BiCheckShield } from "react-icons/bi";
 import { GiRotaryPhone, GiSettingsKnobs } from "react-icons/gi";
 import { HiMail, HiFilter } from "react-icons/hi";
 import {
@@ -11,6 +12,7 @@ import {
   AiOutlineHome,
   AiOutlinePhone,
   AiFillHeart,
+  AiOutlineMinus,
 } from "react-icons/ai";
 import {
   RiShoppingBasket2Line,
@@ -27,10 +29,11 @@ import {
   FaUserCircle,
   FaTelegramPlane,
   FaInstagram,
+  FaFire,
 } from "react-icons/fa";
 import { SiAboutdotme } from "react-icons/si";
 import { TbDeviceMobile, TbDeviceWatch } from "react-icons/tb";
-import { BsSpeakerFill } from "react-icons/bs";
+import { BsSpeakerFill, BsPlusLg, BsInfoLg } from "react-icons/bs";
 export {
   GiRotaryPhone,
   HiMail,
@@ -60,4 +63,9 @@ export {
   FaInstagram,
   HiFilter,
   GiSettingsKnobs,
+  BiCheckShield,
+  FaFire,
+  BsPlusLg,
+  AiOutlineMinus,
+  BsInfoLg,
 };
