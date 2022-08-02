@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 // icon
-import { BsPlusLg, AiOutlineMinus, BsInfoLg } from "./../../assets/icons/icons";
+import { BsPlusLg, AiOutlineMinus, BsInfoLg } from "./../../../assets/icons/icons";
 // style
-import "./../../styles/scss/product/ProductInformationPriceBox.scss";
+import "./../../../styles/scss/product/ProductInformation/ProductInformationPriceBox.scss";
 // type
-import { ProductsType } from "./../../assets/Types";
+import { ProductsType } from "./../../../assets/Types";
 interface propsType {
   product: ProductsType;
 }

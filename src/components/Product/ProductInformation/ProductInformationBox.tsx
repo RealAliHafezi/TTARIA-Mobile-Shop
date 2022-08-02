@@ -1,14 +1,14 @@
 import React from "react";
 // style
-import "./../../styles/scss/product/ProductInformationBox.scss";
+import "./../../../styles/scss/product/ProductInformation/ProductInformationBox.scss";
 // icons
 import {
   BiCheckShield,
   FaFire,
   AiOutlineClose,
-} from "./../../assets/icons/icons";
+} from "../../../assets/icons/icons";
 // type
-import { ProductsType } from "./../../assets/Types";
+import { ProductsType } from "../../../assets/Types";
 interface propsType {
   product: ProductsType;
 }
@@ -71,12 +71,12 @@ const ProductInformationBox = ({ product }: propsType) => {
           )}
           {product.information.height &&
             product.information.width &&
-            product.information.length && (
+            product.information.typelength && (
               <li className="mb-2">
                 <span className="fw-bold">سایز</span> :{" "}
                 {product.information.height} <AiOutlineClose />{" "}
                 {product.information.width} <AiOutlineClose />{" "}
-                {product.information.length}
+                {product.information.typelength}
               </li>
             )}
           {product.information.sim.length > 0 && (

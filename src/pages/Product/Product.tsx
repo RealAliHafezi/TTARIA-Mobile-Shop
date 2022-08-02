@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useAppSelector } from "../../redux/hooks";
 // components
-import ProductInformationBox from "./../../components/Product/ProductInformationBox";
-import ProductInformationPriceBox from "../../components/Product/ProductInformationPriceBox";
-import ProductInformationGallery from "../../components/Product/ProductInformationGallery";
+import ProductInformationBox from "../../components/Product/ProductInformation/ProductInformationBox";
+import ProductInformationPriceBox from "../../components/Product/ProductInformation/ProductInformationPriceBox";
+import ProductInformationGallery from "../../components/Product/ProductInformation/ProductInformationGallery";
+import ProductInformationSendProduct from "../../components/Product/ProductInformation/ProductInformationServices";
 // style
 import { ProductWrapper } from "../../styles/js/Product.style";
 import "./../../styles/scss/product/Product.scss";
 // type
 import { ProductsType } from "./../../assets/Types";
-import ProductInformationSendProduct from "../../components/Product/ProductInformationServices";
 
 const Product = () => {
   const { Product } = useParams();

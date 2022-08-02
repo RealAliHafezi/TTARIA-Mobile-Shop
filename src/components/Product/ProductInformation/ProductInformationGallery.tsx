@@ -16,13 +16,13 @@ import "swiper/css/thumbs";
 import {
   RiArrowLeftSLine,
   RiArrowRightSLine,
-} from "./../../assets/icons/icons";
+} from "./../../../assets/icons/icons";
 // style
-import "./../../styles/scss/product/ProductInformationGallery.scss";
+import "./../../../styles/scss/product/ProductInformation/ProductInformationGallery.scss";
 // components
 import { ProductInformationImageZoom } from "./ProductInformationImageEffect";
 // type
-import { ProductsType } from "./../../assets/Types";
+import { ProductsType } from "./../../../assets/Types";
 interface propsType {
   product: ProductsType;
   resultVisibility: boolean;

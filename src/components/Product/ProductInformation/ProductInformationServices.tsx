@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 // style
-import "./../../styles/scss/product/ProductInformationServices.scss";
+import "./../../../styles/scss/product/ProductInformation/ProductInformationServices.scss";
 // Data
-import { FooterData } from "../../Data";
+import { FooterData } from "../../../Data";
 // type
 interface DataType {
   title: string;
