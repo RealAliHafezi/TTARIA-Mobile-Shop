@@ -38,8 +38,9 @@ a {
   color: unset;
   text-decoration: none;
 }
-a:visited,
-.LINK:visited {
+.LINK:visited,
+.LINK:focus,
+.LINK:active {
   color: unset;
 }
 .btn {

@@ -1,0 +1,13 @@
+@import "./../Variables";
+.Product_Information_Services {
+  .Product_Information_Services_Logo {
+    img {
+      object-fit: contain;
+    }
+  }
+  .Product_Information_Services_Label span {
+    font-size: 12px;
+    color: $textP;
+    font-weight: 500px;
+  }
+}

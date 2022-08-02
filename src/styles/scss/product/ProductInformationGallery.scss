@@ -1,0 +1,75 @@
+@import "./../Variables";
+.swiper-slide {
+  /* Center slide text vertically */
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+}
+.Product_Information_Gallery_mySwiper2 .swiper-slide img,
+.Product_Information_Gallery_mySwiper .swiper-slide img {
+  object-fit: fill;
+}
+.swiper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Product_Information_Gallery_mySwiper .swiper-slide,
+.Product_Information_Gallery_mySwiper2 .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.Product_Information_Gallery_mySwiper2 {
+  height: 75%;
+}
+.Product_Information_Gallery_mySwiper {
+  height: 20%;
+  .Product_Information_Gallery_mySwiper .swiper-button-lock {
+    display: block !important;
+  }
+  .Product_Information_Gallery_mySwiper .swiper-slide {
+    opacity: 0.4;
+  }
+  .Product_Information_Gallery_mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+  button {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    transition: $transition02;
+    &:disabled {
+      opacity: 0.2 !important;
+    }
+  }
+}
+
+.Product_Information_IMG {
+  z-index: 29;
+}
+// responsive
+@media only screen and (min-width: 768px) {
+  .Product_Information_IMG {
+    cursor: crosshair;
+  }
+  .img-zoom-lens {
+    display: none;
+  }
+  .Product_Information_Gallery_mySwiper2_SwiperSlide:hover .img-zoom-lens {
+    display: block;
+    position: absolute;
+    border: 1px solid gray;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 100px;
+    height: 100px;
+    cursor: crosshair;
+    z-index: 99;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .Product_Information_Gallery_mySwiper2 {
+    height: 100% !important;
+  }
+  .Product_Information_IMG {
+    cursor: grab;
+  }
+}

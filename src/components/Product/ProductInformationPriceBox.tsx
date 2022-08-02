@@ -132,26 +132,3 @@ const ProductInformationPriceBox = ({ product }: propsType) => {
 };
 
 export default ProductInformationPriceBox;
-
-{
-  /* <>
-<div className="Product_Information_PriceBox_PriceBox_Offer d-flex justify-content-center align-items-center">
-  <span className="bg-danger py-1 px-2 text-light rounded-pill ms-2">
-    <span className="fw-bold">
-      {""} %{product.information.off}
-    </span>
-    تخفیف
-  </span>
-  <span className="Product_Information_PriceBox_PriceBox_Offer_OffPrice">
-    {product.information.price?.toLocaleString()} تومان
-  </span>
-</div>
-<h1 className="fs-2 fw-bold text-black text-start mt-2">
-  {(
-    product.information.price -
-    (product.information.price * product.information.off) / 100
-  ).toLocaleString()}{" "}
-  تومان
-</h1>
-</> */
-}
