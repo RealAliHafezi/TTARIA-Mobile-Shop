@@ -62,7 +62,6 @@ export function ProductInformationImageZoom(imgID: string, resultID: string) {
     if (result) {
       result.style.backgroundPosition = "-" + x * cx + "px -" + y * cy + "px";
     }
-    console.log(x, y, cx, cy);
   }
   function getCursorPos(e: any) {
     var a,
