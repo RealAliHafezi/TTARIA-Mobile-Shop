@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "./redux/hooks";
 import { getFetchingProductsFun } from "./redux/productsSlice";
@@ -11,6 +11,7 @@ import Footer from "./sections/Footer/Footer";
 import Products from "./pages/Products/Products";
 import ProductsCategory from "./pages/ProductsCategory/ProductsCategory";
 import Product from "./pages/Product/Product";
+import Login from "./pages/Login/Login";
 function App() {
   const dispatch = useAppDispatch();
   const getProducts = useAppSelector((state) => state.Products.products);
@@ -20,7 +21,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
@@ -29,8 +30,9 @@ function App() {
             element={<ProductsCategory />}
           />
           <Route path="/products/:Product" element={<Product />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

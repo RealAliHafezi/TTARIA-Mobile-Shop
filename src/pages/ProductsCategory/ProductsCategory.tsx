@@ -11,6 +11,7 @@ import ProductsCategoryAside from "../../components/productsCategory/productsCat
 import ProductsCategorySection from "../../components/productsCategory/productsCategorySection/ProductsCategorySection";
 import ProductNotFound from "../../components/productNotFound/productNotFound";
 import ProductsCategoryAsideResponsive from "../../components/productsCategory/productsCategoryAsideResponsive/productsCategoryAsideResponsive";
+import PagesLayout from "../../sections/PagesLayout/PageLayout";
 
 const ProductsCategory = () => {
   // products
@@ -82,38 +83,40 @@ const ProductsCategory = () => {
       );
   }, [getProducts, ProductsCategory]);
   return (
-    <main id="Products" className="row gx-0 h-100">
-      <aside className="col-0 col-md-4 col-lg-3 d-none d-md-block position-relative px-3 py-2">
-        <ProductsCategoryAside handleFilter={handleFilterProducts} />
-      </aside>
-      {/* Responsive */}
-      <button
-        className="d-flex d-md-none btn btn-primary w-auto align-items-center me-3"
-        onClick={() => setResponsiveAside(true)}
-      >
-        <span className="ms-1">جستجوی پیشرفته</span>
-        <GiSettingsKnobs />
-      </button>
-      <ProductsCategoryAsideResponsive
-        filterSlide={ResponsiveAside}
-        setFilterSlide={setResponsiveAside}
-        handleFilter={handleFilterProducts}
-      />
-      <article className="col-12 col-md-8 col-lg-9 position-relative px-3 py-4">
-        {productsCategory && productsCategory.length > 0 ? (
-          <>
-            <h6 className="mb-3">
-              فروشگاه آریا / محصولات دسته بندی{" "}
-              {productsCategory && productsCategory[0].productNameFa}{" "}
-              {productsCategory && productsCategory[0].brandFa}
-            </h6>
-            <ProductsCategorySection products={productsCategory} />
-          </>
-        ) : (
-          <ProductNotFound />
-        )}
-      </article>
-    </main>
+    <PagesLayout>
+      <main id="Products" className="row gx-0 h-100">
+        <aside className="col-0 col-md-4 col-lg-3 d-none d-md-block position-relative px-3 py-2">
+          <ProductsCategoryAside handleFilter={handleFilterProducts} />
+        </aside>
+        {/* Responsive */}
+        <button
+          className="d-flex d-md-none btn btn-primary w-auto align-items-center me-3"
+          onClick={() => setResponsiveAside(true)}
+        >
+          <span className="ms-1">جستجوی پیشرفته</span>
+          <GiSettingsKnobs />
+        </button>
+        <ProductsCategoryAsideResponsive
+          filterSlide={ResponsiveAside}
+          setFilterSlide={setResponsiveAside}
+          handleFilter={handleFilterProducts}
+        />
+        <article className="col-12 col-md-8 col-lg-9 position-relative px-3 py-4">
+          {productsCategory && productsCategory.length > 0 ? (
+            <>
+              <h6 className="mb-3">
+                فروشگاه آریا / محصولات دسته بندی{" "}
+                {productsCategory && productsCategory[0].productNameFa}{" "}
+                {productsCategory && productsCategory[0].brandFa}
+              </h6>
+              <ProductsCategorySection products={productsCategory} />
+            </>
+          ) : (
+            <ProductNotFound />
+          )}
+        </article>
+      </main>
+    </PagesLayout>
   );
 };
 
