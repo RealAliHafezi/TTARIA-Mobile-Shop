@@ -3,7 +3,7 @@ import React from "react";
 import "./../../../styles/scss/product/ProductPanel/ProductPanelOptions.scss";
 import {
   AiOutlineClose,
-  MdOutlineArrowLeft
+  MdOutlineArrowLeft,
 } from "./../../../assets/icons/icons";
 // type
 import { ProductsType } from "../../../assets/Types";
@@ -67,18 +67,18 @@ const ProductPanelOptions = ({ product }: propsType) => {
           </div>
         </>
       )}
-      {product.information.height &&
-        product.information.length &&
-        product.information.width && (
+      {product.information.height > 0 &&
+        product.information.length > 0 &&
+        product.information.width > 0 && (
           <>
             <div className="Product_Panel_Options_Name col-12 col-md-3 mb-0 mb-md-3 ps-md-2">
               <span className="py-2 px-3 p-md-3">ابعاد</span>
             </div>
             <div className="Product_Panel_Options_Answer col-12 col-md-9 mb-3 pe-md-2">
               <span className="p-3">
-                {product.information.height} <AiOutlineClose />{" "}
-                {product.information.length} <AiOutlineClose />{" "}
-                {product.information.width} میلی متر
+                {product.information.height > 0} <AiOutlineClose />{" "}
+                {product.information.length > 0} <AiOutlineClose />{" "}
+                {product.information.width > 0} میلی متر
               </span>
             </div>
           </>

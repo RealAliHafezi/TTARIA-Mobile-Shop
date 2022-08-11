@@ -5,10 +5,10 @@ export interface ProductsInformationType {
   Inventory: boolean;
   date: string;
   type: string;
-  typelength: number | null;
-  width: number | null;
-  height: number | null;
-  weight: number | null;
+  length: number;
+  width: number;
+  height: number;
+  weight: number;
   sim: string;
   colors: Array<string> | [];
   colorsEn: Array<string> | [];
@@ -19,6 +19,7 @@ export interface ProductsInformationType {
 }
 export interface ProductsType {
   productName: string;
+  productNameFa: string;
   brand: `samsung` | `xiaomi` | `apple` | `Speaker` | `Watch`;
   brandFa: string;
   PhoneLable: string;

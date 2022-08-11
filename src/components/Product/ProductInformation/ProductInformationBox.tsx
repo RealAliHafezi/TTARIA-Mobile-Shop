@@ -69,14 +69,14 @@ const ProductInformationBox = ({ product }: propsType) => {
               {product.information.weight} گرم
             </li>
           )}
-          {product.information.height &&
-            product.information.width &&
-            product.information.typelength && (
+          {product.information.height > 0 &&
+            product.information.width > 0 &&
+            product.information.length > 0 && (
               <li className="mb-2">
                 <span className="fw-bold">سایز</span> :{" "}
-                {product.information.height} <AiOutlineClose />{" "}
-                {product.information.width} <AiOutlineClose />{" "}
-                {product.information.typelength}
+                {product.information.height > 0} <AiOutlineClose />{" "}
+                {product.information.width > 0} <AiOutlineClose />{" "}
+                {product.information.length > 0}
               </li>
             )}
           {product.information.sim.length > 0 && (

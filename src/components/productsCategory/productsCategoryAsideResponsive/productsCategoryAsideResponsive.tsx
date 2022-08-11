@@ -1,6 +1,6 @@
 import React, { SetStateAction, useEffect, useState } from "react";
 // style
-import { ProductsCategoryAsideResponsiveWrapper } from "../../../styles/js/productCategory";
+import { ProductsCategoryAsideResponsiveWrapper } from "../../../styles/js/productCategory.style";
 import "./../../../styles/scss/productsCategory/productsCategoryAsideResponsive.scss";
 // icon
 import {
