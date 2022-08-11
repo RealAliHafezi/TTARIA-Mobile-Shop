@@ -1,0 +1,18 @@
+@import "./../../Variables";
+.Product_Panel_Description_Paragraph {
+  font-size: 14px;
+  color: $textMiniTitle;
+  line-height: 2;
+  word-spacing: 1.2px;
+}
+.Product_Panel_Description_Title {
+  font-family: shabnam_bold;
+}
+.Product_Panel_Description_Picture {
+  object-fit: contain;
+}
+@media only screen and (max-width: 1060px) {
+  .Product_Panel_Description_Picture {
+    width: 100% !important;
+  }
+}

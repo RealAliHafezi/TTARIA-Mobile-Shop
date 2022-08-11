@@ -24,12 +24,12 @@ const Home = () => {
       <Intro />
       <HomeAmazingOffer />
       <ProductsBanner />
-      <ProductsBrand brand="samsung" icon={<TbDeviceMobile />} />
-      <ProductsBrand brand="apple" icon={<TbDeviceMobile />} />
-      <ProductsBrand brand="xiaomi" icon={<TbDeviceMobile />} />
-      <ProductsBrand brand="Speaker" icon={<BsSpeakerFill />} />
+      <ProductsBrand brand="samsung" icon={<TbDeviceMobile />} title="موبایل سامسونگ" />
+      <ProductsBrand brand="apple" icon={<TbDeviceMobile />} title="موبایل اپل" />
+      <ProductsBrand brand="xiaomi" icon={<TbDeviceMobile />} title="موبایل شیائومی" />
+      <ProductsBrand brand="Speaker" icon={<BsSpeakerFill />} title="اسپیکر" />
       <ProductsBetweenBanners numOne={0} numTwo={2} />
-      <ProductsBrand brand="Watch" icon={<TbDeviceWatch />} />
+      <ProductsBrand brand="Watch" icon={<TbDeviceWatch />} title="ساعت هوشمند" />
       <ProductsBetweenBanners numOne={2} numTwo={4} />
       <HomeLastReadable />
       <HomeReadable />

@@ -44,3 +44,10 @@
   opacity: $opacity;
   visibility: $visibility;
 }
+// product page
+@mixin ProductPanelOptions {
+  background-color: #f7f7f7;
+  font-size: 14px;
+  border-radius: 3px;
+  display: block;
+}

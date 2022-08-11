@@ -1,33 +1,49 @@
 @import "./../Variables";
 .Product {
   margin-top: 75px;
-  .Product_Information {
-    border-color: $border !important;
-    border-radius: $border8 !important;
-    .Product_Information_Gallery {
-      height: 75vh;
-    }
-    .Product_Information_Image_Result {
-      position: absolute;
-      transform: translateX(50%);
-      top: 50%;
-      border: 1px solid black;
-      z-index: 19;
-      transition: opacity 1s, width 0.5s, height 0.5s, right 0.5s,
-        visibility 0.5s;
-    }
-    .Product_Information_Services {
-      border-top: 1px solid $border;
-    }
+}
+// -------------------------------------------------------------
+.Product_Information {
+  border-color: $border !important;
+  border-radius: $border8 !important;
+  .Product_Information_Gallery {
+    height: 75vh;
+  }
+  .Product_Information_Image_Result {
+    position: absolute;
+    transform: translateX(50%);
+    top: 50%;
+    border: 1px solid black;
+    z-index: 19;
+    transition: opacity 1s, width 0.5s, height 0.5s, right 0.5s, visibility 0.5s;
+  }
+  .Product_Information_Services {
+    border-top: 1px solid $border;
   }
 }
-
+// -----------------------------------------------------------------------
+.Product_Panel {
+  border: 1px solid $border;
+  border-radius: $border8;
+  .MuiButtonBase-root {
+    font-size: 18px !important;
+    font-family: shabnam;
+    color: $primary;
+    opacity: 1;
+  }
+  .MuiButtonBase-root.Mui-selected {
+    color: rgba(0, 0, 0, 0.85);
+  }
+  .MuiTabs-indicator {
+    height: 3px;
+    background-color: $black;
+  }
+}
+// -----------------------------------------------------------------------
 @media only screen and (max-width: 768px) {
-  .Product {
-    .Product_Information {
-      .Product_Information_Gallery {
-        height: 50vh;
-      }
+  .Product_Information {
+    .Product_Information_Gallery {
+      height: 50vh;
     }
   }
 }

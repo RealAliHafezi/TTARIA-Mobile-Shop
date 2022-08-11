@@ -19,7 +19,7 @@ export interface ProductsInformationType {
 }
 export interface ProductsType {
   productName: string;
-  brand: string;
+  brand: `samsung` | `xiaomi` | `apple` | `Speaker` | `Watch`;
   brandFa: string;
   PhoneLable: string;
   PhoneLableFa: string;
@@ -72,4 +72,11 @@ interface FooterLinksType {
 export interface FooterTypes {
   services: Array<FooterServicesType>;
   links: Array<Array<FooterLinksType>>;
+}
+export interface ProductDescriptionType {
+  title: string | null;
+  desc1: string | null;
+  desc2: string | null;
+  pic1: string | null;
+  pic2: string | null;
 }

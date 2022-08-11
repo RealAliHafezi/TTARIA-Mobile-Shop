@@ -1,0 +1,24 @@
+@import "./../../Variables";
+@import "./../../Mixin";
+.Product_Panel_Options_Name,
+.Product_Panel_Options_Answer {
+  span {
+    @include ProductPanelOptions;
+  }
+}
+.Product_Panel_Options_TitleBox {
+  h3 {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.75);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Product_Panel_Options_Name {
+    span {
+      background-color: transparent !important;
+      border-radius: 0;
+      font-weight: bold;
+    }
+  }
+}

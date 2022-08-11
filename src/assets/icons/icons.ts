@@ -5,6 +5,7 @@ import {
   MdOutlineSearch,
   MdOutlineArrowBackIosNew,
   MdOutlineWatchLater,
+  MdOutlineArrowLeft,
 } from "react-icons/md";
 import {
   AiOutlineHeart,
@@ -31,6 +32,7 @@ import {
   FaInstagram,
   FaFire,
 } from "react-icons/fa";
+import { FiRepeat } from "react-icons/fi";
 import { SiAboutdotme } from "react-icons/si";
 import { TbDeviceMobile, TbDeviceWatch } from "react-icons/tb";
 import { BsSpeakerFill, BsPlusLg, BsInfoLg } from "react-icons/bs";
@@ -68,4 +70,6 @@ export {
   BsPlusLg,
   AiOutlineMinus,
   BsInfoLg,
+  MdOutlineArrowLeft,
+  FiRepeat,
 };
