@@ -1,0 +1,64 @@
+@import "./../Variables";
+.Login {
+  height: 100vh;
+  .Login_Card {
+    width: 480px;
+    min-width: 350px;
+    border-radius: $border8;
+    img {
+      object-fit: contain !important;
+      max-width: 180px;
+    }
+    .card-body {
+      .card-title {
+        border-bottom: 1px solid $border;
+        font-size: 20px !important;
+      }
+    }
+    form {
+      label {
+        font-size: 14px;
+      }
+      .form-control {
+        border-radius: 7px;
+        padding: 14px;
+        font-size: 15px;
+        border: 1.5px solid $border;
+        box-shadow: none;
+        &:focus,
+        &:active {
+          box-shadow: none;
+        }
+      }
+      .Login_Form_InValid {
+        box-shadow: -1px 1px 6px 2px rgba(255, 79, 79, 0.5);
+        border: 1.5px solid rgba(255, 79, 79);
+      }
+      .Login_Input_Icon {
+        position: absolute;
+        font-size: 28px;
+        left: 5px;
+        top: 30%;
+      }
+      // hide or show
+      .Login_Form_Error {
+        font-size: 13px;
+      }
+      .Login_Form_SubmitBtn {
+        border-radius: $border8;
+        span {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+// responsive
+@media only screen and (max-width: 450px) {
+  .Login {
+    .Login_Card {
+      width: 100%;
+      min-width: auto !important;
+    }
+  }
+}

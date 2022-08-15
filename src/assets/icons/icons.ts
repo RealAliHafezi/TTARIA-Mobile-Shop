@@ -31,6 +31,7 @@ import {
   FaTelegramPlane,
   FaInstagram,
   FaFire,
+  FaSignInAlt,
 } from "react-icons/fa";
 import { FiRepeat } from "react-icons/fi";
 import { SiAboutdotme } from "react-icons/si";
@@ -72,4 +73,5 @@ export {
   BsInfoLg,
   MdOutlineArrowLeft,
   FiRepeat,
+  FaSignInAlt,
 };
