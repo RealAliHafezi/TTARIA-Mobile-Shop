@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "./redux/hooks";
 import { getFetchingProductsFun } from "./redux/productsSlice";
 // style & icon
@@ -13,9 +13,21 @@ import Product from "./pages/Product/Product";
 import Login from "./pages/Login/Login";
 import LoginWE from "./pages/Login/LoginWE";
 import LoginAdmin from "./pages/Login/LoginAdmin";
+import Panel from "./pages/Panel/Panel";
+// types
+interface AccessForPanelPageType {
+  children: JSX.Element;
+}
 function App() {
   const dispatch = useAppDispatch();
   const getProducts = useAppSelector((state) => state.Products.products);
+  const AdminAccess: true | null = useAppSelector(
+    (state) => state.Access.AdminAccess
+  );
+  // access for panel page
+  const AccessForPanelPage = ({ children }: AccessForPanelPageType) => {
+    return AdminAccess === true ? children : <Navigate to={"/loginAdmin"} />;
+  };
   useEffect(() => {
     dispatch(getFetchingProductsFun());
   }, [getFetchingProductsFun]);
@@ -33,6 +45,14 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/loginWE" element={<LoginWE />} />
           <Route path="/loginAdmin" element={<LoginAdmin />} />
+          <Route
+            path="/panel"
+            element={
+              <AccessForPanelPage>
+                <Panel />
+              </AccessForPanelPage>
+            }
+          />
         </Routes>
       </div>
     </>
