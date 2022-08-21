@@ -12,6 +12,7 @@ import ProductsCategory from "./pages/ProductsCategory/ProductsCategory";
 import Product from "./pages/Product/Product";
 import Login from "./pages/Login/Login";
 import LoginWE from "./pages/Login/LoginWE";
+import LoginAdmin from "./pages/Login/LoginAdmin";
 function App() {
   const dispatch = useAppDispatch();
   const getProducts = useAppSelector((state) => state.Products.products);
@@ -31,6 +32,7 @@ function App() {
           <Route path="/products/:Product" element={<Product />} />
           <Route path="/login" element={<Login />} />
           <Route path="/loginWE" element={<LoginWE />} />
+          <Route path="/loginAdmin" element={<LoginAdmin />} />
         </Routes>
       </div>
     </>
