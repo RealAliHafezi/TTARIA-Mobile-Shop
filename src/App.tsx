@@ -13,7 +13,6 @@ import Product from "./pages/Product/Product";
 import Login from "./pages/Login/Login";
 import LoginWE from "./pages/Login/LoginWE";
 import LoginAdmin from "./pages/Login/LoginAdmin";
-import Panel from "./pages/Panel/Panel";
 // types
 interface AccessForPanelPageType {
   children: JSX.Element;
@@ -28,6 +27,7 @@ function App() {
   const AccessForPanelPage = ({ children }: AccessForPanelPageType) => {
     return AdminAccess === true ? children : <Navigate to={"/loginAdmin"} />;
   };
+  console.log(AdminAccess);
   useEffect(() => {
     dispatch(getFetchingProductsFun());
   }, [getFetchingProductsFun]);
@@ -45,14 +45,6 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/loginWE" element={<LoginWE />} />
           <Route path="/loginAdmin" element={<LoginAdmin />} />
-          <Route
-            path="/panel"
-            element={
-              <AccessForPanelPage>
-                <Panel />
-              </AccessForPanelPage>
-            }
-          />
         </Routes>
       </div>
     </>

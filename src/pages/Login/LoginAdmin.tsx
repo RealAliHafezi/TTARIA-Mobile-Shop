@@ -1,11 +1,15 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "./../../redux/hooks";
 import { handleChangeAdminAccess } from "../../redux/Access";
 // components
 import LoginBase from "../../sections/Login/LoginBase";
+// icons
+import { FaSignInAlt } from "./../../assets/icons/icons";
 const LoginAdmin = () => {
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const formik = useFormik({
     initialValues: {
@@ -14,6 +18,7 @@ const LoginAdmin = () => {
     },
     onSubmit: () => {
       dispatch(handleChangeAdminAccess());
+      navigate("/editPanel");
     },
     validationSchema: Yup.object({
       Email: Yup.string()
@@ -43,7 +48,6 @@ const LoginAdmin = () => {
           id="LoginAdminEmail"
           {...formik.getFieldProps("Email")}
         />
-        {/* <TbDeviceMobile className="Login_Input_Icon" /> */}
         {formik.touched.Email && formik.errors.Email && (
           <span className="Login_Form_Error mt-1 text-danger position-absolute">
             ایمیل شما برای ورود به سایت صحیح نیست
@@ -74,8 +78,8 @@ const LoginAdmin = () => {
           data-bs-toggle="modal"
           data-bs-target="#LoginPhoneNumberModal"
         >
-          {/* <FaSignInAlt /> */}
-          <span className="me-1">ارسال کد تایید</span>
+          <FaSignInAlt />
+          <span className="text-light me-1">ارسال کد تایید</span>
         </button>
       </>
     </LoginBase>

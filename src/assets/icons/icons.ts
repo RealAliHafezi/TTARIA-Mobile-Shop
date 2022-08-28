@@ -1,11 +1,17 @@
 import { BiCheckShield } from "react-icons/bi";
-import { GiRotaryPhone, GiSettingsKnobs } from "react-icons/gi";
+import {
+  GiRotaryPhone,
+  GiSettingsKnobs,
+  GiSightDisabled,
+} from "react-icons/gi";
 import { HiMail, HiFilter } from "react-icons/hi";
 import {
   MdOutlineSearch,
   MdOutlineArrowBackIosNew,
   MdOutlineWatchLater,
   MdOutlineArrowLeft,
+  MdInventory,
+  MdMore,
 } from "react-icons/md";
 import {
   AiOutlineHeart,
@@ -14,6 +20,7 @@ import {
   AiOutlinePhone,
   AiFillHeart,
   AiOutlineMinus,
+  AiFillEdit,
 } from "react-icons/ai";
 import {
   RiShoppingBasket2Line,
@@ -22,6 +29,7 @@ import {
   RiArrowLeftSLine,
   RiArrowRightSLine,
   RiBookMarkFill,
+  RiLockPasswordFill,
 } from "react-icons/ri";
 import {
   FaRegUserCircle,
@@ -32,6 +40,8 @@ import {
   FaInstagram,
   FaFire,
   FaSignInAlt,
+  FaSearchengin,
+  FaLayerGroup,
 } from "react-icons/fa";
 import { FiRepeat } from "react-icons/fi";
 import { SiAboutdotme } from "react-icons/si";
@@ -74,4 +84,11 @@ export {
   MdOutlineArrowLeft,
   FiRepeat,
   FaSignInAlt,
+  RiLockPasswordFill,
+  AiFillEdit,
+  MdInventory,
+  FaSearchengin,
+  GiSightDisabled,
+  FaLayerGroup,
+  MdMore,
 };

@@ -6,7 +6,7 @@ interface initialStateType {
 }
 let AdminAccessStorage = sessionStorage.getItem("admin");
 const initialState: initialStateType = {
-  AdminAccess: AdminAccessStorage ? JSON.parse(AdminAccessStorage) : null,
+  AdminAccess: AdminAccessStorage && JSON.parse(AdminAccessStorage),
 };
 const AccessSlice = createSlice({
   name: "AccessSlice",
@@ -14,6 +14,7 @@ const AccessSlice = createSlice({
   reducers: {
     handleChangeAdminAccess: (state: initialStateType) => {
       sessionStorage.setItem("admin", JSON.stringify(true));
+      state.AdminAccess = true;
       console.log(state.AdminAccess);
     },
   },
