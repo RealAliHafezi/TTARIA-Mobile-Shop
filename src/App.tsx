@@ -13,6 +13,7 @@ import LoginWE from "./pages/Login/LoginWE";
 import LoginAdmin from "./pages/Login/LoginAdmin";
 import AdminPanelHome from "./pages/AdminPanel/AdminPanelHome";
 import AdminPanelMobiles from "./pages/AdminPanel/AdminPanelMobiles";
+import AdminPanelWatch from "./pages/AdminPanel/AdminPanelWatches";
 // types
 interface AccessForPanelPageType {
   children: JSX.Element;
@@ -58,6 +59,14 @@ function App() {
             element={
               <AccessForPanelPage>
                 <AdminPanelMobiles />
+              </AccessForPanelPage>
+            }
+          />
+          <Route
+            path="/panel/watches"
+            element={
+              <AccessForPanelPage>
+                <AdminPanelWatch />
               </AccessForPanelPage>
             }
           />
