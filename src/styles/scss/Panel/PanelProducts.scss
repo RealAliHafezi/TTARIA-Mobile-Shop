@@ -1,0 +1,58 @@
+@import "./../Variables";
+.Panel_Products {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: $black;
+  .Panel_Product_Info {
+    h6 {
+      font-size: 13px;
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+  .Panel_Product_Info2 {
+    h6 {
+      font-size: 13px;
+      .d-block {
+        font-size: 16px;
+      }
+    }
+  }
+  img {
+    width: 75px;
+    height: 75px;
+  }
+  .Panel_Products_ShowMoreBtn {
+    background-color: orangered;
+  }
+  .Panel_Product_Btns {
+    button {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+
+// responsive
+@media only screen and (max-width: 768px) {
+  .Panel_Products {
+    li {
+      &:nth-child(odd) {
+        border-left: 1px solid orangered !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+  .Panel_Products {
+    li {
+      &:nth-child(odd) {
+        border-left: none !important;
+      }
+    }
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
