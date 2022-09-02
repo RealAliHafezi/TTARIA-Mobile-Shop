@@ -30,6 +30,7 @@ import {
   RiArrowRightSLine,
   RiBookMarkFill,
   RiLockPasswordFill,
+  RiDeleteBin5Fill,
 } from "react-icons/ri";
 import {
   FaRegUserCircle,
@@ -45,7 +46,7 @@ import {
 } from "react-icons/fa";
 import { FiRepeat } from "react-icons/fi";
 import { SiAboutdotme } from "react-icons/si";
-import { TbDeviceMobile, TbDeviceWatch } from "react-icons/tb";
+import { TbDeviceMobile, TbDeviceWatch,TbEdit } from "react-icons/tb";
 import { BsSpeakerFill, BsPlusLg, BsInfoLg } from "react-icons/bs";
 export {
   GiRotaryPhone,
@@ -91,4 +92,6 @@ export {
   GiSightDisabled,
   FaLayerGroup,
   MdMore,
+  RiDeleteBin5Fill,
+  TbEdit
 };

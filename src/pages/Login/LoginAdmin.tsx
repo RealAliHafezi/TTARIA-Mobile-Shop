@@ -18,7 +18,7 @@ const LoginAdmin = () => {
     },
     onSubmit: () => {
       dispatch(handleChangeAdminAccess());
-      navigate("/editPanel");
+      navigate("/panel/editPanel");
     },
     validationSchema: Yup.object({
       Email: Yup.string()
