@@ -1,0 +1,26 @@
+@import "./../Variables";
+.Panel_Sidebar {
+  background-color: $black;
+  border-right: 1px solid orangered;
+  .Panel_Sidebar_ListItem {
+    border-top-left-radius: $border8;
+    border-bottom-left-radius: $border8;
+    transition: all 0.3s;
+    &:hover {
+      background-color: orange !important;
+    }
+  }
+  .Panel_Sidebar_ListItem2 {
+    &:hover {
+      background-color: orangered !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .Panel_Sidebar {
+    .Panel_Sidebar_ListItem {
+      border-radius: 50px 10px 50px 10px !important;
+    }
+  }
+}
