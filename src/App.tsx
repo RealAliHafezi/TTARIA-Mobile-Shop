@@ -2,8 +2,6 @@ import React, { Fragment, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "./redux/hooks";
 import { getFetchingProductsFun } from "./redux/productsSlice";
-// style & icon
-import { TbDeviceMobile, HiMail } from "./assets/icons/icons";
 import "./styles/scss/App.scss";
 // components
 import Home from "./pages/Home/Home";
@@ -14,6 +12,7 @@ import Login from "./pages/Login/Login";
 import LoginWE from "./pages/Login/LoginWE";
 import LoginAdmin from "./pages/Login/LoginAdmin";
 import AdminPanelHome from "./pages/AdminPanel/AdminPanelHome";
+import AdminPanelMobiles from "./pages/AdminPanel/AdminPanelMobiles";
 // types
 interface AccessForPanelPageType {
   children: JSX.Element;
@@ -51,6 +50,14 @@ function App() {
             element={
               <AccessForPanelPage>
                 <AdminPanelHome />
+              </AccessForPanelPage>
+            }
+          />
+          <Route
+            path="/panel/mobiles"
+            element={
+              <AccessForPanelPage>
+                <AdminPanelMobiles />
               </AccessForPanelPage>
             }
           />
