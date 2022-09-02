@@ -5,7 +5,7 @@ import "./../../styles/scss/Panel/PanelHeader.scss";
 import { MdOutlineSearch } from "./../../assets/icons/icons";
 const PanelHeader = () => {
   return (
-    <header className="Panel_Header py-4 bg-dark col-10">
+    <header className="Panel_Header py-4 col-10">
       <div className="input-group w-50 mx-auto mb-3">
         <input
           type="text"

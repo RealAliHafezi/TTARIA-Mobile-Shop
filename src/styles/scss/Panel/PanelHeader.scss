@@ -1,6 +1,7 @@
 @import "./../Variables";
 .Panel_Header {
   border-bottom: 1px solid orangered;
+  background-color: $black;
   .input-group-text {
     border-top-left-radius: $border8 !important;
     border-bottom-left-radius: $border8 !important;
