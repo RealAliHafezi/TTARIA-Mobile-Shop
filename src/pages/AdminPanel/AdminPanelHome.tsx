@@ -1,10 +1,24 @@
+import { useState, useEffect } from "react";
+import { useAppSelector } from "../../redux/hooks";
 import React from "react";
-// component
-import Panel from "../../sections/Panel/Panel";
+// components
+import PanelSidebar from "./../../sections/Panel/PanelSidebar";
+import PanelHeader from "../../components/Panel/PanelHeader";
+// type
+import { ProductsType } from "../../assets/Types";
+import PanelProducts from "./../../sections/Panel/PanelProducts";
 const AdminPanelHome = () => {
-  return <Panel>
-    
-  </Panel>;
+  const [Products, setProducts] = useState<[] | Array<ProductsType>>([]);
+  const AllProducts = useAppSelector((state) => state.Products.products);
+  useEffect(() => {
+    AllProducts && AllProducts.length > 0 && setProducts(AllProducts);
+  }, []);
+  return (
+    <article className="Panel row g-0">
+      <PanelHeader />
+      <PanelProducts products={Products} />
+      <PanelSidebar />
+    </article>
+  );
 };
-
 export default AdminPanelHome;
