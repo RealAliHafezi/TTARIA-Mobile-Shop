@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface ProductsInformationType {
   memory: string;
   memoryType: string;
@@ -80,4 +82,15 @@ export interface ProductDescriptionType {
   desc2: string | null;
   pic1: string | null;
   pic2: string | null;
+}
+
+// panel
+interface PanelSidebarItemsBoxType {
+  txt: string;
+  link: string;
+  icon: any;
+}
+export interface PanelSidebarItemsType {
+  BaseItems: Array<PanelSidebarItemsBoxType>;
+  GroupItems: Array<PanelSidebarItemsBoxType>;
 }

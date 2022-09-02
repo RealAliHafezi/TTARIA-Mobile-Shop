@@ -13,6 +13,7 @@ import Product from "./pages/Product/Product";
 import Login from "./pages/Login/Login";
 import LoginWE from "./pages/Login/LoginWE";
 import LoginAdmin from "./pages/Login/LoginAdmin";
+import AdminPanelHome from "./pages/AdminPanel/AdminPanelHome";
 // types
 interface AccessForPanelPageType {
   children: JSX.Element;
@@ -45,6 +46,14 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/loginWE" element={<LoginWE />} />
           <Route path="/loginAdmin" element={<LoginAdmin />} />
+          <Route
+            path="/panel"
+            element={
+              <AccessForPanelPage>
+                <AdminPanelHome />
+              </AccessForPanelPage>
+            }
+          />
         </Routes>
       </div>
     </>

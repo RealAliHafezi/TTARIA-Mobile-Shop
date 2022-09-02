@@ -1,9 +1,22 @@
+// icon
+import {
+  TbDeviceMobile,
+  TbDeviceWatch,
+  BsSpeakerFill,
+  MdInventory,
+  FaSearchengin,
+  GiSightDisabled,
+  AiOutlineHome,
+  BsPlusLg,
+} from "./assets/icons/icons";
+//
 import {
   NavbarListDataType,
   HomeLastReadableType,
   HomeRedableType,
   FooterTypes,
   ProductDescriptionType,
+  PanelSidebarItemsType,
 } from "./assets/Types";
 const NavbarListItemsData: Array<NavbarListDataType> = [
   {
@@ -725,6 +738,52 @@ const ProductDescriptionData: Array<ProductDescriptionType> = [
     pic2: null,
   },
 ];
+const PanelSidebarItems: PanelSidebarItemsType = {
+  BaseItems: [
+    {
+      txt: "خانه",
+      link: "",
+      icon: AiOutlineHome,
+    },
+    {
+      txt: "محصول",
+      link: "addProduct",
+      icon: BsPlusLg,
+    },
+    {
+      txt: "ناموجود",
+      link: "unAvailable",
+      icon: MdInventory,
+    },
+    {
+      txt: "غیرفعال",
+      link: "disable",
+      icon: GiSightDisabled,
+    },
+    {
+      txt: "پیشرفته",
+      link: "advanceSearch",
+      icon: FaSearchengin,
+    },
+  ],
+  GroupItems: [
+    {
+      txt: "موبایل",
+      link: "mobiles",
+      icon: TbDeviceMobile,
+    },
+    {
+      txt: "ساعت",
+      link: "watches",
+      icon: TbDeviceWatch,
+    },
+    {
+      txt: "اسپیکر",
+      link: "speakers",
+      icon: BsSpeakerFill,
+    },
+  ],
+};
 export {
   NavbarListItemsData,
   ProductsBannersImages,
@@ -733,4 +792,5 @@ export {
   HomeRedableData,
   FooterData,
   ProductDescriptionData,
+  PanelSidebarItems,
 };
