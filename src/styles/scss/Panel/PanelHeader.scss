@@ -1,0 +1,13 @@
+@import "./../Variables";
+.Panel_Header {
+  border-bottom: 1px solid orangered;
+  .input-group-text {
+    border-top-left-radius: $border8 !important;
+    border-bottom-left-radius: $border8 !important;
+    background-color: orange;
+  }
+  .form-control {
+    border-top-right-radius: $border8 !important;
+    border-bottom-right-radius: $border8 !important;
+  }
+}
