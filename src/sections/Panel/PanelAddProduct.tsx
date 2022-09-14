@@ -60,9 +60,9 @@ const PanelAddProduct = () => {
           <input
             type="text"
             className="form-control"
-            name="PhoneLable"
             placeholder="TSCO Desktop TS 2184 Bluetooth Speaker 📡"
             dir="ltr"
+            {...formik.getFieldProps("PhoneLable")}
             // onFocus={(e)=> e.}
             // onBlur={()=> }
           />
@@ -74,8 +74,8 @@ const PanelAddProduct = () => {
           <input
             type="text"
             className="form-control"
-            name="PhoneLableFa"
             placeholder="اسپیکر بلوتوثی رومیزی تسکو مدل TS 2184"
+            {...formik.getFieldProps("PhoneLableFa")}
           />
         </div>
         <div className="mb-3 col-6 ps-2">
@@ -85,9 +85,9 @@ const PanelAddProduct = () => {
           <input
             type="text"
             className="form-control"
-            name="brand"
             placeholder="TSCO 📡"
             dir="ltr"
+            {...formik.getFieldProps("brand")}
           />
         </div>
         <div className="mb-3 col-6 pe-2">
@@ -97,8 +97,8 @@ const PanelAddProduct = () => {
           <input
             type="text"
             className="form-control"
-            name="brandFa"
             placeholder="تسکو"
+            {...formik.getFieldProps("brandFa")}
           />
         </div>
         <div className="mb-3 col-3 ps-4">
@@ -118,9 +118,9 @@ const PanelAddProduct = () => {
           <input
             type="text"
             className="form-control"
-            name="ID"
             placeholder="این بخش بعد از وارد کردن عنوان محصول ، خودکار وارد میشود"
             disabled={AutoIDCheckBox}
+            {...formik.getFieldProps("id")}
           />
           <div className="form-check form-switch mt-2">
             <label
@@ -141,7 +141,16 @@ const PanelAddProduct = () => {
         </div>
         <hr className="bg-warning" />
         <h4 className="text-center mb-3">جزئیات</h4>
-        <PanelAddProductsMobile />
+        <PanelAddProductsMobile formik={formik} />
+        <button
+          className="btn btn-success"
+          onClick={(e) => {
+            e.preventDefault();
+            formik.handleSubmit();
+          }}
+        >
+          ثبت
+        </button>
       </form>
     </section>
   );

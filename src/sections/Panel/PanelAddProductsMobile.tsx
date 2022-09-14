@@ -1,9 +1,16 @@
-import React from "react";
-
-const PanelAddProductsMobile = () => {
+import React, { useState, useRef } from "react";
+// components
+import Panel_AddProduct_Color from "../../components/Panel/Panel_AddProduct_Color";
+// type
+interface propsType {
+  formik: any;
+}
+const PanelAddProductsMobile = ({ formik }: propsType) => {
+  // for colors
+  const [colors, setColors] = useState<Array<string>>([]);
   return (
     <>
-      <div className="mb-3 col-6 pe-4">
+      <div className="mb-3 col-3 pe-4">
         <label htmlFor="Panel_Add_memory" className="form-label">
           مموری
         </label>
@@ -11,11 +18,11 @@ const PanelAddProductsMobile = () => {
           id="Panel_Add_memory"
           type="text"
           className="form-control"
-          name="memory"
           placeholder="مثلا 16 گیگابایت 💾"
+          {...formik.getFieldProps("information.memory")}
         />
       </div>
-      <div className="mb-3 col-6 pe-4">
+      <div className="mb-3 col-3 pe-4">
         <label htmlFor="Panel_Add_memoryType" className="form-label">
           نوع مموری
         </label>
@@ -23,11 +30,11 @@ const PanelAddProductsMobile = () => {
           id="Panel_Add_memoryType"
           type="text"
           className="form-control"
-          name="memoryType"
           placeholder="UFC 3.1 مثلا 🖫"
+          {...formik.getFieldProps("information.memoryType")}
         />
       </div>
-      <div className="mb-3 col-6 pe-4">
+      <div className="mb-3 col-3 pe-4">
         <label htmlFor="Panel_Add_price" className="form-label">
           قیمت
         </label>
@@ -35,8 +42,8 @@ const PanelAddProductsMobile = () => {
           id="Panel_Add_price"
           type="number"
           className="form-control"
-          name="price"
           placeholder="مثلا 2600000 💲"
+          {...formik.getFieldProps("information.price")}
         />
       </div>
       <div className="mb-3 col-3 pe-4">
@@ -60,8 +67,8 @@ const PanelAddProductsMobile = () => {
           placeholder="مثلا 14 سپتامبر 2021 📆"
         />
       </div>
-      <div className="mb-3 col-6 pe-4">
-        <label htmlFor="Panel_Add_date" className="form-label">
+      <div className="mb-3 col-3 pe-4">
+        <label htmlFor="Panel_Add_type" className="form-label">
           نوع
         </label>
         <input
@@ -85,8 +92,8 @@ const PanelAddProductsMobile = () => {
         />
       </div>
       <div className="mb-3 col-3 pe-4">
-        <label htmlFor="Panel_Add_date" className="form-label">
-          طول
+        <label htmlFor="Panel_Add_width" className="form-label">
+          عرض
         </label>
         <input
           type="number"
@@ -97,16 +104,94 @@ const PanelAddProductsMobile = () => {
         />
       </div>
       <div className="mb-3 col-3 pe-4">
-        <label htmlFor="Panel_Add_date" className="form-label">
-        
+        <label htmlFor="Panel_Add_height" className="form-label">
+          ضخامت
         </label>
         <input
           type="number"
-          id="Panel_Add_width"
+          id="Panel_Add_height"
           className="form-control"
-          name="width"
-          placeholder="مثلا 168"
+          name="height"
+          placeholder="مثلا 8.9"
         />
+      </div>
+      <div className="mb-3 col-3 pe-4">
+        <label htmlFor="Panel_Add_length" className="form-label">
+          طول
+        </label>
+        <input
+          type="number"
+          id="Panel_Add_length"
+          className="form-control"
+          name="length"
+          placeholder="مثلا 175"
+        />
+      </div>
+      <div className="mb-3 col-3 pe-4">
+        <label htmlFor="Panel_Add_weight" className="form-label">
+          وزن
+        </label>
+        <input
+          type="number"
+          id="Panel_Add_weight"
+          className="form-control"
+          name="weight"
+          placeholder="مثلا 203"
+        />
+      </div>
+      <div className="mb-3 col-3 pe-4">
+        <label htmlFor="formGroupExampleInput" className="form-label">
+          تخفیف
+        </label>
+        <select className="form-select" aria-label="Default select example">
+          <option value="1">ندارد</option>
+          <option value="2">دارد</option>
+        </select>
+      </div>
+      {/* 
+      if have a discount
+      */}
+
+      <div className="mb-3 col-3 pe-4">
+        <label htmlFor="Panel_Add_off" className="form-label">
+          میزان تخفیف
+        </label>
+        <input
+          type="number"
+          id="Panel_Add_off"
+          className="form-control"
+          name="off"
+          placeholder="مثلا 8"
+          disabled
+        />
+      </div>
+      <Panel_AddProduct_Color colors={colors} setColors={setColors} />
+      <div className="mb-3 col-6 offset-3 pe-4">
+        <label htmlFor="Panel_Add_basePic" className="form-label">
+          عکس اصلی
+        </label>
+        <input
+          type="text"
+          id="Panel_Add_basePic"
+          className="form-control"
+          name="banner"
+          placeholder="لینک عکس مورد نظر 🖾"
+        />
+      </div>
+      <div className="mb-3 col-6 pe-4">
+        <label htmlFor="Panel_Add_basePic" className="form-label">
+          عکس دیگر
+        </label>
+        <input
+          type="text"
+          id="Panel_Add_basePic"
+          className="form-control"
+          name="banner"
+          placeholder="لینک عکس مورد نظر 🖾"
+        />
+      </div>
+      <div className="mb-3 pe-4">
+        <button className="btn btn-warning">عکس دیگر</button>
       </div>
     </>
   );
