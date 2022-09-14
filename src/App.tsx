@@ -14,6 +14,9 @@ import LoginAdmin from "./pages/Login/LoginAdmin";
 import AdminPanelHome from "./pages/AdminPanel/AdminPanelHome";
 import AdminPanelMobiles from "./pages/AdminPanel/AdminPanelMobiles";
 import AdminPanelWatch from "./pages/AdminPanel/AdminPanelWatches";
+import AdminPanelSpeakers from "./pages/AdminPanel/AdminPanelSpeakers";
+import AdminPanelUnAvailable from "./pages/AdminPanel/AdminPanelUnAvailable";
+import AdminPanelAddProduct from "./pages/AdminPanel/AdminPanelAddProduct"
 // types
 interface AccessForPanelPageType {
   children: JSX.Element;
@@ -67,6 +70,30 @@ function App() {
             element={
               <AccessForPanelPage>
                 <AdminPanelWatch />
+              </AccessForPanelPage>
+            }
+          />
+          <Route
+            path="/panel/speakers"
+            element={
+              <AccessForPanelPage>
+                <AdminPanelSpeakers />
+              </AccessForPanelPage>
+            }
+          />
+          <Route
+            path="/panel/unAvailable"
+            element={
+              <AccessForPanelPage>
+                <AdminPanelUnAvailable />
+              </AccessForPanelPage>
+            }
+          />
+          <Route
+            path="/panel/addProduct"
+            element={
+              <AccessForPanelPage>
+                <AdminPanelAddProduct />
               </AccessForPanelPage>
             }
           />

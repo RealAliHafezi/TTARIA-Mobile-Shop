@@ -2,6 +2,7 @@
 .Panel_Products {
   color: rgba(255, 255, 255, 0.8);
   background-color: $black;
+  min-height: calc(100vh - 105px);
   .Panel_Product_Info {
     h6 {
       font-size: 13px;
