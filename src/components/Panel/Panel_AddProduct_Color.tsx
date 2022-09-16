@@ -1,54 +1,23 @@
 import React, { useState, useRef } from "react";
 import { SketchPicker } from "react-color";
-import Modal from "../Modal";
-// type
-interface propsType {
-  colors: Array<string>;
-  setColors: React.Dispatch<React.SetStateAction<Array<string>>>;
-}
-const Panel_AddProduct_Color = ({ colors, setColors }: propsType) => {
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import {
+  handleSaveColor,
+  handleDeleteColor,
+  handleResetColors,
+} from "../../redux/Panel_AddproductSlice";
+const Panel_AddProduct_Color = () => {
   const [color, setColor] = useState<string>("#ff0000");
   const productColorList = useRef<HTMLDivElement>(null);
+  const dispatch = useAppDispatch();
+  const colors = useAppSelector((state) => state.AddProductState.colors);
   //   create and save color box
   const handleSaveColors = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const handleCreateColor = () => {
-      // creating color box
-      setColors([...colors, `${color}`]);
-      setColor("#ff0000");
-    };
-    // if a color repeat , do not create that
-    const have = colors.some((color2) => color === color2);
-    !have ? (
-      colors.length >= 5 ? (
-        <Modal
-          title="اخطار"
-          bodyTxt="تعداد رنگ ها نباید بیشتر از 5 عذذ باشد"
-          id="RepeatColor"
-          btnTxt="خارح شو"
-          linkAddress=""
-          linkTxt=""
-        />
-      ) : (
-        handleCreateColor()
-      )
-    ) : (
-      <Modal
-        title="اخطار"
-        bodyTxt="این رنگ قبلا وارد شده است"
-        id="RepeatColor"
-        btnTxt="خارح شو"
-        linkAddress=""
-        linkTxt=""
-      />
-    );
+    dispatch(handleSaveColor(color));
   };
   // finish
   //   deleting color box
-  const handleDeleteColor = (boxColor: string) => {
-    const filteredColors = colors.filter((color3) => color3 !== boxColor);
-    setColors(filteredColors);
-  };
   return (
     <div className="mb-3 col-6 pe-4">
       <label htmlFor="Panel_Add_colors" className="form-label">
@@ -87,7 +56,7 @@ const Panel_AddProduct_Color = ({ colors, setColors }: propsType) => {
                 key={index}
                 className="Panel_Add_createColorCircle rounded-circle border border-warning m-2"
                 style={{ backgroundColor: `${color2}` }}
-                onClick={() => handleDeleteColor(color2)}
+                onClick={() => dispatch(handleDeleteColor(color2))}
               ></div>
             ))}
           </div>
@@ -95,7 +64,7 @@ const Panel_AddProduct_Color = ({ colors, setColors }: propsType) => {
             <button
               className="btn btn-sm btn-danger mt-3 me-3"
               onClick={(e) => {
-                setColors([]);
+                dispatch(handleResetColors());
                 e.preventDefault();
               }}
             >

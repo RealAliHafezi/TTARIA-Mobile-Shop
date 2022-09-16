@@ -9,7 +9,6 @@ interface propsType {
 const PanelAddProductsMobile = ({ formik }: propsType) => {
   // for colors
   const [colors, setColors] = useState<Array<string>>([]);
-  const [pictures, setPictures] = useState<Array<string>>([]);
   return (
     <>
       <div className="mb-3 col-3 pe-4">
@@ -167,8 +166,8 @@ const PanelAddProductsMobile = ({ formik }: propsType) => {
           disabled
         />
       </div>
-      <Panel_AddProduct_Color colors={colors} setColors={setColors} />
-      <Panel_AddProduct_Picture pictures={pictures} setPictures={setPictures} />
+      <Panel_AddProduct_Color />
+      <Panel_AddProduct_Picture />
     </>
   );
 };
