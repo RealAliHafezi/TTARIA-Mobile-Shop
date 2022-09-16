@@ -1,4 +1,4 @@
-import { BiCheckShield } from "react-icons/bi";
+import { BiCheckShield, BiLoader } from "react-icons/bi";
 import {
   GiRotaryPhone,
   GiSettingsKnobs,
@@ -46,7 +46,7 @@ import {
 } from "react-icons/fa";
 import { FiRepeat } from "react-icons/fi";
 import { SiAboutdotme } from "react-icons/si";
-import { TbDeviceMobile, TbDeviceWatch,TbEdit } from "react-icons/tb";
+import { TbDeviceMobile, TbDeviceWatch, TbEdit } from "react-icons/tb";
 import { BsSpeakerFill, BsPlusLg, BsInfoLg } from "react-icons/bs";
 export {
   GiRotaryPhone,
@@ -93,5 +93,6 @@ export {
   FaLayerGroup,
   MdMore,
   RiDeleteBin5Fill,
-  TbEdit
+  TbEdit,
+  BiLoader,
 };

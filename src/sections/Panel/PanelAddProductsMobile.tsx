@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 // components
 import Panel_AddProduct_Color from "../../components/Panel/Panel_AddProduct_Color";
+import Panel_AddProduct_Picture from "../../components/Panel/Panel_AddProduct_Picture";
 // type
 interface propsType {
   formik: any;
@@ -8,6 +9,7 @@ interface propsType {
 const PanelAddProductsMobile = ({ formik }: propsType) => {
   // for colors
   const [colors, setColors] = useState<Array<string>>([]);
+  const [pictures, setPictures] = useState<Array<string>>([]);
   return (
     <>
       <div className="mb-3 col-3 pe-4">
@@ -166,33 +168,7 @@ const PanelAddProductsMobile = ({ formik }: propsType) => {
         />
       </div>
       <Panel_AddProduct_Color colors={colors} setColors={setColors} />
-      <div className="mb-3 col-6 offset-3 pe-4">
-        <label htmlFor="Panel_Add_basePic" className="form-label">
-          عکس اصلی
-        </label>
-        <input
-          type="text"
-          id="Panel_Add_basePic"
-          className="form-control"
-          name="banner"
-          placeholder="لینک عکس مورد نظر 🖾"
-        />
-      </div>
-      <div className="mb-3 col-6 pe-4">
-        <label htmlFor="Panel_Add_basePic" className="form-label">
-          عکس دیگر
-        </label>
-        <input
-          type="text"
-          id="Panel_Add_basePic"
-          className="form-control"
-          name="banner"
-          placeholder="لینک عکس مورد نظر 🖾"
-        />
-      </div>
-      <div className="mb-3 pe-4">
-        <button className="btn btn-warning">عکس دیگر</button>
-      </div>
+      <Panel_AddProduct_Picture pictures={pictures} setPictures={setPictures} />
     </>
   );
 };

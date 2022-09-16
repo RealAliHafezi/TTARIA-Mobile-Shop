@@ -95,7 +95,7 @@ const Panel_AddProduct_Color = ({ colors, setColors }: propsType) => {
             <button
               className="btn btn-sm btn-danger mt-3 me-3"
               onClick={(e) => {
-                setColors([])
+                setColors([]);
                 e.preventDefault();
               }}
             >
