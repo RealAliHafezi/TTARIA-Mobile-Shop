@@ -19,7 +19,7 @@ const Panel_AddProduct_Color = () => {
   // finish
   //   deleting color box
   return (
-    <div className="mb-3 col-6 pe-4">
+    <div className="mb-3 col-12 col-md-6 pe-4">
       <label htmlFor="Panel_Add_colors" className="form-label">
         رنگ ها
       </label>

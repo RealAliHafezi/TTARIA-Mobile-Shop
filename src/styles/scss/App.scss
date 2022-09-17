@@ -60,7 +60,13 @@ iframe {
   visibility: hidden;
   opacity: none;
 }
-
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 // my classes
 .CURSOR {
   cursor: pointer !important;

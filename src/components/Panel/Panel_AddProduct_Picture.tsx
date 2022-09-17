@@ -18,7 +18,7 @@ const Panel_AddProduct_Picture = () => {
   };
   return (
     <div className="Panel_AddProduct_Picture d-flex flex-column flex-wrap">
-      <div className="mb-3 col-9 pe-4" ref={productPicturesList}>
+      <div className="mb-3 col-12 col-md-9 pe-md-4" ref={productPicturesList}>
         <label htmlFor="Panel_Add_basePic" className="form-label">
           عکس اصلی
         </label>

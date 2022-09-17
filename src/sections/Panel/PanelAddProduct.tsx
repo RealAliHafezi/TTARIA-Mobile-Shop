@@ -1,33 +1,40 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
+import { useAppSelector } from "../../redux/hooks";
+// components
+import PanelAddProductsMobile from "./PanelAddProductsMobile";
 // style
 import "./../../styles/scss/Panel/PanelAddProducts.scss";
-import PanelAddProductsMobile from "./PanelAddProductsMobile";
 // type
-import { ProductsType } from "../../assets/Types";
+import { ProductsType } from "./../../assets/Types";
+
 const PanelAddProduct = () => {
   const [AutoIDCheckBox, setAutoID] = useState<boolean>(true);
-  const formik = useFormik({
+  const PhoneLabelRefForID = useRef<HTMLInputElement>(null);
+  // is in initialValues , but there is another page , for that , i write that in redux-toolkit , and give from redux-toolkit-state
+  const pictures = useAppSelector((state) => state.AddProductState.pictures);
+  const colors = useAppSelector((state) => state.AddProductState.colors);
+  const formik = useFormik<ProductsType>({
     initialValues: {
-      ProductsName: "",
-      ProductNameFa: "",
+      productName: "",
+      productNameFa: "",
       PhoneLable: "",
       PhoneLableFa: "",
-      brand: "",
+      brand: "samsung",
       brandFa: "",
       id: "",
       information: {
         memory: "",
         memoryType: "",
-        price: 0,
+        price: 1,
         Inventory: true,
         date: "",
         type: "",
-        length: 0,
-        width: 0,
-        weight: 0,
-        height: 0,
+        length: 1,
+        width: 1,
+        weight: 1,
+        height: 1,
         sim: "",
         colors: [],
         colorsEn: [],
@@ -38,6 +45,21 @@ const PanelAddProduct = () => {
       },
     },
     onSubmit: (values) => {
+      // so pictures and colors are array and i give these array and == initialValues.information.banners || colors and others
+      values.information.banners = [...pictures];
+      values.information = { ...values.information, banner: pictures[0] };
+      values.information.colorsEn = [...colors];
+      if (AutoIDCheckBox && PhoneLabelRefForID.current?.value.length) {
+        values = {
+          ...values,
+          id: PhoneLabelRefForID.current?.value
+            .trim()
+            .toUpperCase()
+            .split(" ")
+            .join("_"),
+        };
+      }
+      //
       console.log(values);
     },
     validationSchema: Yup.object({}),
@@ -53,7 +75,7 @@ const PanelAddProduct = () => {
           formik.handleSubmit();
         }}
       >
-        <div className="mb-3 col-6 ps-2">
+        <div className="mb-3 col-12 col-md-6 ps-md-2">
           <label htmlFor="formGroupExampleInput" className="form-label">
             عنوان محصول (En)
           </label>
@@ -62,12 +84,12 @@ const PanelAddProduct = () => {
             className="form-control"
             placeholder="TSCO Desktop TS 2184 Bluetooth Speaker 📡"
             dir="ltr"
+            autoComplete="off"
+            ref={PhoneLabelRefForID}
             {...formik.getFieldProps("PhoneLable")}
-            // onFocus={(e)=> e.}
-            // onBlur={()=> }
           />
         </div>
-        <div className="mb-3 col-6 pe-2">
+        <div className="mb-3 col-12 col-md-6 pe-md-2">
           <label htmlFor="formGroupExampleInput" className="form-label">
             عنوان محصول
           </label>
@@ -75,43 +97,70 @@ const PanelAddProduct = () => {
             type="text"
             className="form-control"
             placeholder="اسپیکر بلوتوثی رومیزی تسکو مدل TS 2184"
+            autoComplete="off"
             {...formik.getFieldProps("PhoneLableFa")}
           />
         </div>
-        <div className="mb-3 col-6 ps-2">
+        <div className="mb-3 col-12 col-md-6 ps-md-2">
           <label htmlFor="formGroupExampleInput" className="form-label">
             برند محصول (En)
           </label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="TSCO 📡"
-            dir="ltr"
-            {...formik.getFieldProps("brand")}
-          />
+          <select
+            className="form-select"
+            onChange={(e) => {
+              e.preventDefault();
+              // this code is true and worked , but i dont know ts what it wants from me
+              formik.values.brand = e.target.value;
+              console.log(e.target.value);
+            }}
+            aria-label="Default select example"
+          >
+            <option value="samsung">samsung</option>
+            <option value="xiaomi">xiaomi</option>
+            <option value="apple">apple</option>
+            <option value="Watch">Watch</option>
+            <option value="Speaker">Speaker</option>
+          </select>
         </div>
-        <div className="mb-3 col-6 pe-2">
+        <div className="mb-3 col-12 col-md-6 pe-md-2">
           <label htmlFor="formGroupExampleInput" className="form-label">
             برند محصول
           </label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="تسکو"
-            {...formik.getFieldProps("brandFa")}
-          />
+          <select
+            className="form-select"
+            onChange={(e) => {
+              e.preventDefault();
+              // this code is true and worked , but i dont know ts what it wants from me
+              formik.values.brandFa = e.target.value;
+              console.log(e.target.value);
+            }}
+            aria-label="Default select example"
+          >
+            <option value="سامسونگ">سامسونگ</option>
+            <option value="شیائومی">شیائومی</option>
+            <option value="اپل">اپل</option>
+            <option value="ساعت">ساعت</option>
+            <option value="اسپیکر">اسپیکر</option>
+          </select>
         </div>
-        <div className="mb-3 col-3 ps-4">
+        <div className="mb-3 col-12 col-md-3 ps-md-4">
           <label htmlFor="formGroupExampleInput" className="form-label">
             نوع محصول
           </label>
-          <select className="form-select" aria-label="Default select example">
-            <option value="1">Mobile</option>
-            <option value="2">Watch</option>
-            <option value="3">Speaker</option>
+          <select
+            className="form-select"
+            onChange={(e) => {
+              e.preventDefault();
+              formik.values.productName = `${e.target.value}`;
+            }}
+            aria-label="Default select example"
+          >
+            <option value="Mobile">Mobile</option>
+            <option value="Watch">Watch</option>
+            <option value="Speaker">Speaker</option>
           </select>
         </div>
-        <div className="mb-3 col-9 pe-4">
+        <div className="mb-3 col-12 col-md-9 pe-md-4">
           <label htmlFor="formGroupExampleInput" className="form-label">
             آیدی محصول
           </label>
@@ -119,6 +168,7 @@ const PanelAddProduct = () => {
             type="text"
             className="form-control"
             placeholder="این بخش بعد از وارد کردن عنوان محصول ، خودکار وارد میشود"
+            autoComplete="off"
             disabled={AutoIDCheckBox}
             {...formik.getFieldProps("id")}
           />

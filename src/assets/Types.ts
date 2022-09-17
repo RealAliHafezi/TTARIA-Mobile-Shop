@@ -17,7 +17,7 @@ export interface ProductsInformationType {
   discount: boolean;
   off: number | null;
   banner: string;
-  banners: Array<string>;
+  banners: Array<string> | [];
 }
 export interface ProductsType {
   productName: string;
