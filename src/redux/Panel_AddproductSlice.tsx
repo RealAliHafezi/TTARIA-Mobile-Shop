@@ -100,6 +100,10 @@ const Panel_AddProduct_State_Slice = createSlice({
     handleResetColors: (state: initialStateType) => {
       state.colors = [];
     },
+    handleResetAll: (state) => {
+      state.colors = [];
+      state.pictures = [];
+    },
   },
 });
 
@@ -109,5 +113,6 @@ export const {
   handleSaveColor,
   handleDeleteColor,
   handleResetColors,
+  handleResetAll,
 } = Panel_AddProduct_State_Slice.actions;
 export default Panel_AddProduct_State_Slice.reducer;

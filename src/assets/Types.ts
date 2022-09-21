@@ -3,8 +3,8 @@ import React from "react";
 export interface ProductsInformationType {
   memory: string;
   memoryType: string;
-  price: number | null;
-  Inventory: boolean;
+  price: number | undefined;
+  Inventory: boolean | "true" | "false";
   date: string;
   type: string;
   length: number;
@@ -12,12 +12,12 @@ export interface ProductsInformationType {
   height: number;
   weight: number;
   sim: string;
-  colors: Array<string> | [];
-  colorsEn: Array<string> | [];
-  discount: boolean;
+  colors: Array<string>;
+  colorsEn: Array<string>;
+  discount: boolean | "true" | "false";
   off: number | null;
   banner: string;
-  banners: Array<string> | [];
+  banners: Array<string>;
 }
 export interface ProductsType {
   productName: string;

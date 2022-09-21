@@ -26,6 +26,12 @@
   min-width: 200px;
   height: 100%;
 }
+// when we posting new product
+.PostingSpinner {
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
 
 // responsive
 @media only screen and (max-width: 500px) {

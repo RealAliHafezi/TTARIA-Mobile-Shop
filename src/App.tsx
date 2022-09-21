@@ -16,7 +16,7 @@ import AdminPanelMobiles from "./pages/AdminPanel/AdminPanelMobiles";
 import AdminPanelWatch from "./pages/AdminPanel/AdminPanelWatches";
 import AdminPanelSpeakers from "./pages/AdminPanel/AdminPanelSpeakers";
 import AdminPanelUnAvailable from "./pages/AdminPanel/AdminPanelUnAvailable";
-import AdminPanelAddProduct from "./pages/AdminPanel/AdminPanelAddProduct"
+import AdminPanelAddProduct from "./pages/AdminPanel/AdminPanelAddProduct";
 // types
 interface AccessForPanelPageType {
   children: JSX.Element;
@@ -31,7 +31,6 @@ function App() {
   const AccessForPanelPage = ({ children }: AccessForPanelPageType) => {
     return AdminAccess === true ? children : <Navigate to={"/loginAdmin"} />;
   };
-  console.log(AdminAccess);
   useEffect(() => {
     dispatch(getFetchingProductsFun());
   }, [getFetchingProductsFun]);

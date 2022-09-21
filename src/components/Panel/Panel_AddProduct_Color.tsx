@@ -15,6 +15,7 @@ const Panel_AddProduct_Color = () => {
   const handleSaveColors = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     dispatch(handleSaveColor(color));
+    setColor("#ff0000");
   };
   // finish
   //   deleting color box

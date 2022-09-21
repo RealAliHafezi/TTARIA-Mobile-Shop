@@ -1,71 +1,59 @@
 import React, { useRef, useState } from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
-import { useAppSelector } from "../../redux/hooks";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { PanelAddProductPost } from "../../redux/PanelAddProductSlice";
+import { handleResetAll } from "../../redux/Panel_AddproductSlice";
 // components
-import PanelAddProductsMobile from "./PanelAddProductsMobile";
+import PanelAddProductsCategory from "./PanelAddProductsCategory";
 // style
 import "./../../styles/scss/Panel/PanelAddProducts.scss";
 // type
 import { ProductsType } from "./../../assets/Types";
+import Alert from "./../../components/Alert";
+import Pending from "../../components/Pending";
 
 const PanelAddProduct = () => {
+  const dispatch = useAppDispatch();
+  const initialValues = useAppSelector(
+    (state) => state.AddProduct.initialValues
+  );
+  const postingProductReactions = useAppSelector(
+    (state) => state.AddProduct.reactions
+  );
   const [AutoIDCheckBox, setAutoID] = useState<boolean>(true);
   const PhoneLabelRefForID = useRef<HTMLInputElement>(null);
   // is in initialValues , but there is another page , for that , i write that in redux-toolkit , and give from redux-toolkit-state
   const pictures = useAppSelector((state) => state.AddProductState.pictures);
   const colors = useAppSelector((state) => state.AddProductState.colors);
   const formik = useFormik<ProductsType>({
-    initialValues: {
-      productName: "",
-      productNameFa: "",
-      PhoneLable: "",
-      PhoneLableFa: "",
-      brand: "samsung",
-      brandFa: "",
-      id: "",
-      information: {
-        memory: "",
-        memoryType: "",
-        price: 1,
-        Inventory: true,
-        date: "",
-        type: "",
-        length: 1,
-        width: 1,
-        weight: 1,
-        height: 1,
-        sim: "",
-        colors: [],
-        colorsEn: [],
-        discount: false,
-        off: 0,
-        banner: "",
-        banners: [],
-      },
-    },
+    initialValues,
     onSubmit: (values) => {
-      // so pictures and colors are array and i give these array and == initialValues.information.banners || colors and others
-      values.information.banners = [...pictures];
-      values.information = { ...values.information, banner: pictures[0] };
-      values.information.colorsEn = [...colors];
-      if (AutoIDCheckBox && PhoneLabelRefForID.current?.value.length) {
-        values = {
-          ...values,
-          id: PhoneLabelRefForID.current?.value
-            .trim()
-            .toUpperCase()
-            .split(" ")
-            .join("_"),
-        };
-      }
-      //
-      console.log(values);
+      values = {
+        ...values,
+        id:
+          AutoIDCheckBox && PhoneLabelRefForID.current?.value.length
+            ? PhoneLabelRefForID.current?.value
+                .trim()
+                .toUpperCase()
+                .split(" ")
+                .join("_")
+            : "",
+        information: {
+          ...values.information,
+          colors: [...colors],
+          banners: [...pictures],
+        },
+      };
+      dispatch(PanelAddProductPost(values));
+      postingProductReactions.success && dispatch(handleResetAll());
+      postingProductReactions.success && formik.setValues(initialValues);
     },
     validationSchema: Yup.object({}),
   });
+
   return (
-    <section className="Panel_AddProducts col-10 px-4 py-3">
+    <section className="Panel_AddProducts position-relative col-10 px-4 py-3">
       <h2 className="text-center mb-3">فرم اضافه کردن کالا</h2>
       <form
         action=""
@@ -107,12 +95,7 @@ const PanelAddProduct = () => {
           </label>
           <select
             className="form-select"
-            onChange={(e) => {
-              e.preventDefault();
-              // this code is true and worked , but i dont know ts what it wants from me
-              formik.values.brand = e.target.value;
-              console.log(e.target.value);
-            }}
+            {...formik.getFieldProps("brand")}
             aria-label="Default select example"
           >
             <option value="samsung">samsung</option>
@@ -128,12 +111,7 @@ const PanelAddProduct = () => {
           </label>
           <select
             className="form-select"
-            onChange={(e) => {
-              e.preventDefault();
-              // this code is true and worked , but i dont know ts what it wants from me
-              formik.values.brandFa = e.target.value;
-              console.log(e.target.value);
-            }}
+            {...formik.getFieldProps("brandFa")}
             aria-label="Default select example"
           >
             <option value="سامسونگ">سامسونگ</option>
@@ -149,10 +127,7 @@ const PanelAddProduct = () => {
           </label>
           <select
             className="form-select"
-            onChange={(e) => {
-              e.preventDefault();
-              formik.values.productName = `${e.target.value}`;
-            }}
+            {...formik.getFieldProps("productName")}
             aria-label="Default select example"
           >
             <option value="Mobile">Mobile</option>
@@ -191,9 +166,40 @@ const PanelAddProduct = () => {
         </div>
         <hr className="bg-warning" />
         <h4 className="text-center mb-3">جزئیات</h4>
-        <PanelAddProductsMobile formik={formik} />
+        {formik.values.productName === `Mobile` && (
+          <PanelAddProductsCategory
+            formik={formik}
+            memory={true}
+            date={true}
+            type={true}
+            sim={true}
+            size={true}
+          />
+        )}
+        {formik.values.productName === "Speaker" && (
+          <PanelAddProductsCategory
+            formik={formik}
+            memory={false}
+            date={false}
+            type={false}
+            sim={false}
+            size={false}
+          />
+        )}
+        {formik.values.productName === "Watch" && (
+          <PanelAddProductsCategory
+            formik={formik}
+            memory={false}
+            date={true}
+            type={false}
+            sim={true}
+            size={false}
+          />
+        )}
         <button
+          type="submit"
           className="btn btn-success"
+          disabled={postingProductReactions.pending}
           onClick={(e) => {
             e.preventDefault();
             formik.handleSubmit();
@@ -202,6 +208,30 @@ const PanelAddProduct = () => {
           ثبت
         </button>
       </form>
+      {/* pending when posting product */}
+      {postingProductReactions.pending && <Pending />}
+      {/* when posting is success or rejecting */}
+      {postingProductReactions.success && (
+        <Alert
+          bg="success"
+          title="پیام جدید"
+          massage="محصول شما با موفقیت ذخیره شد 😉"
+          bottom="30px"
+          right="10px"
+          time={5000}
+        />
+      )}
+      {postingProductReactions.reject && (
+        <Alert
+          bg="danger"
+          title="پیام جدید"
+          massage="عمیلات با خطا مواجه شد 🚩"
+          bottom="30px"
+          right="10px"
+          time={4000}
+        />
+      )}
+      {/*  */}
     </section>
   );
 };
