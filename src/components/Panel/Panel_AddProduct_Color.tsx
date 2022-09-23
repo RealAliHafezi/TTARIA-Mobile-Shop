@@ -6,7 +6,7 @@ import {
   handleDeleteColor,
   handleResetColors,
 } from "../../redux/Panel_AddproductSlice";
-const Panel_AddProduct_Color = () => {
+const Panel_AddProduct_Color = ({ formik }: any) => {
   const [color, setColor] = useState<string>("#ff0000");
   const productColorList = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
@@ -24,7 +24,7 @@ const Panel_AddProduct_Color = () => {
       <label htmlFor="Panel_Add_colors" className="form-label">
         رنگ ها
       </label>
-      <div className="d-flex">
+      <div className="d-flex position-relative">
         <SketchPicker
           color={color}
           onChangeComplete={(color: any) => {
@@ -73,6 +73,12 @@ const Panel_AddProduct_Color = () => {
             </button>
           ) : null}
         </div>
+        {formik.touched.information?.colorsEn &&
+          formik.errors.information?.colorsEn && (
+            <span className="text-danger position-absolute ErrorText">
+              {formik.errors.information?.colorsEn}
+            </span>
+          )}
       </div>
     </div>
   );

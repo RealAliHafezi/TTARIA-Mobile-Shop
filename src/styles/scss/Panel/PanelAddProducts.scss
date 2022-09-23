@@ -32,7 +32,12 @@
   top: 0;
   background-color: rgba(0, 0, 0, 0.75);
 }
-
+// when we have error on inputs
+.ErrorText {
+  bottom: -20px;
+  right: 10px;
+  font-size: 12px;
+}
 // responsive
 @media only screen and (max-width: 500px) {
   .sketch-picker {

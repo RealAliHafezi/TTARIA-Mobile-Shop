@@ -4,7 +4,7 @@ import {
   handleSavePicture,
   handleResetPictures,
 } from "../../redux/Panel_AddproductSlice";
-const Panel_AddProduct_Picture = () => {
+const Panel_AddProduct_Picture = ({ formik }: any) => {
   const [picture, setPicture] = useState<string>("");
   const productPicturesList = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
@@ -17,8 +17,8 @@ const Panel_AddProduct_Picture = () => {
     setPicture("");
   };
   return (
-    <div className="Panel_AddProduct_Picture d-flex flex-column flex-wrap">
-      <div className="mb-3 col-12 col-md-9 pe-md-4" ref={productPicturesList}>
+    <div className="Panel_AddProduct_Picture d-flex flex-column flex-wrap position-relative">
+      <div className="col-12 col-md-9 mb-3" ref={productPicturesList}>
         <label htmlFor="Panel_Add_basePic" className="form-label">
           عکس اصلی
         </label>
@@ -26,7 +26,11 @@ const Panel_AddProduct_Picture = () => {
           <input
             type="text"
             id="Panel_Add_basePic"
-            className="form-control d-block w-75"
+            className={`form-control d-block w-75 ${
+              formik.touched.PhoneLable &&
+              formik.touched.PhoneLable &&
+              "ErrorInput"
+            }`}
             name="banner"
             placeholder="لینک عکس مورد نظر 🖾"
             value={picture}
@@ -55,6 +59,15 @@ const Panel_AddProduct_Picture = () => {
             </button>
           )}
         </div>
+        {formik.touched.information?.banners &&
+          formik.errors.information?.banners && (
+            <span
+              style={{ bottom: "15px" }}
+              className="text-danger position-absolute ErrorText"
+            >
+              {formik.errors.information?.banners}
+            </span>
+          )}
       </div>
       <div className="d-flex flex-wrap mb-3 mt-2 me-3">
         {pictures.map((pic, index) => (
