@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 // icons
 import {
   RiArrowDownSLine,
-  RiArrowUpSLine,
+  // RiArrowUpSLine,
   FaLayerGroup,
 } from "./../../assets/icons/icons";
 // data

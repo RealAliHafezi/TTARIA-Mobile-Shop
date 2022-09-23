@@ -6,7 +6,7 @@ import {
   handleDeleteColor,
   handleResetColors,
 } from "../../redux/Panel_AddproductSlice";
-const Panel_AddProduct_Color = ({ formik }: any) => {
+const PanelAddProductColor = ({ formik }: any) => {
   const [color, setColor] = useState<string>("#ff0000");
   const productColorList = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
@@ -84,4 +84,4 @@ const Panel_AddProduct_Color = ({ formik }: any) => {
   );
 };
 
-export default Panel_AddProduct_Color;
+export default PanelAddProductColor;

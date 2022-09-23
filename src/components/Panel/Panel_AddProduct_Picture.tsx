@@ -4,7 +4,7 @@ import {
   handleSavePicture,
   handleResetPictures,
 } from "../../redux/Panel_AddproductSlice";
-const Panel_AddProduct_Picture = ({ formik }: any) => {
+const PanelAddProductPicture = ({ formik }: any) => {
   const [picture, setPicture] = useState<string>("");
   const productPicturesList = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
@@ -83,4 +83,4 @@ const Panel_AddProduct_Picture = ({ formik }: any) => {
     </div>
   );
 };
-export default Panel_AddProduct_Picture;
+export default PanelAddProductPicture;

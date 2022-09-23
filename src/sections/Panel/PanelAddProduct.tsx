@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import * as Yup from "yup";
 import { useFormik } from "formik";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { PanelAddProductPost } from "../../redux/PanelAddProductSlice";
@@ -50,6 +49,7 @@ const PanelAddProduct = () => {
       postingProductReactions.success && dispatch(handleResetAll());
       postingProductReactions.success && formik.setValues(initialValues);
     },
+    // Yup schema validation is another file
     validationSchema: Panel_PostProduct_Validate,
   });
 

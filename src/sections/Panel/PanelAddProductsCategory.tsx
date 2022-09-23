@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 // components
-import Panel_AddProduct_Color from "../../components/Panel/Panel_AddProduct_Color";
-import Panel_AddProduct_Picture from "../../components/Panel/Panel_AddProduct_Picture";
+import PanelAddProductColor from "../../components/Panel/Panel_AddProduct_Color";
+import PanelAddProductPicture from "../../components/Panel/Panel_AddProduct_Picture";
 // type
 interface propsType {
   formik: any;
@@ -341,8 +341,8 @@ const PanelAddProductsCategory = ({
           </span>
         )}
       </div>
-      <Panel_AddProduct_Color formik={formik} />
-      <Panel_AddProduct_Picture formik={formik} />
+      <PanelAddProductColor formik={formik} />
+      <PanelAddProductPicture formik={formik} />
     </React.Fragment>
   );
 };
