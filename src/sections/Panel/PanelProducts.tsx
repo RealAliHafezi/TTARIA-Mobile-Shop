@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useAppDispatch } from "../../redux/hooks";
+import { PanelEditProductGet } from "../../redux/PanelEditProductSlice";
 // style
 import "./../../styles/scss/Panel/PanelProducts.scss";
 // icon
@@ -9,6 +11,7 @@ interface propsType {
   products: Array<ProductsType>;
 }
 const PanelProducts = ({ products }: propsType) => {
+  const dispatch = useAppDispatch();
   const [length, setMore] = useState<number>(10);
   return (
     <section className="Panel_Products col-10 text-center">
@@ -59,6 +62,7 @@ const PanelProducts = ({ products }: propsType) => {
               <button
                 className="btn rounded-circle text-light d-inline-flex align-items-center justify-content-center d-md-flex mx-auto"
                 style={{ backgroundColor: "orange" }}
+                onClick={() => dispatch(PanelEditProductGet(product.id))}
               >
                 <TbEdit className="fs-4" />
               </button>
