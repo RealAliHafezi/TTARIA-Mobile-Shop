@@ -17,6 +17,7 @@ import AdminPanelWatch from "./pages/AdminPanel/AdminPanelWatches";
 import AdminPanelSpeakers from "./pages/AdminPanel/AdminPanelSpeakers";
 import AdminPanelUnAvailable from "./pages/AdminPanel/AdminPanelUnAvailable";
 import AdminPanelAddProduct from "./pages/AdminPanel/AdminPanelAddProduct";
+import AdminPanelEditProduct from "./pages/AdminPanel/AdminPanelEditProduct";
 // types
 interface AccessForPanelPageType {
   children: JSX.Element;
@@ -93,6 +94,14 @@ function App() {
             element={
               <AccessForPanelPage>
                 <AdminPanelAddProduct />
+              </AccessForPanelPage>
+            }
+          />
+          <Route
+            path="/panel/editPanel/:EditID"
+            element={
+              <AccessForPanelPage>
+                <AdminPanelEditProduct />
               </AccessForPanelPage>
             }
           />

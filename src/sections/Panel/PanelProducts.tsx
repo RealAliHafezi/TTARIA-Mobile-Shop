@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useAppDispatch } from "../../redux/hooks";
-import { PanelEditProductGet } from "../../redux/PanelEditProductSlice";
+import { Link } from "react-router-dom";
 // style
 import "./../../styles/scss/Panel/PanelProducts.scss";
 // icon
@@ -62,9 +62,13 @@ const PanelProducts = ({ products }: propsType) => {
               <button
                 className="btn rounded-circle text-light d-inline-flex align-items-center justify-content-center d-md-flex mx-auto"
                 style={{ backgroundColor: "orange" }}
-                onClick={() => dispatch(PanelEditProductGet(product.id))}
               >
-                <TbEdit className="fs-4" />
+                <Link
+                  to={`/panel/editPanel/${product.id}`}
+                  className="LINK"
+                >
+                  <TbEdit className="fs-4" />
+                </Link>
               </button>
             </div>
           </li>
