@@ -98,7 +98,7 @@ function App() {
             }
           />
           <Route
-            path="/panel/editPanel/:EditID"
+            path="/panel/editProduct/:EditID"
             element={
               <AccessForPanelPage>
                 <AdminPanelEditProduct />

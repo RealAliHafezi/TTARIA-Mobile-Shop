@@ -61,7 +61,7 @@ const PanelProducts = ({ products }: propsType) => {
                 className="btn rounded-circle text-light d-inline-flex align-items-center justify-content-center d-md-flex mx-auto"
                 style={{ backgroundColor: "orange" }}
               >
-                <Link to={`/panel/editPanel/${product.id}`} className="LINK">
+                <Link to={`/panel/editProduct/${product.id}`} className="LINK">
                   <TbEdit className="fs-4" />
                 </Link>
               </button>
