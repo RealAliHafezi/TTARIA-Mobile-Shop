@@ -1,21 +1,14 @@
 import React, { useState, useRef } from "react";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { useAppDispatch } from "../../redux/hooks";
 import {
-  handleSavePicture,
-  handleResetPictures,
-} from "../../redux/Panel_AddproductSlice";
-const PanelAddProductPicture = ({ formik }: any) => {
-  const [picture, setPicture] = useState<string>("");
-  const productPicturesList = useRef<HTMLDivElement>(null);
+  HandleResetPictures,
+  HandleSavePicture,
+} from "../../redux/PanelFunctionsSlice";
+const PanelPicture = ({ formik }: any) => {
   const dispatch = useAppDispatch();
-  // give from redux toolkit
-  const pictures = useAppSelector((state) => state.AddProductState.pictures);
-  //   create and save color box
-  const handleSavePictures = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    dispatch(handleSavePicture(picture));
-    setPicture("");
-  };
+  const [picture, setPicture] = useState<string>("");
+  // for show picture in screen
+  const productPicturesList = useRef<HTMLDivElement>(null);
   return (
     <div className="Panel_AddProduct_Picture d-flex flex-column flex-wrap position-relative">
       <div className="col-12 col-md-9 mb-3" ref={productPicturesList}>
@@ -42,17 +35,24 @@ const PanelAddProductPicture = ({ formik }: any) => {
           <button
             className="btn btn-warning btn-sm"
             onClick={(e) => {
-              handleSavePictures(e);
+              e.preventDefault();
+              dispatch(
+                HandleSavePicture({
+                  formik: formik,
+                  picture: picture,
+                  setPicture: setPicture,
+                })
+              );
             }}
           >
             ثبت عکس
           </button>
-          {pictures.length >= 2 && (
+          {formik.values.information.banners.length >= 2 && (
             <button
               className="btn btn-danger btn-sm me-2"
               onClick={(e) => {
                 e.preventDefault();
-                dispatch(handleResetPictures());
+                dispatch(HandleResetPictures(formik));
               }}
             >
               ریست
@@ -70,7 +70,7 @@ const PanelAddProductPicture = ({ formik }: any) => {
           )}
       </div>
       <div className="d-flex flex-wrap mb-3 mt-2 me-3">
-        {pictures.map((pic, index) => (
+        {formik.values.information.banners.map((pic: string, index: number) => (
           <img
             key={index}
             src={pic.trim()}
@@ -83,4 +83,4 @@ const PanelAddProductPicture = ({ formik }: any) => {
     </div>
   );
 };
-export default PanelAddProductPicture;
+export default PanelPicture;

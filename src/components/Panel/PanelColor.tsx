@@ -1,24 +1,17 @@
 import React, { useState, useRef } from "react";
 import { SketchPicker } from "react-color";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { useAppDispatch } from "../../redux/hooks";
 import {
-  handleSaveColor,
-  handleDeleteColor,
-  handleResetColors,
-} from "../../redux/Panel_AddproductSlice";
-const PanelAddProductColor = ({ formik }: any) => {
-  const [color, setColor] = useState<string>("#ff0000");
-  const productColorList = useRef<HTMLDivElement>(null);
+  HandleDeleteColor,
+  HandleResetColors,
+  HandleSaveColor,
+} from "../../redux/PanelFunctionsSlice";
+const PanelColor = ({ formik }: any) => {
   const dispatch = useAppDispatch();
-  const colors = useAppSelector((state) => state.AddProductState.colors);
-  //   create and save color box
-  const handleSaveColors = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    dispatch(handleSaveColor(color));
-    setColor("#ff0000");
-  };
+  const [color, setColor] = useState<string>("#ff0000");
+  // for show color elements
+  const productColorList = useRef<HTMLDivElement>(null);
   // finish
-  //   deleting color box
   return (
     <div className="mb-3 col-12 col-md-6 pe-4">
       <label htmlFor="Panel_Add_colors" className="form-label">
@@ -43,7 +36,16 @@ const PanelAddProductColor = ({ formik }: any) => {
           </div>
           <button
             className="btn btn-sm btn-warning me-3 mt-3"
-            onClick={(e) => handleSaveColors(e)}
+            onClick={(e) => {
+              e.preventDefault();
+              dispatch(
+                HandleSaveColor({
+                  formik: formik,
+                  setColor: setColor,
+                  color: color,
+                })
+              );
+            }}
             type="button"
             data-bs-toggle="modal"
             data-bs-target="#RepeatColor"
@@ -52,21 +54,32 @@ const PanelAddProductColor = ({ formik }: any) => {
           </button>
           <h6 className="pe-4 mt-3">رنگ های ثبت شده</h6>
           <div className="me-3 mt-3 d-flex flex-wrap" ref={productColorList}>
-            {colors.map((color2, index) => (
-              <div
-                key={index}
-                className="Panel_Add_createColorCircle rounded-circle border border-warning m-2"
-                style={{ backgroundColor: `${color2}` }}
-                onClick={() => dispatch(handleDeleteColor(color2))}
-              ></div>
-            ))}
+            {formik.values.information.colorsEn.length &&
+              formik.values.information.colorsEn.map(
+                (color2: string, index: number) => (
+                  <div
+                    key={index}
+                    className="Panel_Add_createColorCircle rounded-circle border border-warning m-2 CURSOR"
+                    style={{ backgroundColor: `${color2}` }}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      dispatch(
+                        HandleDeleteColor({
+                          formik: formik,
+                          color: color2,
+                        })
+                      );
+                    }}
+                  ></div>
+                )
+              )}
           </div>
-          {colors.length >= 2 ? (
+          {formik.values.information.colorsEn.length >= 2 ? (
             <button
               className="btn btn-sm btn-danger mt-3 me-3"
               onClick={(e) => {
-                dispatch(handleResetColors());
                 e.preventDefault();
+                dispatch(HandleResetColors(formik));
               }}
             >
               ریست
@@ -83,5 +96,4 @@ const PanelAddProductColor = ({ formik }: any) => {
     </div>
   );
 };
-
-export default PanelAddProductColor;
+export default PanelColor;

@@ -20,8 +20,19 @@
         "height": 8.4,
         "weight": 189,
         "sim": "دو سیم کارته ( نانوسیم ، همزمان یکی فعال )",
-        "colors": ["مشکی", "بنفش", "آبی", "سفید"],
-        "colorsEn": ["black", "purple", "blue", "rgb(244, 244, 244)"],
+        "colors": [
+          "مشکی",
+          "بنفش",
+          "آبی",
+          "سفید"
+        ],
+        "colorsEn": [
+          "black",
+          "purple",
+          "blue",
+          "rgb(244, 244, 244)",
+          "#ff0000"
+        ],
         "discount": true,
         "off": 8,
         "banner": "https://www.samsung.com/ae/smartphones/galaxy-a/galaxy-a52-5g/buy/",
@@ -53,8 +64,19 @@
         "height": 7.9,
         "weight": 200,
         "sim": "دو سیم کارته ( نانوسیم ، همزمان یکی فعال )",
-        "colors": ["مشکی", "یاسی", "سبز روشن", "سفید"],
-        "colorsEn": ["black", "lavender", "lightgreen", "rgb(244, 244, 244)"],
+        "colors": [
+          "مشکی",
+          "یاسی",
+          "سبز روشن",
+          "سفید"
+        ],
+        "colorsEn": [
+          "black",
+          "lavender",
+          "lightgreen",
+          "rgb(244, 244, 244)",
+          "#4a90e2"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://www.samsung.com/ae/smartphones/galaxy-a/galaxy-a525g/buy/",
@@ -86,8 +108,16 @@
         "height": 8.9,
         "weight": 205,
         "sim": "دو سیم کارته",
-        "colors": ["مشکی", "آبی", "سفید"],
-        "colorsEn": ["black", "blue", "rgb(244, 244, 244)"],
+        "colors": [
+          "مشکی",
+          "آبی",
+          "سفید"
+        ],
+        "colorsEn": [
+          "black",
+          "blue",
+          "rgb(244, 244, 244)"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://dkstatics-public.digikala.com/digikala-products/089503e23d24bc56838a84e66b231fce49e239f3_1654945905.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
@@ -118,8 +148,16 @@
         "height": 9.1,
         "weight": 196,
         "sim": "(نانوسیم ، همزمان یکی فعال) دو سیم کارته",
-        "colors": ["مشکی", "آبی", "سفید"],
-        "colorsEn": ["black", "blue", "rgb(244, 244, 244)"],
+        "colors": [
+          "مشکی",
+          "آبی",
+          "سفید"
+        ],
+        "colorsEn": [
+          "black",
+          "blue",
+          "rgb(244, 244, 244)"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://images.samsung.com/is/image/samsung/p6pim/ph/sm-a037fzbgphl/gallery/ph-galaxy-a03s-a037-sm-a037fzbgphl-494359278?$1300_1038_PNG$",
@@ -151,8 +189,16 @@
         "height": 9,
         "weight": 196,
         "sim": "(نانوسیم ، همزمان یکی فعال) دو سیم کارته",
-        "colors": ["مشکی", "آبی", "سفید"],
-        "colorsEn": ["black", "blue", "rgb(244, 244, 244)"],
+        "colors": [
+          "مشکی",
+          "آبی",
+          "سفید"
+        ],
+        "colorsEn": [
+          "black",
+          "blue",
+          "rgb(244, 244, 244)"
+        ],
         "discount": true,
         "off": 9,
         "banner": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSioSv2w8t36pNYAk2zrnVBacyzzOHOdLjGbgDCI3udqJxZ0uBYElktNJ16Kqac8SS1pYk&usqp=CAU",
@@ -184,8 +230,14 @@
         "height": 8.6,
         "weight": 150,
         "sim": "(نانوسیم ، همزمان یکی فعال) دو سیم کارته",
-        "colors": ["مشکی", "آبی"],
-        "colorsEn": ["black", "blue"],
+        "colors": [
+          "مشکی",
+          "آبی"
+        ],
+        "colorsEn": [
+          "black",
+          "blue"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://images.samsung.com/is/image/samsung/ae-galaxy-a01core-a013-sm-a013gzkdxsg-frontblack-289353548?$1300_1038_PNG$",
@@ -217,8 +269,12 @@
         "height": 8.4,
         "weight": 203,
         "sim": "(نانوسیم ، همزمان یکی فعال) دو سیم کارته",
-        "colors": ["مشکی"],
-        "colorsEn": ["black"],
+        "colors": [
+          "مشکی"
+        ],
+        "colorsEn": [
+          "black"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://images.samsung.com/is/image/samsung/assets/ae/galaxy-a52/buy/galaxy-a72/03_colorsection/a72_04_colorselection/A72_Black_ColorSelection_PC_img.jpg?imwidth=480",
@@ -250,8 +306,12 @@
         "height": 8.4,
         "weight": 190,
         "sim": "دو سیم کارته هیبریدی (نانو سیم،همزمان یکی فعال)",
-        "colors": ["سرمه ای"],
-        "colorsEn": ["#000080"],
+        "colors": [
+          "سرمه ای"
+        ],
+        "colorsEn": [
+          "#000080"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://storage.torob.com/backend-api/base/images/mm/wo/mmwoKZ0VhRPwgUgL.png",
@@ -283,8 +343,20 @@
         "height": 7.7,
         "weight": 204,
         "sim": "دوسیم کارته ( نانوسیم ، همزمان یکی فعال ) پلتفرم",
-        "colors": ["نفره ای", "خاکستری", "طلایی", "سبز", "آبی"],
-        "colorsEn": ["silver", "gray", "gold", "green", "blue"],
+        "colors": [
+          "نفره ای",
+          "خاکستری",
+          "طلایی",
+          "سبز",
+          "آبی"
+        ],
+        "colorsEn": [
+          "silver",
+          "gray",
+          "gold",
+          "green",
+          "blue"
+        ],
         "discount": true,
         "off": 3,
         "banner": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-graphite-select?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1645552346276",
@@ -315,8 +387,18 @@
         "height": 7.7,
         "weight": 240,
         "sim": "دوسیم کارته ( نانوسیم ، همزمان یکی فعال ) پلتفرم",
-        "colors": ["مشکی", "طلایی", "سبز روشن", "آبی"],
-        "colorsEn": ["black", "gold", "lightgreen", "blue"],
+        "colors": [
+          "مشکی",
+          "طلایی",
+          "سبز روشن",
+          "آبی"
+        ],
+        "colorsEn": [
+          "black",
+          "gold",
+          "lightgreen",
+          "blue"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/61i8Vjb17SL._SL1500_.jpg",
@@ -348,8 +430,14 @@
         "height": 0,
         "weight": 0,
         "sim": "",
-        "colors": ["سفید", "مشکی"],
-        "colorsEn": ["black", "rgb(244, 244, 244)"],
+        "colors": [
+          "سفید",
+          "مشکی"
+        ],
+        "colorsEn": [
+          "black",
+          "rgb(244, 244, 244)"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/71hIfcIPyxS.jpg",
@@ -381,7 +469,15 @@
         "height": 0,
         "weight": 0,
         "sim": "",
-        "colors": ["خاکستری", "نفره ای", "زرد", "سبز", "آبی", "مشکی", "سفید"],
+        "colors": [
+          "خاکستری",
+          "نفره ای",
+          "زرد",
+          "سبز",
+          "آبی",
+          "مشکی",
+          "سفید"
+        ],
         "colorsEn": [
           "black",
           "rgb(244, 244, 244)",
@@ -453,8 +549,14 @@
         "height": 7.3,
         "weight": 148,
         "sim": "نانوسیم",
-        "colors": ["سفید", "مشکی"],
-        "colorsEn": ["black", "rgb(244, 244, 244)"],
+        "colors": [
+          "سفید",
+          "مشکی"
+        ],
+        "colorsEn": [
+          "black",
+          "rgb(244, 244, 244)"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/81K+adaNRiL._AC_SS450_.jpg",
@@ -486,8 +588,18 @@
         "height": 7.4,
         "weight": 189,
         "sim": "دوسیم ( همزمان یکی فعال )",
-        "colors": ["آبی", "مشکی", "طلایی", "نفره ای"],
-        "colorsEn": ["black", "blue", "gold", "silver"],
+        "colors": [
+          "آبی",
+          "مشکی",
+          "طلایی",
+          "نفره ای"
+        ],
+        "colorsEn": [
+          "black",
+          "blue",
+          "gold",
+          "silver"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/61AwGDDZd3L._AC_SS450_.jpg",
@@ -551,8 +663,16 @@
         "height": 8.9,
         "weight": 181,
         "sim": "دوسیم کارته ( نانوسیم ، همزمان یکی فعال )",
-        "colors": ["سفید", "آبی", "خاکستری"],
-        "colorsEn": ["rgb(244, 244, 244)", "blue", "gray"],
+        "colors": [
+          "سفید",
+          "آبی",
+          "خاکستری"
+        ],
+        "colorsEn": [
+          "rgb(244, 244, 244)",
+          "blue",
+          "gray"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/51UyTHwP6wL._AC_SX385_.jpg",
@@ -584,8 +704,14 @@
         "height": 9.1,
         "weight": 199,
         "sim": "دوسیم کارته ( نانوسیم ، همزمان یکی فعال )",
-        "colors": ["بنفش", "خاکستری"],
-        "colorsEn": ["PURPLE", "gray"],
+        "colors": [
+          "بنفش",
+          "خاکستری"
+        ],
+        "colorsEn": [
+          "PURPLE",
+          "gray"
+        ],
         "discount": true,
         "off": 6,
         "banner": "https://m.media-amazon.com/images/I/71UpLRVYK+L._AC_SS450_.jpg",
@@ -617,8 +743,16 @@
         "height": 8.1,
         "weight": 193,
         "sim": "دوسیم کارته ( نانوسیم ، همزمان یکی فعال )",
-        "colors": ["بنفش", "خاکستری", "برنز"],
-        "colorsEn": ["purple", "gray", "bronze"],
+        "colors": [
+          "بنفش",
+          "خاکستری",
+          "برنز"
+        ],
+        "colorsEn": [
+          "purple",
+          "gray",
+          "bronze"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/61ls5QbwTbS._SL1500_.jpg",
@@ -650,8 +784,18 @@
         "height": 9.1,
         "weight": 198,
         "sim": "دوسیم کارته ( نانوسیم ، همزمان یکی فعال )",
-        "colors": ["مشکی", "آبی", "بنفش", "سبز"],
-        "colorsEn": ["black", "blue", "purple", "green"],
+        "colors": [
+          "مشکی",
+          "آبی",
+          "بنفش",
+          "سبز"
+        ],
+        "colorsEn": [
+          "black",
+          "blue",
+          "purple",
+          "green"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/6147ZT4PeFL._AC_SS450_.jpg",
@@ -684,8 +828,16 @@
         "height": 7.7,
         "weight": 203,
         "sim": "دوسیم کارته ( نانوسیم ، همزمان یکی فعال )",
-        "colors": ["آبی", "خاکستری", "سفید"],
-        "colorsEn": ["blue", "gray", "rgb(244, 244, 244)"],
+        "colors": [
+          "آبی",
+          "خاکستری",
+          "سفید"
+        ],
+        "colorsEn": [
+          "blue",
+          "gray",
+          "rgb(244, 244, 244)"
+        ],
         "discount": true,
         "off": 3,
         "banner": "https://m.media-amazon.com/images/I/51ySxiRTuhL._AC_SX679_.jpg",
@@ -717,8 +869,12 @@
         "height": 0,
         "weight": 0,
         "sim": "",
-        "colors": ["مشکی"],
-        "colorsEn": ["black"],
+        "colors": [
+          "مشکی"
+        ],
+        "colorsEn": [
+          "black"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/71K5mOrvM3L._AC_SX385_.jpg",
@@ -750,8 +906,12 @@
         "height": 9,
         "weight": 196,
         "sim": "دوسیم کارته ( نانوسیم )",
-        "colors": ["خاکستری"],
-        "colorsEn": ["gray"],
+        "colors": [
+          "خاکستری"
+        ],
+        "colorsEn": [
+          "gray"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/6147ZT4PeFL._AC_SX425_.jpg",
@@ -1079,8 +1239,16 @@
         "height": 0,
         "weight": 0,
         "sim": "",
-        "colors": ["مشکی", "سرمه ای", "طلایی"],
-        "colorsEn": ["black", "darkblue", "gold"],
+        "colors": [
+          "مشکی",
+          "سرمه ای",
+          "طلایی"
+        ],
+        "colorsEn": [
+          "black",
+          "darkblue",
+          "gold"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/61tl5AxHGiS._AC_SX679_.jpg",
@@ -1111,8 +1279,16 @@
         "height": 0,
         "weight": 0,
         "sim": "",
-        "colors": ["مشکی", "سرمه ای", "طلایی"],
-        "colorsEn": ["black", "darkblue", "gold"],
+        "colors": [
+          "مشکی",
+          "سرمه ای",
+          "طلایی"
+        ],
+        "colorsEn": [
+          "black",
+          "darkblue",
+          "gold"
+        ],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/71fxj9HPLPL._AC_SL1500_.jpg",
@@ -1143,7 +1319,11 @@
         "weight": 220,
         "height": 7.9,
         "sim": "دوسیم کارته",
-        "colors": ["#ff0000", "#000000", "#f8e71c"],
+        "colors": [
+          "#ff0000",
+          "#000000",
+          "#f8e71c"
+        ],
         "colorsEn": [],
         "discount": "true",
         "off": 8,

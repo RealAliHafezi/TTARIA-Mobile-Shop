@@ -1,7 +1,7 @@
 import React from "react";
 // components
-import PanelColor from "../../components/Panel/PanelColor";
-import PanelPicture from "../../components/Panel/PanelPicture";
+import PanelEditProductColor from "../../components/Panel/PanelColor";
+import PanelEditProductPicture from "../../components/Panel/PanelPicture";
 // type
 interface propsType {
   formik: any;
@@ -11,7 +11,7 @@ interface propsType {
   type: boolean;
   size: boolean;
 }
-const PanelAddProductsCategory = ({
+const PanelEditProductsCategory = ({
   formik,
   memory,
   date,
@@ -293,7 +293,7 @@ const PanelAddProductsCategory = ({
             </span>
           )}
       </div>
-      <div className="mb-4 col-12 col-sm-6 col-md-3 pe-mdic-2 position-relative">
+      <div className="mb-4 col-12 col-sm-6 col-md-3 pe-md-2 position-relative">
         <label htmlFor="formGroupExampleInput" className="form-label">
           تخفیف
         </label>
@@ -341,10 +341,10 @@ const PanelAddProductsCategory = ({
           </span>
         )}
       </div>
-      <PanelColor formik={formik} />
-      <PanelPicture formik={formik} />
+      <PanelEditProductColor formik={formik} />
+      <PanelEditProductPicture formik={formik} />
     </React.Fragment>
   );
 };
 
-export default PanelAddProductsCategory;
+export default PanelEditProductsCategory;

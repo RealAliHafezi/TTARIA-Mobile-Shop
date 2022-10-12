@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useAppDispatch } from "../../redux/hooks";
 import { Link } from "react-router-dom";
 // style
 import "./../../styles/scss/Panel/PanelProducts.scss";
@@ -11,7 +10,6 @@ interface propsType {
   products: Array<ProductsType>;
 }
 const PanelProducts = ({ products }: propsType) => {
-  const dispatch = useAppDispatch();
   const [length, setMore] = useState<number>(10);
   return (
     <section className="Panel_Products col-10 text-center">
@@ -63,10 +61,7 @@ const PanelProducts = ({ products }: propsType) => {
                 className="btn rounded-circle text-light d-inline-flex align-items-center justify-content-center d-md-flex mx-auto"
                 style={{ backgroundColor: "orange" }}
               >
-                <Link
-                  to={`/panel/editPanel/${product.id}`}
-                  className="LINK"
-                >
+                <Link to={`/panel/editPanel/${product.id}`} className="LINK">
                   <TbEdit className="fs-4" />
                 </Link>
               </button>

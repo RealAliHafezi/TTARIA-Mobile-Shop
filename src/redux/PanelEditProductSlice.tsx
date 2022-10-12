@@ -16,6 +16,10 @@ interface initialStateType {
   initialValues: ProductsType;
   reactions: reActions;
 }
+interface UpdaterType {
+  id: string;
+  values: ProductsType;
+}
 const initialState: initialStateType = {
   initialValues: {
     productName: "Mobile",
@@ -52,11 +56,12 @@ const initialState: initialStateType = {
   },
 };
 // data
-export const PanelEditProductGet = createAsyncThunk(
+export const HandlePanelUpdateProduct = createAsyncThunk(
   "PanelEditProductGet",
-  async (id: string) => {
-    let response = await axios.get(
-      `http://localhost:3000/productsForMySecurityHasManyWordInThisAddress/${id}`
+  async ({ id, values }: UpdaterType) => {
+    let response = await axios.put(
+      `http://localhost:3000/productsForMySecurityHasManyWordInThisAddress/${id}`,
+      values
     );
     return response.data;
   }
@@ -74,27 +79,37 @@ const PanelEditProductSlice = createSlice({
       );
       state.initialValues = newInitialValues[0];
     },
+    handleResetColorEditPage: (state) => {
+      state.initialValues.information.colorsEn = [];
+    },
+    handleResetPictureEditPage: (state) => {
+      state.initialValues.information.banners = [];
+    },
   },
   extraReducers(builder) {
-    builder.addCase(PanelEditProductGet.pending, (state) => {
+    builder.addCase(HandlePanelUpdateProduct.pending, (state) => {
       state.reactions.pending = true;
       state.reactions.reject = false;
       state.reactions.success = false;
     });
     builder.addCase(
-      PanelEditProductGet.fulfilled,
+      HandlePanelUpdateProduct.fulfilled,
       (state, action: PayloadAction<ProductsType>) => {
         state.initialValues = action.payload;
         state.reactions.reject = false;
         state.reactions.pending = false;
       }
     );
-    builder.addCase(PanelEditProductGet.rejected, (state) => {
+    builder.addCase(HandlePanelUpdateProduct.rejected, (state) => {
       state.reactions.success = false;
       state.reactions.reject = true;
       state.reactions.pending = false;
     });
   },
 });
-export const { FilteredProduct } = PanelEditProductSlice.actions;
+export const {
+  FilteredProduct,
+  handleResetColorEditPage,
+  handleResetPictureEditPage,
+} = PanelEditProductSlice.actions;
 export default PanelEditProductSlice.reducer;

@@ -19,7 +19,7 @@ const AdminPanelEditProduct = () => {
   return (
     <article className="Panel row g-0">
       <PanelHeader />
-      <PanelEditProduct />
+      {EditID && <PanelEditProduct ID={EditID} />}
       <PanelSidebar />
     </article>
   );

@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { useFormik } from "formik";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { PanelAddProductPost } from "../../redux/PanelAddProductSlice";
-import { handleResetAll } from "../../redux/Panel_AddproductSlice";
 // components
 import PanelAddProductsCategory from "./PanelAddProductsCategory";
 // style
@@ -23,9 +22,6 @@ const PanelAddProduct = () => {
   );
   const [AutoIDCheckBox, setAutoID] = useState<boolean>(true);
   const PhoneLabelRefForID = useRef<HTMLInputElement>(null);
-  // is in initialValues , but there is another page , for that , i write that in redux-toolkit , and give from redux-toolkit-state
-  const pictures = useAppSelector((state) => state.AddProductState.pictures);
-  const colors = useAppSelector((state) => state.AddProductState.colors);
   const formik = useFormik<ProductsType>({
     initialValues,
     onSubmit: (values) => {
@@ -39,14 +35,8 @@ const PanelAddProduct = () => {
                 .split(" ")
                 .join("_")
             : "",
-        information: {
-          ...values.information,
-          colors: [...colors],
-          banners: [...pictures],
-        },
       };
       dispatch(PanelAddProductPost(values));
-      postingProductReactions.success && dispatch(handleResetAll());
       postingProductReactions.success && formik.setValues(initialValues);
     },
     // Yup schema validation is another file
