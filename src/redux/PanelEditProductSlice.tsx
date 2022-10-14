@@ -98,6 +98,7 @@ const PanelEditProductSlice = createSlice({
         state.initialValues = action.payload;
         state.reactions.reject = false;
         state.reactions.pending = false;
+        state.reactions.success = true;
       }
     );
     builder.addCase(HandlePanelUpdateProduct.rejected, (state) => {

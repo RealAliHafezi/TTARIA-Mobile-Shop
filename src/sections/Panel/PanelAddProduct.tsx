@@ -1,16 +1,16 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useFormik } from "formik";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { PanelAddProductPost } from "../../redux/PanelAddProductSlice";
 // components
 import PanelAddProductsCategory from "./PanelAddProductsCategory";
+import Alert from "./../../components/Alert";
+import Pending from "../../components/Pending";
+import { Panel_PostProduct_Validate } from "../../components/ValidationSchema";
 // style
 import "./../../styles/scss/Panel/PanelAddProducts.scss";
 // type
 import { ProductsType } from "./../../assets/Types";
-import Alert from "./../../components/Alert";
-import Pending from "../../components/Pending";
-import { Panel_PostProduct_Validate } from "../../components/ValidationSchema";
 
 const PanelAddProduct = () => {
   const dispatch = useAppDispatch();
@@ -24,7 +24,7 @@ const PanelAddProduct = () => {
   const PhoneLabelRefForID = useRef<HTMLInputElement>(null);
   const formik = useFormik<ProductsType>({
     initialValues,
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       values = {
         ...values,
         id:
@@ -37,11 +37,14 @@ const PanelAddProduct = () => {
             : "",
       };
       dispatch(PanelAddProductPost(values));
-      postingProductReactions.success && formik.setValues(initialValues);
+      postingProductReactions.success && resetForm();
     },
     // Yup schema validation is another file
     validationSchema: Panel_PostProduct_Validate,
   });
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <section className="Panel_AddProducts position-relative col-10 px-2 py-3">

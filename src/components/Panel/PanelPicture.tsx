@@ -78,9 +78,8 @@ const PanelPicture = ({ formik }: any) => {
         {formik.values.information.banners.length ? (
           formik.values.information.banners.map(
             (pic: string, index: number) => (
-              <>
+              <React.Fragment key={index}>
                 <img
-                  key={index}
                   src={pic.trim()}
                   alt="Does not exist"
                   className="me-2 CURSOR"
@@ -89,7 +88,7 @@ const PanelPicture = ({ formik }: any) => {
                   data-bs-target={`#PicModal_${index}`}
                 />
                 <PicModal formik={formik} URL={pic.trim()} index={index} />
-              </>
+              </React.Fragment>
             )
           )
         ) : (

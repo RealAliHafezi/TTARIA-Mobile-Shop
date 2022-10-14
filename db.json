@@ -20,12 +20,7 @@
         "height": 8.4,
         "weight": 189,
         "sim": "دو سیم کارته ( نانوسیم ، همزمان یکی فعال )",
-        "colors": [
-          "مشکی",
-          "بنفش",
-          "آبی",
-          "سفید"
-        ],
+        "colors": ["مشکی", "بنفش", "آبی", "سفید"],
         "colorsEn": [
           "black",
           "purple",
@@ -64,12 +59,7 @@
         "height": 7.9,
         "weight": 200,
         "sim": "دو سیم کارته ( نانوسیم ، همزمان یکی فعال )",
-        "colors": [
-          "مشکی",
-          "یاسی",
-          "سبز روشن",
-          "سفید"
-        ],
+        "colors": ["مشکی", "یاسی", "سبز روشن", "سفید"],
         "colorsEn": [
           "black",
           "lavender",
@@ -108,16 +98,8 @@
         "height": 8.9,
         "weight": 205,
         "sim": "دو سیم کارته",
-        "colors": [
-          "مشکی",
-          "آبی",
-          "سفید"
-        ],
-        "colorsEn": [
-          "black",
-          "blue",
-          "rgb(244, 244, 244)"
-        ],
+        "colors": ["مشکی", "آبی", "سفید"],
+        "colorsEn": ["black", "blue", "rgb(244, 244, 244)"],
         "discount": false,
         "off": 0,
         "banner": "https://dkstatics-public.digikala.com/digikala-products/089503e23d24bc56838a84e66b231fce49e239f3_1654945905.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
@@ -148,16 +130,8 @@
         "height": 9.1,
         "weight": 196,
         "sim": "(نانوسیم ، همزمان یکی فعال) دو سیم کارته",
-        "colors": [
-          "مشکی",
-          "آبی",
-          "سفید"
-        ],
-        "colorsEn": [
-          "black",
-          "blue",
-          "rgb(244, 244, 244)"
-        ],
+        "colors": ["مشکی", "آبی", "سفید"],
+        "colorsEn": ["black", "blue", "rgb(244, 244, 244)"],
         "discount": false,
         "off": 0,
         "banner": "https://images.samsung.com/is/image/samsung/p6pim/ph/sm-a037fzbgphl/gallery/ph-galaxy-a03s-a037-sm-a037fzbgphl-494359278?$1300_1038_PNG$",
@@ -189,16 +163,8 @@
         "height": 9,
         "weight": 196,
         "sim": "(نانوسیم ، همزمان یکی فعال) دو سیم کارته",
-        "colors": [
-          "مشکی",
-          "آبی",
-          "سفید"
-        ],
-        "colorsEn": [
-          "black",
-          "blue",
-          "rgb(244, 244, 244)"
-        ],
+        "colors": ["مشکی", "آبی", "سفید"],
+        "colorsEn": ["black", "blue", "rgb(244, 244, 244)"],
         "discount": true,
         "off": 9,
         "banner": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSioSv2w8t36pNYAk2zrnVBacyzzOHOdLjGbgDCI3udqJxZ0uBYElktNJ16Kqac8SS1pYk&usqp=CAU",
@@ -230,14 +196,8 @@
         "height": 8.6,
         "weight": 150,
         "sim": "(نانوسیم ، همزمان یکی فعال) دو سیم کارته",
-        "colors": [
-          "مشکی",
-          "آبی"
-        ],
-        "colorsEn": [
-          "black",
-          "blue"
-        ],
+        "colors": ["مشکی", "آبی"],
+        "colorsEn": ["black", "blue"],
         "discount": false,
         "off": 0,
         "banner": "https://images.samsung.com/is/image/samsung/ae-galaxy-a01core-a013-sm-a013gzkdxsg-frontblack-289353548?$1300_1038_PNG$",
@@ -269,12 +229,8 @@
         "height": 8.4,
         "weight": 203,
         "sim": "(نانوسیم ، همزمان یکی فعال) دو سیم کارته",
-        "colors": [
-          "مشکی"
-        ],
-        "colorsEn": [
-          "black"
-        ],
+        "colors": ["مشکی"],
+        "colorsEn": ["black"],
         "discount": false,
         "off": 0,
         "banner": "https://images.samsung.com/is/image/samsung/assets/ae/galaxy-a52/buy/galaxy-a72/03_colorsection/a72_04_colorselection/A72_Black_ColorSelection_PC_img.jpg?imwidth=480",
@@ -306,12 +262,8 @@
         "height": 8.4,
         "weight": 190,
         "sim": "دو سیم کارته هیبریدی (نانو سیم،همزمان یکی فعال)",
-        "colors": [
-          "سرمه ای"
-        ],
-        "colorsEn": [
-          "#000080"
-        ],
+        "colors": ["سرمه ای"],
+        "colorsEn": ["#000080"],
         "discount": false,
         "off": 0,
         "banner": "https://storage.torob.com/backend-api/base/images/mm/wo/mmwoKZ0VhRPwgUgL.png",
@@ -343,20 +295,8 @@
         "height": 7.7,
         "weight": 204,
         "sim": "دوسیم کارته ( نانوسیم ، همزمان یکی فعال ) پلتفرم",
-        "colors": [
-          "نفره ای",
-          "خاکستری",
-          "طلایی",
-          "سبز",
-          "آبی"
-        ],
-        "colorsEn": [
-          "silver",
-          "gray",
-          "gold",
-          "green",
-          "blue"
-        ],
+        "colors": ["نفره ای", "خاکستری", "طلایی", "سبز", "آبی"],
+        "colorsEn": ["silver", "gray", "gold", "green", "blue"],
         "discount": true,
         "off": 3,
         "banner": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-graphite-select?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1645552346276",
@@ -387,18 +327,8 @@
         "height": 7.7,
         "weight": 240,
         "sim": "دوسیم کارته ( نانوسیم ، همزمان یکی فعال ) پلتفرم",
-        "colors": [
-          "مشکی",
-          "طلایی",
-          "سبز روشن",
-          "آبی"
-        ],
-        "colorsEn": [
-          "black",
-          "gold",
-          "lightgreen",
-          "blue"
-        ],
+        "colors": ["مشکی", "طلایی", "سبز روشن", "آبی"],
+        "colorsEn": ["black", "gold", "lightgreen", "blue"],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/61i8Vjb17SL._SL1500_.jpg",
@@ -430,14 +360,8 @@
         "height": 0,
         "weight": 0,
         "sim": "",
-        "colors": [
-          "سفید",
-          "مشکی"
-        ],
-        "colorsEn": [
-          "black",
-          "rgb(244, 244, 244)"
-        ],
+        "colors": ["سفید", "مشکی"],
+        "colorsEn": ["black", "rgb(244, 244, 244)"],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/71hIfcIPyxS.jpg",
@@ -469,15 +393,7 @@
         "height": 0,
         "weight": 0,
         "sim": "",
-        "colors": [
-          "خاکستری",
-          "نفره ای",
-          "زرد",
-          "سبز",
-          "آبی",
-          "مشکی",
-          "سفید"
-        ],
+        "colors": ["خاکستری", "نفره ای", "زرد", "سبز", "آبی", "مشکی", "سفید"],
         "colorsEn": [
           "black",
           "rgb(244, 244, 244)",
@@ -549,14 +465,8 @@
         "height": 7.3,
         "weight": 148,
         "sim": "نانوسیم",
-        "colors": [
-          "سفید",
-          "مشکی"
-        ],
-        "colorsEn": [
-          "black",
-          "rgb(244, 244, 244)"
-        ],
+        "colors": ["سفید", "مشکی"],
+        "colorsEn": ["black", "rgb(244, 244, 244)"],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/81K+adaNRiL._AC_SS450_.jpg",
@@ -588,18 +498,8 @@
         "height": 7.4,
         "weight": 189,
         "sim": "دوسیم ( همزمان یکی فعال )",
-        "colors": [
-          "آبی",
-          "مشکی",
-          "طلایی",
-          "نفره ای"
-        ],
-        "colorsEn": [
-          "black",
-          "blue",
-          "gold",
-          "silver"
-        ],
+        "colors": ["آبی", "مشکی", "طلایی", "نفره ای"],
+        "colorsEn": ["black", "blue", "gold", "silver"],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/61AwGDDZd3L._AC_SS450_.jpg",
@@ -663,16 +563,8 @@
         "height": 8.9,
         "weight": 181,
         "sim": "دوسیم کارته ( نانوسیم ، همزمان یکی فعال )",
-        "colors": [
-          "سفید",
-          "آبی",
-          "خاکستری"
-        ],
-        "colorsEn": [
-          "rgb(244, 244, 244)",
-          "blue",
-          "gray"
-        ],
+        "colors": ["سفید", "آبی", "خاکستری"],
+        "colorsEn": ["rgb(244, 244, 244)", "blue", "gray"],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/51UyTHwP6wL._AC_SX385_.jpg",
@@ -704,14 +596,8 @@
         "height": 9.1,
         "weight": 199,
         "sim": "دوسیم کارته ( نانوسیم ، همزمان یکی فعال )",
-        "colors": [
-          "بنفش",
-          "خاکستری"
-        ],
-        "colorsEn": [
-          "PURPLE",
-          "gray"
-        ],
+        "colors": ["بنفش", "خاکستری"],
+        "colorsEn": ["PURPLE", "gray"],
         "discount": true,
         "off": 6,
         "banner": "https://m.media-amazon.com/images/I/71UpLRVYK+L._AC_SS450_.jpg",
@@ -743,16 +629,8 @@
         "height": 8.1,
         "weight": 193,
         "sim": "دوسیم کارته ( نانوسیم ، همزمان یکی فعال )",
-        "colors": [
-          "بنفش",
-          "خاکستری",
-          "برنز"
-        ],
-        "colorsEn": [
-          "purple",
-          "gray",
-          "bronze"
-        ],
+        "colors": ["بنفش", "خاکستری", "برنز"],
+        "colorsEn": ["purple", "gray", "bronze"],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/61ls5QbwTbS._SL1500_.jpg",
@@ -784,18 +662,8 @@
         "height": 9.1,
         "weight": 198,
         "sim": "دوسیم کارته ( نانوسیم ، همزمان یکی فعال )",
-        "colors": [
-          "مشکی",
-          "آبی",
-          "بنفش",
-          "سبز"
-        ],
-        "colorsEn": [
-          "black",
-          "blue",
-          "purple",
-          "green"
-        ],
+        "colors": ["مشکی", "آبی", "بنفش", "سبز"],
+        "colorsEn": ["black", "blue", "purple", "green"],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/6147ZT4PeFL._AC_SS450_.jpg",
@@ -828,16 +696,8 @@
         "height": 7.7,
         "weight": 203,
         "sim": "دوسیم کارته ( نانوسیم ، همزمان یکی فعال )",
-        "colors": [
-          "آبی",
-          "خاکستری",
-          "سفید"
-        ],
-        "colorsEn": [
-          "blue",
-          "gray",
-          "rgb(244, 244, 244)"
-        ],
+        "colors": ["آبی", "خاکستری", "سفید"],
+        "colorsEn": ["blue", "gray", "rgb(244, 244, 244)"],
         "discount": true,
         "off": 3,
         "banner": "https://m.media-amazon.com/images/I/51ySxiRTuhL._AC_SX679_.jpg",
@@ -869,12 +729,8 @@
         "height": 0,
         "weight": 0,
         "sim": "",
-        "colors": [
-          "مشکی"
-        ],
-        "colorsEn": [
-          "black"
-        ],
+        "colors": ["مشکی"],
+        "colorsEn": ["black"],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/71K5mOrvM3L._AC_SX385_.jpg",
@@ -906,12 +762,8 @@
         "height": 9,
         "weight": 196,
         "sim": "دوسیم کارته ( نانوسیم )",
-        "colors": [
-          "خاکستری"
-        ],
-        "colorsEn": [
-          "gray"
-        ],
+        "colors": ["خاکستری"],
+        "colorsEn": ["gray"],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/6147ZT4PeFL._AC_SX425_.jpg",
@@ -1239,16 +1091,8 @@
         "height": 0,
         "weight": 0,
         "sim": "",
-        "colors": [
-          "مشکی",
-          "سرمه ای",
-          "طلایی"
-        ],
-        "colorsEn": [
-          "black",
-          "darkblue",
-          "gold"
-        ],
+        "colors": ["مشکی", "سرمه ای", "طلایی"],
+        "colorsEn": ["black", "darkblue", "gold"],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/61tl5AxHGiS._AC_SX679_.jpg",
@@ -1279,16 +1123,8 @@
         "height": 0,
         "weight": 0,
         "sim": "",
-        "colors": [
-          "مشکی",
-          "سرمه ای",
-          "طلایی"
-        ],
-        "colorsEn": [
-          "black",
-          "darkblue",
-          "gold"
-        ],
+        "colors": ["مشکی", "سرمه ای", "طلایی"],
+        "colorsEn": ["black", "darkblue", "gold"],
         "discount": false,
         "off": 0,
         "banner": "https://m.media-amazon.com/images/I/71fxj9HPLPL._AC_SL1500_.jpg",
@@ -1296,40 +1132,6 @@
           "https://m.media-amazon.com/images/I/71fxj9HPLPL._AC_SL1500_.jpg",
           "https://m.media-amazon.com/images/I/818hbpVfOgL._AC_SX466_.jpg",
           "https://m.media-amazon.com/images/I/711BW6zqs0L._AC_SX466_.jpg"
-        ]
-      }
-    },
-    {
-      "productName": "Mobile",
-      "productNameFa": "",
-      "PhoneLable": "a a a  a",
-      "PhoneLableFa": "ثبکبتصث",
-      "brand": "samsung",
-      "brandFa": "سامسونگ",
-      "id": "A_A_A__A",
-      "information": {
-        "memory": "16 گیگ",
-        "memoryType": "نمیدونم",
-        "price": 3400000,
-        "Inventory": true,
-        "date": "",
-        "type": "نمیدونم",
-        "length": 175,
-        "width": 168,
-        "weight": 220,
-        "height": 7.9,
-        "sim": "دوسیم کارته",
-        "colors": [
-          "#ff0000",
-          "#000000",
-          "#f8e71c"
-        ],
-        "colorsEn": [],
-        "discount": "true",
-        "off": 8,
-        "banner": "",
-        "banners": [
-          "data:image/jpeg;base64,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"
         ]
       }
     }

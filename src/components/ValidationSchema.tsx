@@ -17,16 +17,14 @@ export const Panel_PostProduct_Validate = Yup.object({
   brandFa: Yup.string()
     .required("انتخاب گزینه در این فیلد ضروری است")
     .oneOf(["اسپیکر", "ساعت", "سامسونگ", "شیائومی", "اپل"]),
-  id: Yup.string()
-    .required("وارد کردن این فیلد ضروری است")
-    .min(5, "حداقل باید 5 حرف داشته باشد"),
+  // id: Yup.string()
+  //   .required("وارد کردن این فیلد ضروری است")
+  //   .min(5, "حداقل باید 5 حرف داشته باشد"),
   information: Yup.object({
     memory: Yup.string(),
     memoryType: Yup.string(),
-    price: Yup.number()
-      .required("پر کردن این فیلد ضروری است")
-      .min(2, "حداقل باید 10 تومان باشد"),
-    inventory: Yup.lazy((value) =>
+    price: Yup.number().required("پر کردن این فیلد ضروری است"),
+    Inventory: Yup.lazy((value) =>
       typeof value === "string"
         ? Yup.string()
             .oneOf(["true", "false"])
@@ -40,10 +38,10 @@ export const Panel_PostProduct_Validate = Yup.object({
     height: Yup.number(),
     weight: Yup.number(),
     sim: Yup.string(),
-    colors: Yup.array(Yup.string())
-      .required("باید رنگ انتخاب کنید")
-      .min(1, "باید حداقل یک رنگ انتخاب کنید")
-      .max(5, "نمی توانید بیشتر از 5 رنگ انتخاب کنید"),
+    // colors: Yup.array(Yup.string())
+    //   .required("باید رنگ انتخاب کنید")
+    //   .min(1, "باید حداقل یک رنگ انتخاب کنید")
+    //   .max(5, "نمی توانید بیشتر از 5 رنگ انتخاب کنید"),
     colorsEn: Yup.array(Yup.string())
       .required("باید رنگ انتخاب کنید")
       .min(1, "باید حداقل یک رنگ انتخاب کنید")

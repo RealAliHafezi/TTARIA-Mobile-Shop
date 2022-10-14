@@ -4,27 +4,31 @@ import { useFormik } from "formik";
 import { HandlePanelUpdateProduct } from "./../../redux/PanelEditProductSlice";
 // components
 import PanelEditProductsCategory from "./PanelEditProductsCategory";
+import Alert from "./../../components/Alert";
+import Pending from "./../../components/Pending";
 // types
+import { Panel_PostProduct_Validate } from "./../../components/ValidationSchema";
 interface propsType {
   ID: string;
 }
 const PanelEditProduct = ({ ID }: propsType) => {
   const dispatch = useAppDispatch();
+  const UpdateProductReactions = useAppSelector(
+    (state) => state.EditProduct.reactions
+  );
   const initialValues = useAppSelector(
     (state) => state.EditProduct.initialValues
   );
   const formik = useFormik({
     initialValues,
     onSubmit: (values) => {
-      console.log(values);
-      values = {
-        ...values,
-      };
       dispatch(HandlePanelUpdateProduct({ id: ID, values: values }));
     },
+    validationSchema: Panel_PostProduct_Validate,
   });
   useEffect(() => {
     formik.setValues(initialValues);
+    window.scrollTo(0, 0);
   }, [initialValues]);
   return (
     <section className="Panel_AddProducts position-relative col-10 px-2 py-3">
@@ -209,7 +213,7 @@ const PanelEditProduct = ({ ID }: propsType) => {
         <button
           type="submit"
           className="btn btn-success"
-          // disabled={postingProductReactions.pending}
+          disabled={UpdateProductReactions.pending}
           onClick={(e) => {
             e.preventDefault();
             formik.handleSubmit();
@@ -219,28 +223,28 @@ const PanelEditProduct = ({ ID }: propsType) => {
         </button>
       </form>
       {/* pending when posting product */}
-      {/* {postingProductReactions.pending && <Pending />} */}
+      {UpdateProductReactions.pending && <Pending />}
       {/* when posting is success or rejecting */}
-      {/* {postingProductReactions.success && (
+      {UpdateProductReactions.success && (
         <Alert
           bg="success"
           title="پیام جدید"
-          massage="محصول شما با موفقیت ذخیره شد 😉"
+          massage="محصول شما با موفقیت بروزرسانی شد 😉"
           bottom="30px"
           right="10px"
           time={5000}
         />
-      )} */}
-      {/* {postingProductReactions.reject && (
+      )}
+      {UpdateProductReactions.reject && (
         <Alert
           bg="danger"
           title="پیام جدید"
-          massage="عمیلات با خطا مواجه شد 🚩"
+          massage="عمیلات بروزرسانی با خطا مواجه شد 🚩"
           bottom="30px"
           right="10px"
           time={4000}
         />
-      )} */}
+      )}
       {/*  */}
     </section>
   );

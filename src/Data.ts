@@ -751,11 +751,6 @@ const PanelSidebarItems: PanelSidebarItemsType = {
       icon: BsPlusLg,
     },
     {
-      txt: "ناموجود",
-      link: "unAvailable",
-      icon: MdInventory,
-    },
-    {
       txt: "غیرفعال",
       link: "disable",
       icon: GiSightDisabled,
@@ -781,6 +776,11 @@ const PanelSidebarItems: PanelSidebarItemsType = {
       txt: "اسپیکر",
       link: "speakers",
       icon: BsSpeakerFill,
+    },
+    {
+      txt: "ناموجود",
+      link: "unAvailable",
+      icon: MdInventory,
     },
   ],
 };

@@ -1,7 +1,7 @@
 import React from "react";
 // components
-import PanelEditProductColor from "../../components/Panel/PanelColor";
-import PanelEditProductPicture from "../../components/Panel/PanelPicture";
+import PanelColor from "../../components/Panel/PanelColor";
+import PanelPicture from "../../components/Panel/PanelPicture";
 // type
 interface propsType {
   formik: any;
@@ -100,13 +100,13 @@ const PanelEditProductsCategory = ({
           وضعیت
         </label>
         <select
-          {...formik.getFieldProps("Inventory")}
           className={`form-control ${
             formik.touched.PhoneLable &&
             formik.touched.PhoneLable &&
             "ErrorInput"
           }`}
           aria-label="Default select example"
+          {...formik.getFieldProps("information.Inventory")}
         >
           <option value="true">موجود</option>
           <option value="false">ناموجود</option>
@@ -341,8 +341,8 @@ const PanelEditProductsCategory = ({
           </span>
         )}
       </div>
-      <PanelEditProductColor formik={formik} />
-      <PanelEditProductPicture formik={formik} />
+      <PanelColor formik={formik} />
+      <PanelPicture formik={formik} />
     </React.Fragment>
   );
 };

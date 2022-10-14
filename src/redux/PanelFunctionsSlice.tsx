@@ -50,7 +50,7 @@ const PanelFunctionsSlice = createSlice({
       // if a picture repeat , do not create that
       !have
         ? formik.values.information.banners.length <= 5
-          ? handleCreatePicture()
+          ? picture.length > 3 && handleCreatePicture()
           : (state.SavePictureError2 = true)
         : (state.SavePictureError1 = true);
     },
