@@ -21,11 +21,11 @@ const Toast = ({
   return (
     <>
       <div
-        className={`toast position-absolute ${toasting && "show"}`}
+        className={`toast position-fixed ${toasting && "show"}`}
         role="alert"
         aria-live="assertive"
         aria-atomic="true"
-        style={{ right: right, bottom: bottom }}
+        style={{ right: right, bottom: bottom, zIndex: 100 }}
       >
         <div className={`toast-header ${color}`}>
           <img

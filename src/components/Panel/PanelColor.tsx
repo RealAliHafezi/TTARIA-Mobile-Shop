@@ -1,19 +1,24 @@
 import React, { useState, useRef } from "react";
 import { SketchPicker } from "react-color";
-import { useAppDispatch } from "../../redux/hooks";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import {
   HandleDeleteColor,
   HandleResetColors,
   HandleSaveColor,
 } from "../../redux/PanelFunctionsSlice";
+// components
+import Alert from "../Alert";
+//
 const PanelColor = ({ formik }: any) => {
   const dispatch = useAppDispatch();
   const [color, setColor] = useState<string>("#ff0000");
   // for show color elements
   const productColorList = useRef<HTMLDivElement>(null);
+  // for errors
+  const errors = useAppSelector((state) => state.PanelFunctions);
   // finish
   return (
-    <div className="mb-3 col-12 col-md-6 pe-4">
+    <div className="mb-3 col-12 col-md-6 pe-4 position-relative">
       <label htmlFor="Panel_Add_colors" className="form-label">
         رنگ ها
       </label>
@@ -47,14 +52,12 @@ const PanelColor = ({ formik }: any) => {
               );
             }}
             type="button"
-            data-bs-toggle="modal"
-            data-bs-target="#RepeatColor"
           >
             ثبت
           </button>
           <h6 className="pe-4 mt-3">رنگ های ثبت شده</h6>
           <div className="me-3 mt-3 d-flex flex-wrap" ref={productColorList}>
-            {formik.values.information.colorsEn.length &&
+            {formik.values.information.colorsEn.length ? (
               formik.values.information.colorsEn.map(
                 (color2: string, index: number) => (
                   <div
@@ -72,14 +75,17 @@ const PanelColor = ({ formik }: any) => {
                     }}
                   ></div>
                 )
-              )}
+              )
+            ) : (
+              <h6>رنگی انتخاب نکردید</h6>
+            )}
           </div>
           {formik.values.information.colorsEn.length >= 2 ? (
             <button
               className="btn btn-sm btn-danger mt-3 me-3"
               onClick={(e) => {
                 e.preventDefault();
-                dispatch(HandleResetColors(formik));
+                dispatch(HandleResetColors({ formik: formik }));
               }}
             >
               ریست
@@ -93,6 +99,26 @@ const PanelColor = ({ formik }: any) => {
             </span>
           )}
       </div>
+      {errors.SaveColorError2 && (
+        <Alert
+          bottom="-10px"
+          right="20px"
+          massage="ذخیره رنگ به دلیل تعداد بالا ناموفق بود"
+          bg="danger"
+          time={2000}
+          title="پیام جدید"
+        />
+      )}
+      {errors.SaveColorError1 && (
+        <Alert
+          bottom="-10px"
+          right="20px"
+          massage="ذخیره رنگ به دلیل تکراری بودن ناموفق بود"
+          bg="danger"
+          time={2000}
+          title="پیام جدید"
+        />
+      )}
     </div>
   );
 };

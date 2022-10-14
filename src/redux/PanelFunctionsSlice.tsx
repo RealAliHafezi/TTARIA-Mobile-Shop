@@ -18,7 +18,12 @@ interface SavePictureActionType {
 }
 const PanelFunctionsSlice = createSlice({
   name: "Panel_All_Functions",
-  initialState: {},
+  initialState: {
+    SavePictureError1: false,
+    SavePictureError2: false,
+    SaveColorError1: false,
+    SaveColorError2: false,
+  },
   reducers: {
     HandleSavePicture: (
       state,
@@ -29,6 +34,8 @@ const PanelFunctionsSlice = createSlice({
         (pic: string) => picture.trim() === pic.trim()
       );
       const handleCreatePicture = () => {
+        state.SavePictureError1 = false;
+        state.SavePictureError2 = false;
         formik.setValues({
           ...formik.values,
           information: {
@@ -37,24 +44,29 @@ const PanelFunctionsSlice = createSlice({
           },
         });
         setPicture("");
+        state.SavePictureError1 = false;
+        state.SavePictureError2 = false;
       };
       // if a picture repeat , do not create that
-      have
-        ? formik.values.information.banners >= 5
-          ? console.log("error")
-          : handleCreatePicture()
-        : console.log("error1");
+      !have
+        ? formik.values.information.banners.length <= 5
+          ? handleCreatePicture()
+          : (state.SavePictureError2 = true)
+        : (state.SavePictureError1 = true);
     },
     HandleResetPictures: (state, action: PayloadAction<any>) => {
-      action.payload.setValue({
-        ...action.payload.values,
+      const { formik } = action.payload;
+      formik.setValues({
+        ...formik.values,
         information: {
-          ...action.payload.values.information,
+          ...formik.values.information,
           banners: [],
         },
       });
     },
     HandleSaveColor: (state, action: PayloadAction<SaveColorActionType>) => {
+      state.SaveColorError1 = false;
+      state.SaveColorError2 = false;
       const { formik, color, setColor } = action.payload;
       const handleCreateColor = () => {
         formik.setValues({
@@ -65,15 +77,17 @@ const PanelFunctionsSlice = createSlice({
           },
         });
         setColor("#ff0000");
+        state.SaveColorError1 = false;
+        state.SaveColorError2 = false;
       };
       const have = formik.values.information.colorsEn.some(
         (color2: string) => color === color2
       );
       !have
-        ? formik.values.information.colorsEn >= 5
-          ? console.log("error")
-          : handleCreateColor()
-        : console.log("error1");
+        ? formik.values.information.colorsEn.length <= 5
+          ? handleCreateColor()
+          : (state.SaveColorError2 = true)
+        : (state.SaveColorError1 = true);
     },
     HandleDeleteColor: (
       state,
