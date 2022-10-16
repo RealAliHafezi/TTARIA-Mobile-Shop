@@ -751,11 +751,6 @@ const PanelSidebarItems: PanelSidebarItemsType = {
       icon: BsPlusLg,
     },
     {
-      txt: "غیرفعال",
-      link: "disable",
-      icon: GiSightDisabled,
-    },
-    {
       txt: "پیشرفته",
       link: "advanceSearch",
       icon: FaSearchengin,
