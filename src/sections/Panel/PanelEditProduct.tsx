@@ -3,7 +3,7 @@ import { useAppSelector, useAppDispatch } from "../../redux/hooks";
 import { useFormik } from "formik";
 import { HandlePanelUpdateProduct } from "./../../redux/PanelEditProductSlice";
 // components
-import PanelEditProductsCategory from "./PanelEditProductsCategory";
+import PanelEditProductsCategory from "./PanelProductsCategory";
 import Alert from "./../../components/Alert";
 import Pending from "./../../components/Pending";
 // types

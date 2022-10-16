@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { PanelAddProductPost } from "../../redux/PanelAddProductSlice";
 // components
-import PanelAddProductsCategory from "./PanelAddProductsCategory";
+import PanelProductsCategory from "./PanelProductsCategory";
 import Alert from "./../../components/Alert";
 import Pending from "../../components/Pending";
 import { Panel_PostProduct_Validate } from "../../components/ValidationSchema";
@@ -215,7 +215,7 @@ const PanelAddProduct = () => {
         <hr className="bg-warning" />
         <h4 className="text-center mb-4">جزئیات</h4>
         {formik.values.productName === `Mobile` && (
-          <PanelAddProductsCategory
+          <PanelProductsCategory
             formik={formik}
             memory={true}
             date={true}
@@ -225,7 +225,7 @@ const PanelAddProduct = () => {
           />
         )}
         {formik.values.productName === "Speaker" && (
-          <PanelAddProductsCategory
+          <PanelProductsCategory
             formik={formik}
             memory={false}
             date={false}
@@ -235,7 +235,7 @@ const PanelAddProduct = () => {
           />
         )}
         {formik.values.productName === "Watch" && (
-          <PanelAddProductsCategory
+          <PanelProductsCategory
             formik={formik}
             memory={false}
             date={true}

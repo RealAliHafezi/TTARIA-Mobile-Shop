@@ -11,7 +11,7 @@ interface propsType {
   type: boolean;
   size: boolean;
 }
-const PanelEditProductsCategory = ({
+const PanelProductsCategory = ({
   formik,
   memory,
   date,
@@ -347,4 +347,4 @@ const PanelEditProductsCategory = ({
   );
 };
 
-export default PanelEditProductsCategory;
+export default PanelProductsCategory;
