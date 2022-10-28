@@ -752,7 +752,7 @@ const PanelSidebarItems: PanelSidebarItemsType = {
     },
     {
       txt: "پیشرفته",
-      link: "advanceSearch",
+      link: "search",
       icon: FaSearchengin,
     },
   ],
