@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 // style
 import "./../../../styles/scss/home/header/NavbarBase.scss";
 // components
@@ -11,7 +12,9 @@ import {
   FaRegUserCircle,
 } from "../../../assets/icons/icons";
 import { Logo } from "../../../assets/image/Images";
+
 const NavbarBase = () => {
+  const navigate = useNavigate();
   const [Search, setSearch] = useState<string>("");
   return (
     <div className="Navbar_Base position-relative d-none d-lg-flex align-items-center justify-content-between px-3 py-2">
@@ -19,7 +22,12 @@ const NavbarBase = () => {
         <div className="NavbarBase_Right_Logo ms-5">
           <img src={Logo} alt="Logo" className="w-100 h1-00" />
         </div>
-        <div className="NavbarBase_Right_SearchBox position-relative">
+        <form
+          onSubmit={() => {
+            navigate(`/search/${Search}`);
+          }}
+          className="NavbarBase_Right_SearchBox position-relative"
+        >
           <input
             type="text"
             value={Search}
@@ -29,8 +37,10 @@ const NavbarBase = () => {
             className="form-control w-100 px-3"
             placeholder="نام محصول یا برند خود را جستجو کنید ..."
           />
-          <MdOutlineSearch className="position-absolute" />
-        </div>
+          <Link className="LINK" to={`/search/${Search}`}>
+            <MdOutlineSearch className="position-absolute" />
+          </Link>
+        </form>
       </div>
       <div className="NavbarBase_Left d-flex align-items-center">
         <div className="NavbarBase_Left_Btn position-relative ms-3">

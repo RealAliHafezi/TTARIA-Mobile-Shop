@@ -4,7 +4,6 @@ import AccessReducer from "./Access";
 import AddProductReducer from "./PanelAddProductSlice";
 import PanelFunctionsReducer from "./PanelFunctionsSlice";
 import EditProductReducer from "./PanelEditProductSlice";
-
 export const store = configureStore({
   reducer: {
     Products: ProductReducer,

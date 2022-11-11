@@ -19,6 +19,7 @@ import AdminPanelUnAvailable from "./pages/AdminPanel/AdminPanelUnAvailable";
 import AdminPanelAddProduct from "./pages/AdminPanel/AdminPanelAddProduct";
 import AdminPanelEditProduct from "./pages/AdminPanel/AdminPanelEditProduct";
 import AdminPanelSearch from "./pages/AdminPanel/AdminPanelSearch";
+import Search from "./pages/Search/Search";
 // types
 interface AccessForPanelPageType {
   children: JSX.Element;
@@ -114,6 +115,7 @@ function App() {
               </AccessForPanelPage>
             }
           />
+          <Route path="/search/:SearchTxt" element={<Search />} />
         </Routes>
       </div>
     </>

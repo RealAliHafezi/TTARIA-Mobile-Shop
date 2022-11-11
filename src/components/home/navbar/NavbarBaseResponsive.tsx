@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-//
+import { useNavigate, Link } from "react-router-dom";
+// components
 import NavbarBaseResponsiveDrawer from "./NavbarBaseResponsiveDrawer";
 // image && icons
 import { Logo } from "../../../assets/image/Images";
@@ -12,6 +13,7 @@ import {
 // style
 import "./../../../styles/scss/home/header/NavbarBaseResponsive.scss";
 const NavbarBaseResponsive = () => {
+  const navigate = useNavigate();
   const [Search, setSearch] = useState<string>("");
   return (
     <div className="Navbar_NavbarBase_Responsive container-fluid d-flex d-lg-none flex-column py-2">
@@ -36,7 +38,12 @@ const NavbarBaseResponsive = () => {
         </div>
       </div>
       <div className="d-flex w-100 align-items-center justify-content-between">
-        <div className="NavbarBaseResponsive_SearchBox position-relative">
+        <form
+          onSubmit={() => {
+            navigate(`/search/${Search}`);
+          }}
+          className="NavbarBaseResponsive_SearchBox position-relative"
+        >
           <input
             type="text"
             value={Search}
@@ -46,8 +53,10 @@ const NavbarBaseResponsive = () => {
             className="form-control w-100 px-3"
             placeholder="نام محصول یا برند خود را جستجو کنید ..."
           />
-          <MdOutlineSearch className="position-absolute" />
-        </div>
+          <Link className="LINK" to={`/search/${Search}`}>
+            <MdOutlineSearch className="position-absolute" />
+          </Link>
+        </form>
         <div className="NavbarBaseResponsive_Btn position-relative d-block me-1">
           <AiOutlineHeart />
           <span className="Navbar_Badge d-flex align-items-center justify-content-center position-absolute top-0 start-100 translate-middle rounded-circle">
