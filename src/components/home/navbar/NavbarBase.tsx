@@ -23,7 +23,8 @@ const NavbarBase = () => {
           <img src={Logo} alt="Logo" className="w-100 h1-00" />
         </div>
         <form
-          onSubmit={() => {
+          onSubmit={(e) => {
+            e.preventDefault();
             navigate(`/search/${Search}`);
           }}
           className="NavbarBase_Right_SearchBox position-relative"
@@ -34,6 +35,7 @@ const NavbarBase = () => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setSearch(e.target.value)
             }
+            onSubmit={() => setSearch("")}
             className="form-control w-100 px-3"
             placeholder="نام محصول یا برند خود را جستجو کنید ..."
           />

@@ -39,7 +39,8 @@ const NavbarBaseResponsive = () => {
       </div>
       <div className="d-flex w-100 align-items-center justify-content-between">
         <form
-          onSubmit={() => {
+          onSubmit={(e) => {
+            e.preventDefault();
             navigate(`/search/${Search}`);
           }}
           className="NavbarBaseResponsive_SearchBox position-relative"
@@ -50,6 +51,7 @@ const NavbarBaseResponsive = () => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setSearch(e.target.value)
             }
+            onSubmit={() => setSearch("")}
             className="form-control w-100 px-3"
             placeholder="نام محصول یا برند خود را جستجو کنید ..."
           />
