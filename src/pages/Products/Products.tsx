@@ -49,6 +49,7 @@ const Products = () => {
   };
   useEffect(() => {
     getProducts.length > 1 && setAllProducts(getProducts);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [getProducts]);
   return (
     <PagesLayout>

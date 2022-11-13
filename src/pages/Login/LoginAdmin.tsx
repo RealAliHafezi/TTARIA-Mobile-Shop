@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
@@ -29,6 +29,9 @@ const LoginAdmin = () => {
         .oneOf(["09380397555"]),
     }),
   });
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <LoginBase
       title="ورود ادمین | فروشگاه آریا"

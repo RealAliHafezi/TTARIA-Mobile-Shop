@@ -14,6 +14,7 @@ const AdminPanelSpeakers = () => {
     AllProducts &&
       AllProducts.length > 0 &&
       setProducts(AllProducts.filter((prod) => prod.productName === "Speaker"));
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
   return (
     <article className="Panel row g-0">

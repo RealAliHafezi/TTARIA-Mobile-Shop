@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // icons
 import {
   TbDeviceMobile,
@@ -20,6 +20,9 @@ import PagesLayout from "../../sections/PagesLayout/PageLayout";
 const Home = () => {
   window.document.title =
     "فروشگاه آریا | خرید اقساطی گوشی موبایل ، لپ تاپ ، قطعات کامپیوتر";
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <PagesLayout>
       <article className="py-1 py-md-2 px-3" id="Home">

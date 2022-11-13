@@ -12,6 +12,7 @@ const AdminPanelHome = () => {
   const AllProducts = useAppSelector((state) => state.Products.products);
   useEffect(() => {
     AllProducts && AllProducts.length > 0 && setProducts(AllProducts);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
   return (
     <article className="Panel row g-0">

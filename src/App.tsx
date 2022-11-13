@@ -8,7 +8,7 @@ import Home from "./pages/Home/Home";
 import Products from "./pages/Products/Products";
 import ProductsCategory from "./pages/ProductsCategory/ProductsCategory";
 import Product from "./pages/Product/Product";
-import Login from "./pages/Login/Login";
+import Login from "./pages/Login/Login";          
 import LoginWE from "./pages/Login/LoginWE";
 import LoginAdmin from "./pages/Login/LoginAdmin";
 import AdminPanelHome from "./pages/AdminPanel/AdminPanelHome";

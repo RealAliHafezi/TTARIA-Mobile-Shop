@@ -41,6 +41,7 @@ const Product = () => {
     Product &&
       getAllProducts &&
       setProduct(getAllProducts.filter((pro) => pro.id === Product));
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [Product, getAllProducts]);
   return (
     <PagesLayout>

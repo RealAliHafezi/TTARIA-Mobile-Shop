@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 // components
@@ -29,6 +30,9 @@ const Login = () => {
         ),
     }),
   });
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <LoginBase
       title="ورود یا ثبت نام با موبایل | فروشگاه آریا"

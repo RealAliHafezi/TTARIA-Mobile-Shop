@@ -81,6 +81,7 @@ const ProductsCategory = () => {
           (product) => String(product.brand) === String(ProductsCategory)
         )
       );
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [getProducts, ProductsCategory]);
   return (
     <PagesLayout>

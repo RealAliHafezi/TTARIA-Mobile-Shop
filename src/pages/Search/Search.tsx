@@ -58,6 +58,7 @@ const Search = () => {
   };
   useEffect(() => {
     SearchTxt && SearchTxt.length && Products.length && GetSearchingResult();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [SearchTxt, Products]);
   return (
     <PagesLayout>

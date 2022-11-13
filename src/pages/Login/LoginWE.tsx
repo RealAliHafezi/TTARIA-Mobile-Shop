@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 // components
@@ -24,6 +24,9 @@ const LoginWE = () => {
         .required("لطفا ایمیل خود را وارد کنید"),
     }),
   });
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <LoginBase
       desc={null}

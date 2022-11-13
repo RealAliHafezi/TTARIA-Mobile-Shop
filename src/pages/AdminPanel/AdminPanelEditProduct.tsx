@@ -15,6 +15,7 @@ const AdminPanelEditProduct = () => {
     EditID &&
       Data.length &&
       dispatch(FilteredProduct({ ID: EditID, data: Data }));
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [EditID]);
   return (
     <article className="Panel row g-0">
