@@ -8,14 +8,10 @@ interface propsType {
   NavbarListData: NavbarListItemsDataType;
   NavbarListDataIndex: number;
 }
-const NavbarBaseResponsiveDrawerDropdown2 = ({
-  NavbarListData,
-  NavbarListDataIndex,
-
-}: propsType) => {
+const NavbarBaseResponsiveDrawerDropdown2 = ({ NavbarListData }: propsType) => {
   const [Arrow, setArrow] = useState<boolean>(false);
   return (
-    <React.Fragment key={NavbarListDataIndex}>
+    <React.Fragment>
       {NavbarListData.item ? (
         <li
           onClick={() => setArrow(!Arrow)}
@@ -32,12 +28,7 @@ const NavbarBaseResponsiveDrawerDropdown2 = ({
           to={`/productsCategories/${NavbarListData.titleEn}`}
           className="LINK CURSOR"
         >
-          <li
-            key={NavbarListDataIndex}
-            className="py-1"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          >
+          <li className="py-1" data-bs-dismiss="offcanvas" aria-label="Close">
             <span>{NavbarListData.title}</span>
           </li>
         </Link>
@@ -46,26 +37,23 @@ const NavbarBaseResponsiveDrawerDropdown2 = ({
         className="collapse NavbarBaseResponsiveDreawer_Body_List2_ListItem_List justify-content-end flex-grow-1 p-0 m-0"
         id={`${NavbarListData.filter}Child`}
       >
-        {NavbarListData.item?.map(
-          (NavbarListItemDataItem, NavbarListItemDataItemIndex) => (
-            <>
-              <li className="CURSOR hosein"></li>
-              <Link
-                key={NavbarListItemDataItemIndex}
-                to={`/productsCategories/${NavbarListData.titleEn}`}
-                className="LINK CURSOR"
+        {NavbarListData.item?.map((NavbarListItemDataItem, index) => (
+          <div key={index}>
+            <li className="CURSOR hosein"></li>
+            <Link
+              to={`/productsCategories/${NavbarListData.titleEn}`}
+              className="LINK CURSOR"
+            >
+              <li
+                className="py-1"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
               >
-                <li
-                  className="py-1"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"
-                >
-                  {NavbarListItemDataItem}
-                </li>
-              </Link>
-            </>
-          )
-        )}
+                {NavbarListItemDataItem}
+              </li>
+            </Link>
+          </div>
+        ))}
       </ul>
     </React.Fragment>
   );
