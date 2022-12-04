@@ -84,10 +84,11 @@ const NavbarBaseResponsiveDrawer = () => {
             </li>
           </ul>
           <ul className="navbar-nav NavbarBaseResponsiveDreawer_Body_List2 justify-content-end flex-grow-1 p-0 py-2 m-0">
-            {NavbarListItemsData.map((NavbarListItem, NavbarListItemIndex) => (
+            {NavbarListItemsData.map((NavbarListItem, index) => (
               <NavbarBaseResponsiveDrawerDropdown1
+                key={index}
                 NavbarListItem={NavbarListItem}
-                NavbarListItemIndex={NavbarListItemIndex}
+                NavbarListItemIndex={index}
               />
             ))}
           </ul>

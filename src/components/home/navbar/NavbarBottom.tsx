@@ -33,10 +33,10 @@ const NavbarBottom = () => {
   };
   // when scroll Bottom , navbarBottom Hide & when scroll top , navbarBottom Show
   useEffect(() => {
-    var lastScrollTop = 0;
+    let lastScrollTop = 0;
     window.addEventListener("scroll", () => {
       if (window.scrollY > 75) {
-        var scrollTop =
+        let scrollTop =
           window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > lastScrollTop) {
           setHideWhenScroll(false);
@@ -53,9 +53,9 @@ const NavbarBottom = () => {
       {...NavbarListDataShowing}
     >
       <ul className="Navbar_Bottom_List d-flex justify-content-start position-relative">
-        {NavbarListItemsData.map((ListItemLable) => (
+        {NavbarListItemsData.map((ListItemLable, index) => (
           <li
-            key={ListItemLable.labelEn}
+            key={index}
             className="Navbar_Bottom_ListItem CURSOR"
             onMouseOver={() =>
               handleHoverOnNavbarListItems(ListItemLable.labelEn)
