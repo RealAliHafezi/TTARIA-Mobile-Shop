@@ -37,6 +37,7 @@ const AdminPanelSearch = lazy(
   () => import("./pages/AdminPanel/AdminPanelSearch")
 );
 const Search = lazy(() => import("./pages/Search/Search"));
+const LazyLoad = lazy(() => import("./components/LazyLoad"));
 
 // import ProductsCategory from "";
 // import Product from "";
@@ -71,7 +72,7 @@ function App() {
   }, [getFetchingProductsFun]);
   return (
     <>
-      <Suspense fallback={<h2>Loading...</h2>}>
+      <Suspense fallback={<LazyLoad />}>
         <div className="App">
           <Routes>
             <Route path="/" element={<Home />} />
